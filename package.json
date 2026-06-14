@@ -1,0 +1,14 @@
+{
+  "name": "nane",
+  "version": "1.0.0",
+  "private": true,
+  "description": "nane beauty concept — strona gabinetu kosmetologii estetycznej w Rawiczu",
+  "scripts": {
+    "build": "echo \"Static site — no build step\"",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.100.0"
+  }
+}
