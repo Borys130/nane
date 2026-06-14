@@ -39,6 +39,21 @@
   .footer-link:hover{ color:#e7c98f !important; }
   .social-link{ transition:color .18s; cursor:pointer; }
   .social-link:hover{ color:#e7c98f !important; }
+  /* before/after slider */
+  .ba{ --pos:50%; margin:16px 0 8px; }
+  .ba-frame{ position:relative; width:100%; margin:0 auto; border-radius:14px; overflow:hidden; cursor:ew-resize; user-select:none; touch-action:none; box-shadow:0 18px 40px -26px rgba(120,80,55,.5); }
+  .ba--portrait .ba-frame{ aspect-ratio:720/1509; max-width:260px; }
+  .ba--landscape .ba-frame{ aspect-ratio:1440/754; max-width:680px; }
+  .ba-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
+  .ba-before{ clip-path:inset(0 calc(100% - var(--pos)) 0 0); }
+  .ba-divider{ position:absolute; top:0; bottom:0; left:var(--pos); width:2px; margin-left:-1px; background:#faf6f2; box-shadow:0 0 0 1px rgba(42,36,33,.18); pointer-events:none; }
+  .ba-handle{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:#faf6f2; color:#2a2421; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(42,36,33,.4); }
+  .ba-label{ position:absolute; top:14px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; padding:5px 11px; border-radius:7px; background:rgba(42,36,33,.55); backdrop-filter:blur(6px); color:#f3ece6; pointer-events:none; }
+  .ba-label-before{ left:14px; }
+  .ba-label-after{ right:14px; }
+  .ba-hint{ text-align:center; font-size:12px; letter-spacing:.04em; color:#8a807a; margin-top:10px; }
+  .ba-animating .ba-before{ transition:clip-path 1.05s cubic-bezier(.4,0,.2,1); }
+  .ba-animating .ba-divider{ transition:left 1.05s cubic-bezier(.4,0,.2,1); }
   @media (max-width:820px){
     [data-page] > div > div[style*="grid-template-columns"]{ grid-template-columns:1fr !important; }
   }
@@ -322,9 +337,15 @@
         <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Makijaż permanentny powieki górnej</span>
         <span style="font-size:13px; color:#8a807a;">eyeliner · kreski · odświeżenia</span>
       </div>
-      <div data-reveal style="margin:14px 0 4px; border-radius:14px; overflow:hidden; position:relative;">
-        <img src="images/brwi_pip.jpg" alt="Makijaż permanentny brwi — przed i po" style="width:100%; height:clamp(180px,22vw,270px); object-fit:cover; display:block;">
-        <span style="position:absolute; bottom:12px; left:12px; background:rgba(42,36,33,.62); backdrop-filter:blur(6px); color:#f3ece6; font-size:11px; letter-spacing:.14em; text-transform:uppercase; padding:4px 10px; border-radius:6px;">Przed · Po</span>
+      <div data-reveal class="ba ba--portrait">
+        <div class="ba-frame">
+          <img class="ba-after" src="images/brwi_pip_b.jpg" alt="Brwi po zabiegu">
+          <img class="ba-before" src="images/brwi_pip_a.jpg" alt="Brwi przed zabiegiem">
+          <span class="ba-label ba-label-before">Przed</span>
+          <span class="ba-label ba-label-after">Po</span>
+          <div class="ba-divider"><div class="ba-handle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-4 6 4 6M15 6l4 6-4 6"/></svg></div></div>
+        </div>
+        <div class="ba-hint">Przeciągnij, aby porównać efekt</div>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Makijaż permanentny powieki górnej (eyeliner)</span>
@@ -374,9 +395,15 @@
         <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Usuwanie makijażu permanentnego</span>
         <span style="font-size:13px; color:#8a807a;">laser · remover</span>
       </div>
-      <div data-reveal style="margin:14px 0 4px; border-radius:14px; overflow:hidden; position:relative;">
-        <img src="images/usta_pip.jpg" alt="Makijaż permanentny ust — przed i po" style="width:100%; height:clamp(180px,22vw,270px); object-fit:cover; object-position:center 35%; display:block;">
-        <span style="position:absolute; bottom:12px; left:12px; background:rgba(42,36,33,.62); backdrop-filter:blur(6px); color:#f3ece6; font-size:11px; letter-spacing:.14em; text-transform:uppercase; padding:4px 10px; border-radius:6px;">Przed · Po</span>
+      <div data-reveal class="ba ba--landscape">
+        <div class="ba-frame">
+          <img class="ba-after" src="images/usta_pip_a.jpg" alt="Usta po zabiegu">
+          <img class="ba-before" src="images/usta_pip_b.jpg" alt="Usta przed zabiegiem">
+          <span class="ba-label ba-label-before">Przed</span>
+          <span class="ba-label ba-label-after">Po</span>
+          <div class="ba-divider"><div class="ba-handle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-4 6 4 6M15 6l4 6-4 6"/></svg></div></div>
+        </div>
+        <div class="ba-hint">Przeciągnij, aby porównać efekt</div>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Usuwanie laserem (brwi lub usta)</span>
@@ -629,6 +656,42 @@
       form.querySelectorAll('input, textarea, select, button').forEach(function (el) { el.style.display = 'none'; });
       document.getElementById('formNote').style.display = 'block';
     });
+  }
+
+  // before/after sliders
+  document.querySelectorAll('.ba').forEach(function (ba) {
+    var frame = ba.querySelector('.ba-frame');
+    function setPos(p) { ba.style.setProperty('--pos', Math.max(0, Math.min(100, p)) + '%'); }
+    var dragging = false;
+    function move(e) {
+      var r = frame.getBoundingClientRect();
+      var cx = (e.clientX != null) ? e.clientX : (e.touches && e.touches[0].clientX);
+      setPos((cx - r.left) / r.width * 100);
+    }
+    frame.addEventListener('pointerdown', function (e) {
+      dragging = true; ba.classList.remove('ba-animating');
+      try { frame.setPointerCapture(e.pointerId); } catch (x) {}
+      move(e);
+    });
+    frame.addEventListener('pointermove', function (e) { if (dragging) move(e); });
+    frame.addEventListener('pointerup', function () { dragging = false; });
+    frame.addEventListener('pointercancel', function () { dragging = false; });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var baIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var ba = en.target;
+        ba.classList.add('ba-animating');
+        ba.style.setProperty('--pos', '85%');
+        setTimeout(function () { ba.style.setProperty('--pos', '16%'); }, 260);
+        setTimeout(function () { ba.style.setProperty('--pos', '50%'); }, 1300);
+        setTimeout(function () { ba.classList.remove('ba-animating'); }, 2300);
+        baIO.unobserve(ba);
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.ba').forEach(function (ba) { baIO.observe(ba); });
   }
 
   go('home');
