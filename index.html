@@ -39,6 +39,21 @@
   .footer-link:hover{ color:#e7c98f !important; }
   .social-link{ transition:color .18s; cursor:pointer; }
   .social-link:hover{ color:#e7c98f !important; }
+  /* before/after slider */
+  .ba{ --pos:50%; margin:16px 0 8px; }
+  .ba-frame{ position:relative; width:100%; margin:0 auto; border-radius:14px; overflow:hidden; cursor:ew-resize; user-select:none; touch-action:none; box-shadow:0 18px 40px -26px rgba(120,80,55,.5); }
+  .ba--portrait .ba-frame{ aspect-ratio:720/1509; max-width:260px; }
+  .ba--landscape .ba-frame{ aspect-ratio:1440/754; max-width:680px; }
+  .ba-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
+  .ba-before{ clip-path:inset(0 calc(100% - var(--pos)) 0 0); }
+  .ba-divider{ position:absolute; top:0; bottom:0; left:var(--pos); width:2px; margin-left:-1px; background:#faf6f2; box-shadow:0 0 0 1px rgba(42,36,33,.18); pointer-events:none; }
+  .ba-handle{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:#faf6f2; color:#2a2421; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(42,36,33,.4); }
+  .ba-label{ position:absolute; top:14px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; padding:5px 11px; border-radius:7px; background:rgba(42,36,33,.55); backdrop-filter:blur(6px); color:#f3ece6; pointer-events:none; }
+  .ba-label-before{ left:14px; }
+  .ba-label-after{ right:14px; }
+  .ba-hint{ text-align:center; font-size:12px; letter-spacing:.04em; color:#8a807a; margin-top:10px; }
+  .ba-animating .ba-before{ transition:clip-path 1.05s cubic-bezier(.4,0,.2,1); }
+  .ba-animating .ba-divider{ transition:left 1.05s cubic-bezier(.4,0,.2,1); }
   @media (max-width:820px){
     [data-page] > div > div[style*="grid-template-columns"]{ grid-template-columns:1fr !important; }
   }
@@ -74,14 +89,14 @@
           <button class="reset-btn btn-outline" data-nav="zabiegi" style="display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:transparent; color:#2a2421; border:1px solid #d8cabb; font-size:14px; letter-spacing:.06em;">Zobacz zabiegi</button>
         </div>
         <div style="display:flex; gap:36px; margin-top:42px; flex-wrap:wrap;">
-          <div><div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:#2a2421;">5.0★</div><div style="font-size:12px; color:#8a807a; letter-spacing:.06em;">ocena w Booksy</div></div>
+          <div><div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:#2a2421;">4.0★</div><div style="font-size:12px; color:#8a807a; letter-spacing:.06em;">ocena w Google</div></div>
           <div><div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:#2a2421;">8+</div><div style="font-size:12px; color:#8a807a; letter-spacing:.06em;">technologii zabiegowych</div></div>
           <div><div style="font-family:'Cormorant Garamond',serif; font-size:36px; color:#2a2421;">100%</div><div style="font-size:12px; color:#8a807a; letter-spacing:.06em;">indywidualne podejście</div></div>
         </div>
       </div>
       <div data-reveal style="transition-delay:.12s;">
         <div style="position:relative; border-radius:220px 220px 18px 18px; overflow:hidden; aspect-ratio:4/5; box-shadow:0 34px 64px -34px rgba(120,80,55,.55);">
-          <img src="images/booksy-8.jpeg" alt="Recepcja nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+          <img src="images/booksy-1.jpeg" alt="Recepcja nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
         </div>
       </div>
     </div>
@@ -164,8 +179,8 @@
     <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
       <div data-reveal style="background:#fff; border:1px solid #efe6dd; border-radius:20px; padding:clamp(36px,5vw,64px); text-align:center;">
         <div style="font-size:20px; color:#b88a5e; letter-spacing:.3em; margin-bottom:22px;">★★★★★</div>
-        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(24px,3.2vw,38px); line-height:1.35; max-width:760px; margin:0 auto 22px; color:#2a2421;">„Profesjonalizm, kameralna atmosfera i efekt, który naprawdę widać. Czuję się zaopiekowana od progu."</p>
-        <div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a;">Opinia pacjentki · Booksy 5.0</div>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(19px,2.4vw,28px); line-height:1.45; max-width:820px; margin:0 auto 22px; color:#2a2421;">„Serdecznie polecam każdemu, kto pragnie zadbać o urodę, ale przede wszystkim ceni profesjonalizm, fachowość i komfort. Od lat korzystam i nie oddaję swojej twarzy w inne ręce. Indywidualne podejście, zaangażowanie i świeże spojrzenie na branżę beauty sprawia, że wracam po więcej tylko do Agaty. Tutaj spotykam się z dbałością o każdy detal, doskonałymi efektami zabiegowymi, niezwykle serdeczną atmosferą, troską o komfort i kompleksową opieką. Piękne, przytulne wnętrza gabinetu odzwierciedlają aurę w nim panującą. ✨"</p>
+        <div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a;">Alicja Łapacz · Opinia w Google</div>
       </div>
     </div>
 
@@ -322,6 +337,16 @@
         <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Makijaż permanentny powieki górnej</span>
         <span style="font-size:13px; color:#8a807a;">eyeliner · kreski · odświeżenia</span>
       </div>
+      <div data-reveal class="ba ba--portrait">
+        <div class="ba-frame">
+          <img class="ba-after" src="images/brwi_pip_b.jpg" alt="Brwi po zabiegu">
+          <img class="ba-before" src="images/brwi_pip_a.jpg" alt="Brwi przed zabiegiem">
+          <span class="ba-label ba-label-before">Przed</span>
+          <span class="ba-label ba-label-after">Po</span>
+          <div class="ba-divider"><div class="ba-handle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-4 6 4 6M15 6l4 6-4 6"/></svg></div></div>
+        </div>
+        <div class="ba-hint">Przeciągnij, aby porównać efekt</div>
+      </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Makijaż permanentny powieki górnej (eyeliner)</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Precyzyjna pigmentacja powieki górnej — eyeliner.</span>
@@ -369,6 +394,16 @@
       <div data-reveal style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #e4d6c9; padding-bottom:14px; margin-bottom:6px;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Usuwanie makijażu permanentnego</span>
         <span style="font-size:13px; color:#8a807a;">laser · remover</span>
+      </div>
+      <div data-reveal class="ba ba--landscape">
+        <div class="ba-frame">
+          <img class="ba-after" src="images/usta_pip_a.jpg" alt="Usta po zabiegu">
+          <img class="ba-before" src="images/usta_pip_b.jpg" alt="Usta przed zabiegiem">
+          <span class="ba-label ba-label-before">Przed</span>
+          <span class="ba-label ba-label-after">Po</span>
+          <div class="ba-divider"><div class="ba-handle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-4 6 4 6M15 6l4 6-4 6"/></svg></div></div>
+        </div>
+        <div class="ba-hint">Przeciągnij, aby porównać efekt</div>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Usuwanie laserem (brwi lub usta)</span>
@@ -430,7 +465,7 @@
       </div>
       <div data-reveal style="transition-delay:.12s;">
         <div style="position:relative; border-radius:18px 18px 200px 200px; overflow:hidden; aspect-ratio:4/5; box-shadow:0 30px 60px -32px rgba(120,80,55,.5);">
-          <img src="images/booksy-1.jpeg" alt="Strefa relaksu nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+          <img src="images/women.jpg" alt="Strefa relaksu nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
         </div>
       </div>
     </div>
@@ -621,6 +656,42 @@
       form.querySelectorAll('input, textarea, select, button').forEach(function (el) { el.style.display = 'none'; });
       document.getElementById('formNote').style.display = 'block';
     });
+  }
+
+  // before/after sliders
+  document.querySelectorAll('.ba').forEach(function (ba) {
+    var frame = ba.querySelector('.ba-frame');
+    function setPos(p) { ba.style.setProperty('--pos', Math.max(0, Math.min(100, p)) + '%'); }
+    var dragging = false;
+    function move(e) {
+      var r = frame.getBoundingClientRect();
+      var cx = (e.clientX != null) ? e.clientX : (e.touches && e.touches[0].clientX);
+      setPos((cx - r.left) / r.width * 100);
+    }
+    frame.addEventListener('pointerdown', function (e) {
+      dragging = true; ba.classList.remove('ba-animating');
+      try { frame.setPointerCapture(e.pointerId); } catch (x) {}
+      move(e);
+    });
+    frame.addEventListener('pointermove', function (e) { if (dragging) move(e); });
+    frame.addEventListener('pointerup', function () { dragging = false; });
+    frame.addEventListener('pointercancel', function () { dragging = false; });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var baIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var ba = en.target;
+        ba.classList.add('ba-animating');
+        ba.style.setProperty('--pos', '85%');
+        setTimeout(function () { ba.style.setProperty('--pos', '16%'); }, 260);
+        setTimeout(function () { ba.style.setProperty('--pos', '50%'); }, 1300);
+        setTimeout(function () { ba.classList.remove('ba-animating'); }, 2300);
+        baIO.unobserve(ba);
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.ba').forEach(function (ba) { baIO.observe(ba); });
   }
 
   go('home');
