@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *{ box-sizing:border-box; }
-  html,body{ margin:0; background:#faf6f2; }
+  html,body{ margin:0; background:#ffffff; }
   body{ font-family:'Jost',sans-serif; color:#2a2421; }
   ::selection{ background:#e8d3c2; color:#2a2421; }
   input,textarea,select,button{ outline:none; }
@@ -49,8 +49,8 @@
   .ba--landscape .ba-frame{ aspect-ratio:1440/754; max-width:680px; }
   .ba-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
   .ba-before{ clip-path:inset(0 calc(100% - var(--pos)) 0 0); }
-  .ba-divider{ position:absolute; top:0; bottom:0; left:var(--pos); width:2px; margin-left:-1px; background:#faf6f2; box-shadow:0 0 0 1px rgba(42,36,33,.18); pointer-events:none; }
-  .ba-handle{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:#faf6f2; color:#2a2421; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(42,36,33,.4); }
+  .ba-divider{ position:absolute; top:0; bottom:0; left:var(--pos); width:2px; margin-left:-1px; background:#ffffff; box-shadow:0 0 0 1px rgba(42,36,33,.18); pointer-events:none; }
+  .ba-handle{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:#ffffff; color:#2a2421; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(42,36,33,.4); }
   .ba-label{ position:absolute; top:14px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; padding:5px 11px; border-radius:7px; background:rgba(42,36,33,.55); backdrop-filter:blur(6px); color:#f3ece6; pointer-events:none; }
   .ba-label-before{ left:14px; }
   .ba-label-after{ right:14px; }
@@ -63,10 +63,10 @@
 </style>
 </head>
 <body>
-<div style="background:#faf6f2; min-height:100vh;">
+<div style="background:#ffffff; min-height:100vh;">
 
   <!-- ===================== NAV ===================== -->
-  <div style="position:sticky; top:0; z-index:50; background:rgba(250,246,242,.86); backdrop-filter:blur(12px); border-bottom:1px solid #efe6dd;">
+  <div style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.85); backdrop-filter:blur(12px); border-bottom:1px solid #efe6dd;">
     <div style="max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px clamp(18px,4vw,40px);">
       <button class="reset-btn" data-nav="home" style="cursor:pointer; padding:0; line-height:0;"><img src="images/logo.png" alt="nane beauty concept" style="height:78px; width:auto; display:block; object-fit:contain;"></button>
       <div style="display:flex; gap:clamp(18px,3vw,34px); align-items:center;">
@@ -123,7 +123,7 @@
     </div>
 
     <!-- values band -->
-    <div style="background:#f1e6dc;">
+    <div style="background:#ffffff; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
       <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,64px) clamp(18px,4vw,40px); display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(20px,3vw,40px);">
         <div data-reveal>
           <div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:#b88a5e; margin-bottom:10px;">I.</div>
@@ -156,22 +156,22 @@
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;">
         <div data-reveal style="background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f1e3d8; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">01</div>
+          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">01</div>
           <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Morpheus8</div>
           <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Frakcyjny lifting RF — ujędrnienie i modelowanie owalu twarzy.</p>
         </div>
         <div data-reveal style="transition-delay:.06s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f1e3d8; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">02</div>
+          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">02</div>
           <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Icoone Laser Body</div>
           <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Modelowanie sylwetki i drenaż limfatyczny dla gładkiej skóry.</p>
         </div>
         <div data-reveal style="transition-delay:.12s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f1e3d8; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">03</div>
+          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">03</div>
           <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Makijaż permanentny</div>
           <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Precyzyjna pigmentacja brwi i kresek — subtelnie i trwale.</p>
         </div>
         <div data-reveal style="transition-delay:.18s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f1e3d8; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">04</div>
+          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">04</div>
           <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">ZO Skin Health</div>
           <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Dermatologiczna pielęgnacja i terapie odbudowujące skórę.</p>
         </div>
@@ -188,13 +188,13 @@
     </div>
 
     <!-- about teaser -->
-    <div style="background:#2a2421; color:#f3ece6;">
+    <div style="background:#ffffff; border-top:1px solid #efe6dd;">
       <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,76px) clamp(18px,4vw,40px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,56px); align-items:center;">
         <div data-reveal>
-          <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#caa6a0; margin-bottom:18px;">O nas</div>
-          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(30px,4vw,52px); line-height:1.05; margin:0 0 20px;">Miejsce stworzone z myślą o Tobie</h2>
-          <p style="max-width:440px; font-size:15px; line-height:1.8; color:#ccbfb6; margin:0 0 28px;">nane beauty concept to gabinet kosmetologii estetycznej w Rawiczu. Łączymy nowoczesne technologie z indywidualnym podejściem, by każdy zabieg był skuteczny, bezpieczny i komfortowy.</p>
-          <button class="reset-btn btn-outline-ondk" data-nav="onas" style="display:inline-flex; align-items:center; height:48px; padding:0 26px; border-radius:999px; border:1px solid #5c4a42; color:#f3ece6; font-size:13px; letter-spacing:.06em; background:transparent;">Poznaj nas →</button>
+          <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#b88a5e; margin-bottom:18px;">O nas</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(30px,4vw,52px); line-height:1.05; margin:0 0 20px; color:#2a2421;">Miejsce stworzone z myślą o Tobie</h2>
+          <p style="max-width:440px; font-size:15px; line-height:1.8; color:#6f655e; margin:0 0 28px;">nane beauty concept to gabinet kosmetologii estetycznej w Rawiczu. Łączymy nowoczesne technologie z indywidualnym podejściem, by każdy zabieg był skuteczny, bezpieczny i komfortowy.</p>
+          <button class="reset-btn btn-outline" data-nav="onas" style="display:inline-flex; align-items:center; height:48px; padding:0 26px; border-radius:999px; border:1px solid #d8cabb; color:#2a2421; font-size:13px; letter-spacing:.06em; background:transparent;">Poznaj nas →</button>
         </div>
         <div data-reveal style="transition-delay:.1s; border-radius:16px; overflow:hidden; aspect-ratio:16/11; position:relative;">
           <img src="images/booksy-4.jpeg" alt="Strefa relaksu w nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
@@ -445,7 +445,7 @@
 
     <!-- note + CTA -->
     <div style="max-width:1180px; margin:0 auto; padding:clamp(28px,4vw,48px) clamp(18px,4vw,40px) clamp(48px,6vw,80px);">
-      <div data-reveal style="background:#f1e6dc; border-radius:20px; padding:clamp(32px,4vw,52px); display:grid; grid-template-columns:1.4fr 1fr; gap:clamp(24px,4vw,48px); align-items:center;">
+      <div data-reveal style="background:#fafafa; border:1px solid #efe6dd; border-radius:20px; padding:clamp(32px,4vw,52px); display:grid; grid-template-columns:1.4fr 1fr; gap:clamp(24px,4vw,48px); align-items:center;">
         <div>
           <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,40px); line-height:1.05; margin:0 0 14px; color:#2a2421;">Nie wiesz, który zabieg wybrać?</h2>
           <p style="max-width:440px; font-size:15px; line-height:1.7; color:#6f655e; margin:0;">Umów konsultację — ocenimy kondycję skóry i zaproponujemy plan dopasowany do Twoich potrzeb i budżetu.</p>
@@ -474,10 +474,10 @@
     </div>
 
     <!-- philosophy statement -->
-    <div style="background:#2a2421; color:#f3ece6;">
+    <div style="background:#fafafa; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
       <div data-reveal style="max-width:980px; margin:0 auto; padding:clamp(48px,6vw,88px) clamp(18px,4vw,40px); text-align:center;">
-        <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#caa6a0; margin-bottom:24px;">Nasza filozofia</div>
-        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(26px,3.6vw,44px); line-height:1.35; margin:0;">„Piękno nie polega na zmienianiu siebie. Polega na podkreśleniu tego, co w Tobie najlepsze."</p>
+        <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#b88a5e; margin-bottom:24px;">Nasza filozofia</div>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(26px,3.6vw,44px); line-height:1.35; margin:0; color:#2a2421;">„Piękno nie polega na zmienianiu siebie. Polega na podkreśleniu tego, co w Tobie najlepsze."</p>
       </div>
     </div>
 
@@ -538,15 +538,15 @@
 
         <div style="display:flex; flex-direction:column; gap:24px;">
           <div style="display:flex; gap:16px; align-items:flex-start;">
-            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f1e3d8; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">⌖</div>
+            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">⌖</div>
             <div><div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a; margin-bottom:4px;">Adres</div><div style="font-size:16px; color:#2a2421;">NANE BEAUTY CONCEPT, Rawicz</div><a href="https://maps.app.goo.gl/Rtr7VHYGZQqd7jMB8" target="_blank" rel="noopener" class="footer-link" style="font-size:13px; color:#b88a5e; text-decoration:none;">Zobacz w Google Maps →</a></div>
           </div>
           <div style="display:flex; gap:16px; align-items:flex-start;">
-            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f1e3d8; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">☏</div>
+            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">☏</div>
             <div><div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a; margin-bottom:4px;">Telefon</div><a href="tel:+48512899699" class="footer-link" style="font-size:16px; color:#2a2421; text-decoration:none;">+48 512 899 699</a></div>
           </div>
           <div style="display:flex; gap:16px; align-items:flex-start;">
-            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f1e3d8; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">◷</div>
+            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">◷</div>
             <div><div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a; margin-bottom:8px;">Godziny</div><div style="font-size:15px; color:#2a2421; line-height:1.9;">Poniedziałek &nbsp;9:00–17:00<br>Wtorek &nbsp;9:00–17:00<br>Środa &nbsp;9:00–17:00<br>Czwartek &nbsp;9:00–17:00<br>Piątek &nbsp;9:00–17:00<br>Sobota &nbsp;9:00–14:00<br>Niedziela &nbsp;<span style="color:#b09a8a;">Zamknięte</span></div></div>
           </div>
         </div>
