@@ -35,6 +35,10 @@
   .btn-outline-ondk:hover{ background:rgba(243,236,230,.1) !important; }
   .btn-gold{ transition:opacity .18s, transform .18s; }
   .btn-gold:hover{ opacity:.86; transform:translateY(-1px); }
+  .btn-hero-light{ transition:opacity .18s, transform .18s; }
+  .btn-hero-light:hover{ opacity:.88; transform:translateY(-1px); }
+  .btn-hero-outline{ transition:background .22s, border-color .22s; }
+  .btn-hero-outline:hover{ background:rgba(243,236,230,.14) !important; border-color:rgba(243,236,230,.85) !important; }
   /* Footer */
   .footer-nav-btn{ transition:color .18s; }
   .footer-nav-btn:hover{ color:#f3ece6 !important; }
@@ -117,23 +121,14 @@
   <!-- ===================== PAGE: HOME ===================== -->
   <div data-page="home" class="is-active">
     <!-- hero -->
-    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px,4vw,56px); align-items:center; padding:clamp(36px,5vw,76px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
-      <div data-reveal>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:22px;">Kosmetologia estetyczna · Rawicz</div>
-        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(42px,5.6vw,76px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Piękno, które<br><em style="color:#b88a5e;">wygląda naturalnie.</em></h1>
-        <p style="max-width:450px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 32px;">Nowoczesne zabiegi na twarz i ciało — od liftingu Morpheus8 po modelowanie Icoone Laser Body. W kameralnym wnętrzu, z pełną dbałością o Twój komfort i naturalny efekt.</p>
-        <div style="display:flex; gap:14px; flex-wrap:wrap;">
-          <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
-          <button class="reset-btn btn-outline" data-nav="zabiegi" style="display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:transparent; color:#2a2421; border:1px solid #d8cabb; font-size:14px; letter-spacing:.06em;">Zobacz zabiegi</button>
-        </div>
-        <div style="display:flex; gap:48px; margin-top:42px; flex-wrap:wrap; align-items:flex-end;">
-          <div style="border-left:2px solid #e4d6c9; padding-left:20px;"><div style="font-family:'Cormorant Garamond',serif; font-size:38px; color:#2a2421; line-height:1;">4.0★</div><div style="font-size:12px; color:#8a807a; letter-spacing:.06em; margin-top:4px;">ocena w Google</div></div>
-          <div style="border-left:2px solid #e4d6c9; padding-left:20px;"><div style="font-family:'Cormorant Garamond',serif; font-size:38px; color:#2a2421; line-height:1;">100%</div><div style="font-size:12px; color:#8a807a; letter-spacing:.06em; margin-top:4px;">indywidualne podejście</div></div>
-        </div>
-      </div>
-      <div data-reveal style="transition-delay:.12s;">
-        <div style="position:relative; border-radius:220px 220px 18px 18px; overflow:hidden; aspect-ratio:4/5; box-shadow:0 34px 64px -34px rgba(120,80,55,.55);">
-          <img src="images/booksy-1.jpeg" alt="Recepcja nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+    <div style="position:relative; min-height:clamp(600px,92vh,960px); display:flex; align-items:flex-end; justify-content:center; overflow:hidden;">
+      <img src="images/hero1.jpeg" alt="nane beauty concept — wnętrze gabinetu" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 50%;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,26,23,.22) 0%, rgba(30,26,23,.12) 40%, rgba(30,26,23,.66) 100%);"></div>
+      <div data-reveal style="position:relative; z-index:2; text-align:center; max-width:580px; padding:0 clamp(20px,5vw,40px) clamp(48px,8vh,96px);">
+        <p style="max-width:480px; margin:0 auto 32px; font-size:16px; line-height:1.8; color:#f3ece6; text-shadow:0 1px 14px rgba(20,16,14,.45);">Nowoczesne zabiegi na twarz i ciało — od liftingu Morpheus8 po modelowanie Icoone Laser Body. W kameralnym wnętrzu, z pełną dbałością o Twój komfort i naturalny efekt.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+          <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-hero-light" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
+          <button class="reset-btn btn-hero-outline" data-nav="zabiegi" style="display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:transparent; color:#f3ece6; border:1px solid rgba(243,236,230,.55); font-size:14px; letter-spacing:.06em;">Zobacz zabiegi</button>
         </div>
       </div>
     </div>
