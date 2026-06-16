@@ -25,6 +25,13 @@
   .nav-link{ cursor:pointer; white-space:nowrap; color:#8a807a; border-bottom:2px solid transparent; padding-bottom:3px; background:none; border-left:none; border-right:none; border-top:none; font:inherit; font-size:14px; letter-spacing:.05em; transition:color .18s, border-color .18s; }
   .nav-link.is-active{ color:#2a2421; border-bottom-color:#a78d76; }
   .nav-link:hover{ color:#2a2421; }
+  /* nav dropdown (Oferta) */
+  .nav-item{ position:relative; display:inline-flex; }
+  .nav-dropdown{ position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:16px; opacity:0; visibility:hidden; transition:opacity .2s ease; z-index:60; }
+  .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown{ opacity:1; visibility:visible; }
+  .nav-dropdown-inner{ min-width:260px; background:#fff; border:1px solid #efe6dd; border-radius:14px; box-shadow:0 20px 46px -24px rgba(120,80,55,.45); padding:8px; display:flex; flex-direction:column; gap:2px; }
+  .nav-dropdown-inner button{ text-align:left; background:none; border:none; font:inherit; cursor:pointer; padding:11px 16px; border-radius:9px; font-size:14px; color:#2a2421; white-space:nowrap; transition:background .15s, color .15s; }
+  .nav-dropdown-inner button:hover{ background:#f7f2ec; color:#a78d76; }
   .reset-btn{ font:inherit; border:none; background:none; cursor:pointer; }
   /* CTA button variants */
   .btn-dark{ transition:opacity .18s, transform .18s; }
@@ -117,6 +124,18 @@
       <button class="reset-btn" data-nav="home" style="cursor:pointer; padding:0; line-height:0;"><img src="images/logo.png" alt="nane beauty concept" style="height:96px; width:auto; display:block; object-fit:contain;"></button>
       <div style="display:flex; gap:clamp(18px,3vw,34px); align-items:center;">
         <button class="nav-link" data-nav="home">Start</button>
+        <div class="nav-item">
+          <button class="nav-link" data-nav="oferta">Oferta</button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <button data-nav="kosmetologia">Kosmetologia i medycyna estetyczna</button>
+              <button data-nav="makijaz">Makijaż permanentny</button>
+              <button data-nav="pielegnacja-twarzy">Pielęgnacja twarzy</button>
+              <button data-nav="pielegnacja-ciala">Pielęgnacja ciała</button>
+              <button data-nav="inne-zabiegi">Inne zabiegi</button>
+            </div>
+          </div>
+        </div>
         <button class="nav-link" data-nav="zabiegi">Cennik</button>
         <button class="nav-link" data-nav="onas">O nas</button>
         <button class="nav-link" data-nav="kontakt">Kontakt</button>
@@ -286,6 +305,61 @@
           <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
           <button class="reset-btn btn-outline" data-nav="kontakt" style="display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; border:1px solid #d8cabb; color:#2a2421; font-size:14px; letter-spacing:.06em; background:transparent;">Formularz kontaktowy</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PAGE: OFERTA ===================== -->
+  <div data-page="oferta">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(8px,2vw,16px);">
+      <div data-reveal style="max-width:680px;">
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(40px,5.4vw,72px); line-height:1.0; margin:0 0 20px; color:#2a2421;">Nasza oferta</h1>
+        <p style="font-size:16px; line-height:1.75; color:#6f655e; margin:0;">Wybierz obszar, który Cię interesuje — pokażemy zabiegi i szczegóły dla każdej kategorii.</p>
+      </div>
+    </div>
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(28px,4vw,44px) clamp(18px,4vw,40px) clamp(52px,6vw,80px);">
+      <div data-reveal class="oferta-grid">
+        <button class="reset-btn oferta-tile" data-nav="kosmetologia" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
+          <img class="oferta-tile-img" src="images/oferta/inne.jpeg" alt="Kosmetologia i medycyna estetyczna">
+          <div class="oferta-tile-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.5vw,16px);letter-spacing:.22em;text-transform:uppercase;line-height:1.55;margin-bottom:14px;">Kosmetologia<br>i medycyna estetyczna</div>
+            <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
+          </div>
+        </button>
+        <button class="reset-btn oferta-tile" data-nav="makijaz" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
+          <img class="oferta-tile-img" src="images/oferta/makijaż.jpeg" alt="Makijaż permanentny">
+          <div class="oferta-tile-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.5vw,16px);letter-spacing:.22em;text-transform:uppercase;line-height:1.55;margin-bottom:14px;">Makijaż permanentny</div>
+            <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
+          </div>
+        </button>
+        <button class="reset-btn oferta-tile" data-nav="pielegnacja-twarzy" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
+          <img class="oferta-tile-img" src="images/oferta/pielęgnacja_twarzy.jpeg" alt="Pielęgnacja twarzy">
+          <div class="oferta-tile-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.5vw,16px);letter-spacing:.22em;text-transform:uppercase;line-height:1.55;margin-bottom:14px;">Pielęgnacja twarzy</div>
+            <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
+          </div>
+        </button>
+        <button class="reset-btn oferta-tile" data-nav="pielegnacja-ciala" style="grid-column:span 3; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
+          <img class="oferta-tile-img" src="images/oferta/Kosmetologia.jpeg" alt="Pielęgnacja ciała">
+          <div class="oferta-tile-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.5vw,16px);letter-spacing:.22em;text-transform:uppercase;line-height:1.55;margin-bottom:14px;">Pielęgnacja ciała</div>
+            <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
+          </div>
+        </button>
+        <button class="reset-btn oferta-tile" data-nav="inne-zabiegi" style="grid-column:span 3; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
+          <img class="oferta-tile-img" src="images/oferta/pielęgnacja ciała.jpeg" alt="Inne zabiegi">
+          <div class="oferta-tile-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.5vw,16px);letter-spacing:.22em;text-transform:uppercase;line-height:1.55;margin-bottom:14px;">Inne zabiegi</div>
+            <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
+          </div>
+        </button>
       </div>
     </div>
   </div>
@@ -729,6 +803,7 @@
           <div style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#8a7d72; margin-bottom:14px;">Nawigacja</div>
           <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; align-items:flex-start;">
             <button class="reset-btn footer-nav-btn" data-nav="home" style="text-align:left; color:#2a2421; font-size:14px;">Start</button>
+            <button class="reset-btn footer-nav-btn" data-nav="oferta" style="text-align:left; color:#2a2421; font-size:14px;">Oferta</button>
             <button class="reset-btn footer-nav-btn" data-nav="zabiegi" style="text-align:left; color:#2a2421; font-size:14px;">Cennik</button>
             <button class="reset-btn footer-nav-btn" data-nav="onas" style="text-align:left; color:#2a2421; font-size:14px;">O nas</button>
             <button class="reset-btn footer-nav-btn" data-nav="kontakt" style="text-align:left; color:#2a2421; font-size:14px;">Kontakt</button>
