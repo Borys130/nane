@@ -17,13 +17,13 @@
   body{ font-family:'Jost',sans-serif; color:#2a2421; }
   ::selection{ background:#e8d3c2; color:#2a2421; }
   input,textarea,select,button{ outline:none; }
-  input:focus,textarea:focus,select:focus{ border-color:#b88a5e !important; }
+  input:focus,textarea:focus,select:focus{ border-color:#a78d76 !important; }
   [data-page]{ display:none; }
   [data-page].is-active{ display:block; }
   [data-reveal]{ opacity:0; transform:translateY(22px); transition:opacity .85s ease, transform .85s cubic-bezier(.2,.7,.2,1); }
   [data-reveal].is-in{ opacity:1; transform:none; }
   .nav-link{ cursor:pointer; white-space:nowrap; color:#8a807a; border-bottom:2px solid transparent; padding-bottom:3px; background:none; border-left:none; border-right:none; border-top:none; font:inherit; font-size:14px; letter-spacing:.05em; transition:color .18s, border-color .18s; }
-  .nav-link.is-active{ color:#2a2421; border-bottom-color:#b88a5e; }
+  .nav-link.is-active{ color:#2a2421; border-bottom-color:#a78d76; }
   .nav-link:hover{ color:#2a2421; }
   .reset-btn{ font:inherit; border:none; background:none; cursor:pointer; }
   /* CTA button variants */
@@ -44,11 +44,11 @@
   @media(min-width:821px){ .hero-content{ padding-bottom:clamp(120px,18vh,185px); } }
   /* Footer */
   .footer-nav-btn{ transition:color .18s; }
-  .footer-nav-btn:hover{ color:#f3ece6 !important; }
+  .footer-nav-btn:hover{ color:#a78d76 !important; }
   .footer-link{ transition:color .18s; }
-  .footer-link:hover{ color:#e7c98f !important; }
+  .footer-link:hover{ color:#a78d76 !important; }
   .social-link{ transition:color .18s; cursor:pointer; }
-  .social-link:hover{ color:#e7c98f !important; }
+  .social-link:hover{ color:#a78d76 !important; }
   /* before/after slider */
   .ba{ --pos:50%; margin:16px 0 8px; }
   .ba-frame{ position:relative; width:100%; margin:0 auto; border-radius:14px; overflow:hidden; cursor:ew-resize; user-select:none; touch-action:none; box-shadow:0 18px 40px -26px rgba(120,80,55,.5); }
@@ -66,12 +66,16 @@
   .ba-animating .ba-divider{ transition:left 1.05s cubic-bezier(.4,0,.2,1); }
   /* treatments carousel */
   .car{ overflow:hidden; }
-  .car-track{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; padding:2px; }
+  .car-track{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; padding:2px; }
   .car-track::-webkit-scrollbar{ display:none; }
   .car-card{ scroll-snap-align:start; flex:0 0 clamp(258px,31%,344px); background:#fff; border:1px solid #efe6dd; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; }
   .car-card-img{ aspect-ratio:3/4; position:relative; overflow:hidden; }
   .car-card-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
   .car-card:hover .car-card-img img{ transform:scale(1.045); }
+  .car-name{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; color:#2a2421; text-align:center; padding:18px 16px 22px; }
+  .ph-img{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#f5efe9 0%,#e9ded1 55%,#ddcab7 100%); }
+  .ph-mark{ font-family:'Cormorant Garamond',serif; font-size:30px; letter-spacing:.04em; color:#a78d76; }
+  .ph-sub{ font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#a8917c; }
   .car-card-body{ padding:22px 22px 26px; display:flex; flex-direction:column; flex:1; }
   .car-card-body h3{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; color:#2a2421; margin:0 0 8px; }
   .car-card-body p{ font-size:14px; line-height:1.6; color:#6f655e; margin:0 0 20px; flex:1; }
@@ -81,7 +85,7 @@
   .car-arrow:hover{ background:#2a2421; color:#fff; border-color:#2a2421; }
   .car-dots{ display:flex; gap:8px; justify-content:center; margin-top:24px; }
   .car-dot{ width:8px; height:8px; border-radius:50%; background:#d8cabb; border:none; padding:0; cursor:pointer; transition:background .2s,transform .2s; }
-  .car-dot.is-active{ background:#b88a5e; transform:scale(1.3); }
+  .car-dot.is-active{ background:#a78d76; transform:scale(1.3); }
   /* treatment detail pages */
   .tp-bullet{ display:flex; gap:14px; align-items:flex-start; }
   .tp-bullet b{ color:#2a2421; }
@@ -108,7 +112,7 @@
 <div style="background:#ffffff; min-height:100vh;">
 
   <!-- ===================== NAV ===================== -->
-  <div style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.85); backdrop-filter:blur(12px); border-bottom:1px solid #efe6dd;">
+  <div style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.96); border-bottom:1px solid #efe6dd;">
     <div style="max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px clamp(18px,4vw,40px);">
       <button class="reset-btn" data-nav="home" style="cursor:pointer; padding:0; line-height:0;"><img src="images/logo.png" alt="nane beauty concept" style="height:96px; width:auto; display:block; object-fit:contain;"></button>
       <div style="display:flex; gap:clamp(18px,3vw,34px); align-items:center;">
@@ -125,10 +129,10 @@
   <div data-page="home" class="is-active">
     <!-- hero -->
     <div style="position:relative; min-height:clamp(540px,80vh,800px); display:flex; align-items:flex-end; justify-content:center; overflow:hidden;">
-      <img src="images/hero1-wide.jpeg" alt="nane beauty concept — wnętrze gabinetu" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 50%;">
-      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(28,24,21,.20) 0%, rgba(28,24,21,.06) 36%, rgba(28,24,21,.22) 72%, rgba(28,24,21,.40) 100%);"></div>
+      <img src="images/hero2.jpeg" alt="nane beauty concept — wnętrze gabinetu" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 50%;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(28,24,21,.16) 0%, rgba(28,24,21,.04) 38%, rgba(28,24,21,.34) 70%, rgba(28,24,21,.60) 100%);"></div>
       <div data-reveal class="hero-content" style="position:relative; z-index:2; text-align:center; max-width:580px;">
-        <p style="max-width:480px; margin:0 auto 32px; font-size:16px; line-height:1.8; color:#f3ece6; text-shadow:0 1px 14px rgba(20,16,14,.45);">Nowoczesne zabiegi na twarz i ciało — od liftingu Morpheus8 po modelowanie Icoone Laser Body. W kameralnym wnętrzu, z pełną dbałością o Twój komfort i naturalny efekt.</p>
+        <p style="max-width:480px; margin:0 auto 32px; font-size:16px; line-height:1.8; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.7);">Nowoczesne zabiegi na twarz i ciało — od liftingu Morpheus8 po modelowanie Icoone Laser Body. W kameralnym wnętrzu, z pełną dbałością o Twój komfort i naturalny efekt.</p>
         <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
           <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-hero-light" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
           <button class="reset-btn btn-hero-outline" data-nav="zabiegi" style="display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:transparent; color:#f3ece6; border:1px solid rgba(243,236,230,.55); font-size:14px; letter-spacing:.06em;">Zobacz zabiegi</button>
@@ -137,11 +141,11 @@
     </div>
 
     <!-- oferta category grid -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,68px) clamp(18px,4vw,40px) clamp(32px,4vw,56px);">
-      <div data-reveal style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:16px;">Oferta</div>
-      <h2 data-reveal style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,44px); margin:0 0 28px; color:#2a2421; transition-delay:.04s;">Nasza oferta</h2>
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(52px,6vw,80px) clamp(18px,4vw,40px);">
+      <div data-reveal style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#a78d76; margin-bottom:18px;">Oferta</div>
+      <h2 data-reveal style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(30px,4vw,48px); margin:0 0 28px; color:#2a2421; transition-delay:.04s;">Nasza oferta</h2>
       <div data-reveal class="oferta-grid" style="transition-delay:.1s;">
-        <button class="reset-btn oferta-tile" data-nav="kosmetologia" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:14px; height:clamp(230px,25vw,320px);">
+        <button class="reset-btn oferta-tile" data-nav="kosmetologia" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
           <img class="oferta-tile-img" src="images/oferta/inne.jpeg" alt="Kosmetologia i medycyna estetyczna">
           <div class="oferta-tile-overlay"></div>
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
@@ -149,7 +153,7 @@
             <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
           </div>
         </button>
-        <button class="reset-btn oferta-tile" data-nav="makijaz" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:14px; height:clamp(230px,25vw,320px);">
+        <button class="reset-btn oferta-tile" data-nav="makijaz" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
           <img class="oferta-tile-img" src="images/oferta/makijaż.jpeg" alt="Makijaż permanentny">
           <div class="oferta-tile-overlay"></div>
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
@@ -157,7 +161,7 @@
             <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
           </div>
         </button>
-        <button class="reset-btn oferta-tile" data-nav="pielegnacja-twarzy" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:14px; height:clamp(230px,25vw,320px);">
+        <button class="reset-btn oferta-tile" data-nav="pielegnacja-twarzy" style="grid-column:span 2; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
           <img class="oferta-tile-img" src="images/oferta/pielęgnacja_twarzy.jpeg" alt="Pielęgnacja twarzy">
           <div class="oferta-tile-overlay"></div>
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
@@ -165,7 +169,7 @@
             <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
           </div>
         </button>
-        <button class="reset-btn oferta-tile" data-nav="pielegnacja-ciala" style="grid-column:span 3; position:relative; overflow:hidden; border-radius:14px; height:clamp(230px,25vw,320px);">
+        <button class="reset-btn oferta-tile" data-nav="pielegnacja-ciala" style="grid-column:span 3; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
           <img class="oferta-tile-img" src="images/oferta/Kosmetologia.jpeg" alt="Pielęgnacja ciała">
           <div class="oferta-tile-overlay"></div>
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
@@ -173,7 +177,7 @@
             <div style="font-size:12px;letter-spacing:.08em;opacity:.85;">Zobacz więcej →</div>
           </div>
         </button>
-        <button class="reset-btn oferta-tile" data-nav="inne-zabiegi" style="grid-column:span 3; position:relative; overflow:hidden; border-radius:14px; height:clamp(230px,25vw,320px);">
+        <button class="reset-btn oferta-tile" data-nav="inne-zabiegi" style="grid-column:span 3; position:relative; overflow:hidden; border-radius:18px; height:clamp(230px,25vw,320px);">
           <img class="oferta-tile-img" src="images/oferta/pielęgnacja ciała.jpeg" alt="Inne zabiegi">
           <div class="oferta-tile-overlay"></div>
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:24px;text-align:center;pointer-events:none;">
@@ -186,31 +190,31 @@
 
     <!-- values band -->
     <div style="background:#ffffff; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
-      <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,64px) clamp(18px,4vw,40px);">
-        <div data-reveal style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; text-align:center; margin-bottom:clamp(28px,4vw,44px);">Nasze wartości</div>
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(52px,6vw,80px) clamp(18px,4vw,40px);">
+        <div data-reveal style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#a78d76; text-align:center; margin-bottom:clamp(28px,4vw,44px);">Nasze wartości</div>
         <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:clamp(20px,2.5vw,32px);">
           <div data-reveal>
-            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#b88a5e; margin-bottom:8px;">I.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#a78d76; margin-bottom:8px;">I.</div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:6px; line-height:1.2;">Indywidualne podejście</div>
             <p style="font-size:13.5px; line-height:1.6; color:#6f655e; margin:0;">Plan dopasowany do Twojej skóry, potrzeb i stylu życia.</p>
           </div>
           <div data-reveal style="transition-delay:.06s;">
-            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#b88a5e; margin-bottom:8px;">II.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#a78d76; margin-bottom:8px;">II.</div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:6px; line-height:1.2;">Holistyczne podejście</div>
             <p style="font-size:13.5px; line-height:1.6; color:#6f655e; margin:0;">Pielęgnacja, kosmetologia i makijaż permanentny w jednym miejscu.</p>
           </div>
           <div data-reveal style="transition-delay:.12s;">
-            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#b88a5e; margin-bottom:8px;">III.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#a78d76; margin-bottom:8px;">III.</div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:6px; line-height:1.2;">Ekspercka wiedza</div>
             <p style="font-size:13.5px; line-height:1.6; color:#6f655e; margin:0;">Doświadczenie i sprawdzone procedury kosmetologii estetycznej.</p>
           </div>
           <div data-reveal style="transition-delay:.18s;">
-            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#b88a5e; margin-bottom:8px;">IV.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#a78d76; margin-bottom:8px;">IV.</div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:6px; line-height:1.2;">Naturalne efekty</div>
             <p style="font-size:13.5px; line-height:1.6; color:#6f655e; margin:0;">Subtelne rezultaty, które podkreślają Twoje rysy i proporcje.</p>
           </div>
           <div data-reveal style="transition-delay:.24s;">
-            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#b88a5e; margin-bottom:8px;">V.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:26px; color:#a78d76; margin-bottom:8px;">V.</div>
             <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:6px; line-height:1.2;">Dyskretna opieka</div>
             <p style="font-size:13.5px; line-height:1.6; color:#6f655e; margin:0;">Uważna obsługa i spokojna atmosfera sprzyjająca wyciszeniu.</p>
           </div>
@@ -219,39 +223,40 @@
     </div>
 
     <!-- services preview -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+    <div data-carousel style="max-width:1180px; margin:0 auto; padding:clamp(52px,6vw,80px) clamp(18px,4vw,40px);">
       <div data-reveal style="display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:32px; flex-wrap:wrap;">
-        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,44px); margin:0; color:#2a2421;">Wybrane zabiegi</h2>
-        <button class="reset-btn" data-nav="zabiegi" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; transition:opacity .18s;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">Pełna oferta →</button>
+        <div>
+          <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#a78d76; margin-bottom:18px;">Zabiegi</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(30px,4vw,48px); margin:0; color:#2a2421;">Wybrane zabiegi</h2>
+        </div>
+        <div style="display:flex; align-items:center; gap:18px;">
+          <button class="reset-btn" data-nav="zabiegi" style="font-size:13px; color:#a78d76; letter-spacing:.04em; transition:opacity .18s;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">Pełna oferta →</button>
+          <div style="display:flex; gap:10px;">
+            <button class="car-arrow" data-car-prev aria-label="Poprzedni zabieg">‹</button>
+            <button class="car-arrow" data-car-next aria-label="Następny zabieg">›</button>
+          </div>
+        </div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;">
-        <div data-reveal style="background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">01</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Morpheus8</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Frakcyjny lifting RF — ujędrnienie i modelowanie owalu twarzy.</p>
+      <div data-reveal class="car">
+        <div class="car-track" data-car-track>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Morpheus 8</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">IPL Lumecca</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Icoon Body Laser</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">AquaPure</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">GeneoX</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Observ 520x</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Wypełnienie ust</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Stymulatory tkankowe</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Makijaż permanentny</div></div>
         </div>
-        <div data-reveal style="transition-delay:.06s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">02</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Icoone Laser Body</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Modelowanie sylwetki i drenaż limfatyczny dla gładkiej skóry.</p>
-        </div>
-        <div data-reveal style="transition-delay:.12s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">03</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Makijaż permanentny</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Precyzyjna pigmentacja brwi i kresek — subtelnie i trwale.</p>
-        </div>
-        <div data-reveal style="transition-delay:.18s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">04</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">ZO Skin Health</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Dermatologiczna pielęgnacja i terapie odbudowujące skórę.</p>
-        </div>
+        <div class="car-dots" data-car-dots></div>
       </div>
     </div>
 
     <!-- testimonial -->
     <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
-      <div data-reveal style="background:#fff; border:1px solid #efe6dd; border-radius:20px; padding:clamp(36px,5vw,64px); text-align:center;">
-        <div style="font-size:20px; color:#b88a5e; letter-spacing:.3em; margin-bottom:22px;">★★★★★</div>
+      <div data-reveal style="background:#fff; border:1px solid #efe6dd; border-radius:18px; padding:clamp(36px,5vw,64px); text-align:center;">
+        <div style="font-size:20px; color:#a78d76; letter-spacing:.3em; margin-bottom:22px;">★★★★★</div>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(19px,2.4vw,28px); line-height:1.45; max-width:820px; margin:0 auto 22px; color:#2a2421;">„Serdecznie polecam każdemu, kto pragnie zadbać o urodę, ale przede wszystkim ceni profesjonalizm, fachowość i komfort. Od lat korzystam i nie oddaję swojej twarzy w inne ręce. Indywidualne podejście, zaangażowanie i świeże spojrzenie na branżę beauty sprawia, że wracam po więcej tylko do Agaty. Tutaj spotykam się z dbałością o każdy detal, doskonałymi efektami zabiegowymi, niezwykle serdeczną atmosferą, troską o komfort i kompleksową opieką. Piękne, przytulne wnętrza gabinetu odzwierciedlają aurę w nim panującą. ✨"</p>
         <div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a;">Alicja Łapacz · Opinia w Google</div>
       </div>
@@ -259,23 +264,23 @@
 
     <!-- about teaser -->
     <div style="background:#ffffff; border-top:1px solid #efe6dd;">
-      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,76px) clamp(18px,4vw,40px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,56px); align-items:center;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(52px,6vw,80px) clamp(18px,4vw,40px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,56px); align-items:center;">
         <div data-reveal>
-          <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#b88a5e; margin-bottom:18px;">O nas</div>
-          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(30px,4vw,52px); line-height:1.05; margin:0 0 20px; color:#2a2421;">Miejsce stworzone z myślą o Tobie</h2>
+          <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#a78d76; margin-bottom:18px;">O nas</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(30px,4vw,48px); line-height:1.05; margin:0 0 20px; color:#2a2421;">Miejsce stworzone z myślą o Tobie</h2>
           <p style="max-width:440px; font-size:15px; line-height:1.8; color:#6f655e; margin:0 0 28px;">nane beauty concept to gabinet kosmetologii estetycznej w Rawiczu. Łączymy nowoczesne technologie z indywidualnym podejściem, by każdy zabieg był skuteczny, bezpieczny i komfortowy.</p>
           <button class="reset-btn btn-outline" data-nav="onas" style="display:inline-flex; align-items:center; height:48px; padding:0 26px; border-radius:999px; border:1px solid #d8cabb; color:#2a2421; font-size:13px; letter-spacing:.06em; background:transparent;">Poznaj nas →</button>
         </div>
-        <div data-reveal style="transition-delay:.1s; border-radius:16px; overflow:hidden; aspect-ratio:16/11; position:relative;">
+        <div data-reveal style="transition-delay:.1s; border-radius:18px; overflow:hidden; aspect-ratio:16/11; position:relative;">
           <img src="images/booksy-4.jpeg" alt="Strefa relaksu w nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
         </div>
       </div>
     </div>
 
     <!-- CTA -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,76px) clamp(18px,4vw,40px); text-align:center;">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(52px,6vw,80px) clamp(18px,4vw,40px); text-align:center;">
       <div data-reveal>
-        <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#b88a5e; margin-bottom:18px;">Zapraszamy</div>
+        <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#a78d76; margin-bottom:18px;">Zapraszamy</div>
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(32px,4.6vw,60px); line-height:1.03; margin:0 0 24px; color:#2a2421;">Umów wizytę w nane</h2>
         <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
           <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
@@ -289,7 +294,7 @@
   <div data-page="zabiegi">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(20px,3vw,36px);">
       <div data-reveal style="max-width:680px;">
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">Oferta</div>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(40px,5.4vw,72px); line-height:1.0; margin:0 0 20px; color:#2a2421;">Zabiegi twarzy i ciała</h1>
         <p style="font-size:16px; line-height:1.75; color:#6f655e; margin:0;">Każdy plan zabiegowy zaczynamy od konsultacji — dobieramy technologię i serię do Twojej skóry oraz oczekiwań. Poniżej najważniejsze obszary naszej pracy.</p>
       </div>
@@ -347,17 +352,17 @@
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Stymulator tkankowy — twarz</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Pobudzenie skóry twarzy do produkcji kolagenu — poprawa gęstości i napięcia cery.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">Wycena</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Stymulator tkankowy — okolica oka</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Stymulacja kolagenu w delikatnej okolicy oka.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">Wycena</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Kontrola pozabiegowa</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Wizyta kontrolna po zabiegu — ocena efektów i dalsze zalecenia.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
       </div>
     </div>
 
@@ -390,7 +395,7 @@
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Icoone Laser Body + 4 focusy</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Najszerszy wariant masażu z czterema fokusami.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">Wycena</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span></span>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — ciało 1 okolica</span>
@@ -438,7 +443,7 @@
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Klasyczny eyeliner lub sam puder</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Klasyczna kreska eyeliner lub samodzielny efekt pudrowy.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">Wycena</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span></span>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Korekta do 3 miesięcy</span>
@@ -486,7 +491,7 @@
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Usuwanie laserem (tatuaż)</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Laserowe usuwanie tatuażu — cena ustalana od wielkości.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">wg wielkości</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">wg wielkości</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Usuwanie makijażu permanentnego — remover</span>
@@ -504,12 +509,12 @@
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Konsultacja przed zabiegiem kosmetologicznym</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Ocena kondycji skóry i dobór planu zabiegowego do Twoich potrzeb.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
         <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Konsultacja przed zabiegiem na ciało</span>
         <span style="font-size:14px; line-height:1.6; color:#6f655e;">Indywidualne omówienie zabiegów modelujących i ujędrniających ciało.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#b88a5e;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
+        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
       </div>
     </div>
 
@@ -532,8 +537,8 @@
   <div data-page="onas">
     <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,4vw,56px); align-items:center; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,48px);">
       <div data-reveal>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">O nas</div>
-        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Kosmetologia<br>z <em style="color:#b88a5e;">sensem i sercem.</em></h1>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">O nas</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Kosmetologia<br>z <em style="color:#a78d76;">sensem i sercem.</em></h1>
         <p style="max-width:460px; font-size:16px; line-height:1.78; color:#6f655e; margin:0;">Nane Beauty Concept to studio kosmetologii estetycznej w Rawiczu — miejsce, gdzie zabiegi na twarz i ciało łączymy z makijażem permanentnym i uważną opieką. Podkreślamy naturalne piękno, nie zmieniamy rysów.</p>
       </div>
       <div data-reveal style="transition-delay:.12s;">
@@ -545,7 +550,7 @@
 
     <!-- values -->
     <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
-      <div data-reveal style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:40px;">Nasze wartości</div>
+      <div data-reveal style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:40px;">Nasze wartości</div>
       <div data-reveal style="border-top:1px solid #e4d6c9; transition-delay:.04s;">
         <div style="display:grid; grid-template-columns:1fr 2fr; gap:clamp(20px,4vw,56px); padding:clamp(22px,3vw,34px) 0; border-bottom:1px solid #efe6dd;">
           <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.2vw,24px); color:#2a2421; line-height:1.25; padding-top:2px;">Indywidualne podejście</div>
@@ -615,7 +620,7 @@
   <div data-page="kontakt">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(20px,3vw,32px);">
       <div data-reveal style="max-width:680px;">
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">Kontakt</div>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Kontakt</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(40px,5.4vw,72px); line-height:1.0; margin:0 0 20px; color:#2a2421;">Umów wizytę</h1>
         <p style="font-size:16px; line-height:1.75; color:#6f655e; margin:0;">Zarezerwuj termin online przez Booksy albo zostaw wiadomość — oddzwonimy i wspólnie dobierzemy najlepszy zabieg.</p>
       </div>
@@ -628,15 +633,15 @@
 
         <div style="display:flex; flex-direction:column; gap:24px;">
           <div style="display:flex; gap:16px; align-items:flex-start;">
-            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">⌖</div>
-            <div><div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a; margin-bottom:4px;">Adres</div><div style="font-size:16px; color:#2a2421;">NANE BEAUTY CONCEPT, Rawicz</div><a href="https://maps.app.goo.gl/Rtr7VHYGZQqd7jMB8" target="_blank" rel="noopener" class="footer-link" style="font-size:13px; color:#b88a5e; text-decoration:none;">Zobacz w Google Maps →</a></div>
+            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#a78d76; font-family:'Cormorant Garamond',serif; font-size:20px;">⌖</div>
+            <div><div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a; margin-bottom:4px;">Adres</div><div style="font-size:16px; color:#2a2421;">NANE BEAUTY CONCEPT, Rawicz</div><a href="https://maps.app.goo.gl/Rtr7VHYGZQqd7jMB8" target="_blank" rel="noopener" class="footer-link" style="font-size:13px; color:#a78d76; text-decoration:none;">Zobacz w Google Maps →</a></div>
           </div>
           <div style="display:flex; gap:16px; align-items:flex-start;">
-            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">☏</div>
+            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#a78d76; font-family:'Cormorant Garamond',serif; font-size:20px;">☏</div>
             <div><div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a; margin-bottom:4px;">Telefon</div><a href="tel:+48512899699" class="footer-link" style="font-size:16px; color:#2a2421; text-decoration:none;">+48 512 899 699</a></div>
           </div>
           <div style="display:flex; gap:16px; align-items:flex-start;">
-            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:20px;">◷</div>
+            <div style="width:42px; height:42px; flex:none; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#a78d76; font-family:'Cormorant Garamond',serif; font-size:20px;">◷</div>
             <div><div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#8a807a; margin-bottom:8px;">Godziny</div><div style="font-size:15px; color:#2a2421; line-height:1.9;">Poniedziałek &nbsp;9:00–17:00<br>Wtorek &nbsp;9:00–17:00<br>Środa &nbsp;9:00–17:00<br>Czwartek &nbsp;9:00–17:00<br>Piątek &nbsp;9:00–17:00<br>Sobota &nbsp;9:00–14:00<br>Niedziela &nbsp;<span style="color:#b09a8a;">Zamknięte</span></div></div>
           </div>
         </div>
@@ -660,7 +665,7 @@
           </select>
           <textarea name="message" placeholder="Wiadomość" rows="4" style="border:1px solid #e4d6c9; border-radius:10px; padding:12px 16px; font-family:'Jost',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3; resize:none;"></textarea>
           <label style="display:flex; gap:10px; align-items:flex-start; font-size:12px; line-height:1.5; color:#8a807a;"><input type="checkbox" required style="margin-top:2px;" /> Wyrażam zgodę na kontakt w celu umówienia wizyty.</label>
-          <button type="submit" class="btn-gold" style="height:52px; border:none; border-radius:999px; background:#b88a5e; color:#fff; font-family:'Jost',sans-serif; font-size:14px; letter-spacing:.06em; cursor:pointer;">Wyślij zapytanie</button>
+          <button type="submit" class="btn-gold" style="height:52px; border:none; border-radius:999px; background:#a78d76; color:#fff; font-family:'Jost',sans-serif; font-size:14px; letter-spacing:.06em; cursor:pointer;">Wyślij zapytanie</button>
           <div id="formNote" style="display:none; font-size:13px; color:#6f655e;">Dziękujemy! Odezwiemy się wkrótce.</div>
         </form>
       </div>
@@ -671,8 +676,8 @@
   <div data-page="kosmetologia">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
       <div data-reveal>
-        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">Oferta</div>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Kosmetologia<br>i medycyna estetyczna</h1>
         <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Szczegóły tej oferty są właśnie przygotowywane — wkrótce znajdziesz tu pełen opis zabiegów, ceny oraz zdjęcia efektów.</p>
         <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
@@ -684,8 +689,8 @@
   <div data-page="makijaz">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
       <div data-reveal>
-        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">Oferta</div>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Makijaż permanentny</h1>
         <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Szczegóły tej oferty są właśnie przygotowywane — wkrótce znajdziesz tu pełen opis zabiegów, ceny oraz zdjęcia efektów.</p>
         <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
@@ -697,8 +702,8 @@
   <div data-page="pielegnacja-twarzy">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
       <div data-reveal>
-        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">Oferta</div>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Pielęgnacja twarzy</h1>
         <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Szczegóły tej oferty są właśnie przygotowywane — wkrótce znajdziesz tu pełen opis zabiegów, ceny oraz zdjęcia efektów.</p>
         <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
@@ -710,8 +715,8 @@
   <div data-page="pielegnacja-ciala">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
       <div data-reveal>
-        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">Oferta</div>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Pielęgnacja ciała</h1>
         <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Szczegóły tej oferty są właśnie przygotowywane — wkrótce znajdziesz tu pełen opis zabiegów, ceny oraz zdjęcia efektów.</p>
         <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
@@ -723,8 +728,8 @@
   <div data-page="inne-zabiegi">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
       <div data-reveal>
-        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#b88a5e; margin-bottom:20px;">Oferta</div>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Inne zabiegi</h1>
         <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Szczegóły tej oferty są właśnie przygotowywane — wkrótce znajdziesz tu pełen opis zabiegów, ceny oraz zdjęcia efektów.</p>
         <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
@@ -733,29 +738,29 @@
   </div>
 
   <!-- ===================== FOOTER ===================== -->
-  <div style="background:#2a2421; color:#cbbfb5;">
+  <div style="background:#f7f2ec; color:#6f655e; border-top:1px solid #efe6dd;">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,60px) clamp(18px,4vw,40px) clamp(24px,3vw,34px);">
-      <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:clamp(24px,4vw,48px); padding-bottom:32px; border-bottom:1px solid #463a33;">
+      <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:clamp(24px,4vw,48px); padding-bottom:32px; border-bottom:1px solid #efe6dd;">
         <div>
-          <div style="margin-bottom:14px;"><img src="images/logo.png" alt="nane beauty concept" style="height:64px; width:auto; display:block; object-fit:contain; filter:invert(1);"></div>
-          <p style="max-width:300px; font-size:14px; line-height:1.7; color:#a89c92; margin:0;">Gabinet kosmetologii estetycznej w Rawiczu. Nowoczesne zabiegi twarzy i ciała z naturalnym efektem.</p>
+          <div style="margin-bottom:14px;"><img src="images/logo.png" alt="nane beauty concept" style="height:64px; width:auto; display:block; object-fit:contain;"></div>
+          <p style="max-width:300px; font-size:14px; line-height:1.7; color:#6f655e; margin:0;">Gabinet kosmetologii estetycznej w Rawiczu. Nowoczesne zabiegi twarzy i ciała z naturalnym efektem.</p>
         </div>
         <div>
           <div style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#8a7d72; margin-bottom:14px;">Nawigacja</div>
           <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; align-items:flex-start;">
-            <button class="reset-btn footer-nav-btn" data-nav="home" style="text-align:left; color:#cbbfb5; font-size:14px;">Start</button>
-            <button class="reset-btn footer-nav-btn" data-nav="zabiegi" style="text-align:left; color:#cbbfb5; font-size:14px;">Zabiegi</button>
-            <button class="reset-btn footer-nav-btn" data-nav="onas" style="text-align:left; color:#cbbfb5; font-size:14px;">O nas</button>
-            <button class="reset-btn footer-nav-btn" data-nav="kontakt" style="text-align:left; color:#cbbfb5; font-size:14px;">Kontakt</button>
+            <button class="reset-btn footer-nav-btn" data-nav="home" style="text-align:left; color:#2a2421; font-size:14px;">Start</button>
+            <button class="reset-btn footer-nav-btn" data-nav="zabiegi" style="text-align:left; color:#2a2421; font-size:14px;">Zabiegi</button>
+            <button class="reset-btn footer-nav-btn" data-nav="onas" style="text-align:left; color:#2a2421; font-size:14px;">O nas</button>
+            <button class="reset-btn footer-nav-btn" data-nav="kontakt" style="text-align:left; color:#2a2421; font-size:14px;">Kontakt</button>
           </div>
         </div>
         <div>
           <div style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#8a7d72; margin-bottom:14px;">Kontakt</div>
-          <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; color:#a89c92;">
-            <a href="https://maps.app.goo.gl/Rtr7VHYGZQqd7jMB8" target="_blank" rel="noopener" class="footer-link" style="color:#a89c92; text-decoration:none;">NANE BEAUTY CONCEPT, Rawicz</a>
-            <a href="tel:+48512899699" class="footer-link" style="color:#a89c92; text-decoration:none;">+48 512 899 699</a>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; color:#6f655e;">
+            <a href="https://maps.app.goo.gl/Rtr7VHYGZQqd7jMB8" target="_blank" rel="noopener" class="footer-link" style="color:#6f655e; text-decoration:none;">NANE BEAUTY CONCEPT, Rawicz</a>
+            <a href="tel:+48512899699" class="footer-link" style="color:#6f655e; text-decoration:none;">+48 512 899 699</a>
             <span>Pon–Pt 9–17 · Sob 9–14</span>
-            <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="footer-link" style="color:#e7c98f; text-decoration:none;">Rezerwacja Booksy →</a>
+            <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="footer-link" style="color:#a78d76; text-decoration:none;">Rezerwacja Booksy →</a>
           </div>
         </div>
       </div>
