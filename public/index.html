@@ -72,6 +72,10 @@
   .car-card-img{ aspect-ratio:3/4; position:relative; overflow:hidden; }
   .car-card-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
   .car-card:hover .car-card-img img{ transform:scale(1.045); }
+  .car-name{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; color:#2a2421; text-align:center; padding:18px 16px 22px; }
+  .ph-img{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#f5efe9 0%,#e9ded1 55%,#ddcab7 100%); }
+  .ph-mark{ font-family:'Cormorant Garamond',serif; font-size:30px; letter-spacing:.04em; color:#b88a5e; }
+  .ph-sub{ font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:#a8917c; }
   .car-card-body{ padding:22px 22px 26px; display:flex; flex-direction:column; flex:1; }
   .car-card-body h3{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; color:#2a2421; margin:0 0 8px; }
   .car-card-body p{ font-size:14px; line-height:1.6; color:#6f655e; margin:0 0 20px; flex:1; }
@@ -222,29 +226,27 @@
     <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
       <div data-reveal style="display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:32px; flex-wrap:wrap;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,3.6vw,44px); margin:0; color:#2a2421;">Wybrane zabiegi</h2>
-        <button class="reset-btn" data-nav="zabiegi" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; transition:opacity .18s;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">Pełna oferta →</button>
+        <div style="display:flex; align-items:center; gap:18px;">
+          <button class="reset-btn" data-nav="zabiegi" style="font-size:13px; color:#b88a5e; letter-spacing:.04em; transition:opacity .18s;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">Pełna oferta →</button>
+          <div style="display:flex; gap:10px;">
+            <button class="car-arrow" data-car-prev aria-label="Poprzedni zabieg">‹</button>
+            <button class="car-arrow" data-car-next aria-label="Następny zabieg">›</button>
+          </div>
+        </div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;">
-        <div data-reveal style="background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">01</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Morpheus8</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Frakcyjny lifting RF — ujędrnienie i modelowanie owalu twarzy.</p>
+      <div data-reveal class="car" data-carousel>
+        <div class="car-track" data-car-track>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Morpheus 8</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">IPL Lumecca</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Icoon Body Laser</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">AquaPure</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">GeneoX</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Observ 520x</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Wypełnienie ust</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Stymulatory tkankowe</div></div>
+          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Makijaż permanentny</div></div>
         </div>
-        <div data-reveal style="transition-delay:.06s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">02</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Icoone Laser Body</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Modelowanie sylwetki i drenaż limfatyczny dla gładkiej skóry.</p>
-        </div>
-        <div data-reveal style="transition-delay:.12s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">03</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">Makijaż permanentny</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Precyzyjna pigmentacja brwi i kresek — subtelnie i trwale.</p>
-        </div>
-        <div data-reveal style="transition-delay:.18s; background:#fff; border:1px solid #efe6dd; border-radius:16px; padding:28px 24px;">
-          <div style="width:42px; height:42px; border-radius:10px; background:#f5f3f1; display:flex; align-items:center; justify-content:center; color:#b88a5e; font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px;">04</div>
-          <div style="font-family:'Cormorant Garamond',serif; font-size:23px; color:#2a2421; margin-bottom:8px;">ZO Skin Health</div>
-          <p style="font-size:14px; line-height:1.6; color:#6f655e; margin:0;">Dermatologiczna pielęgnacja i terapie odbudowujące skórę.</p>
-        </div>
+        <div class="car-dots" data-car-dots></div>
       </div>
     </div>
 
