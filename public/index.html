@@ -66,7 +66,7 @@
   .ba-animating .ba-divider{ transition:left 1.05s cubic-bezier(.4,0,.2,1); }
   /* treatments carousel */
   .car{ overflow:hidden; }
-  .car-track{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; padding:2px; }
+  .car-track{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; padding:2px; }
   .car-track::-webkit-scrollbar{ display:none; }
   .car-card{ scroll-snap-align:start; flex:0 0 clamp(258px,31%,344px); background:#fff; border:1px solid #efe6dd; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; }
   .car-card-img{ aspect-ratio:3/4; position:relative; overflow:hidden; }
@@ -223,7 +223,7 @@
     </div>
 
     <!-- services preview -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(52px,6vw,80px) clamp(18px,4vw,40px);">
+    <div data-carousel style="max-width:1180px; margin:0 auto; padding:clamp(52px,6vw,80px) clamp(18px,4vw,40px);">
       <div data-reveal style="display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:32px; flex-wrap:wrap;">
         <div>
           <div style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#b88a5e; margin-bottom:18px;">Zabiegi</div>
@@ -237,7 +237,7 @@
           </div>
         </div>
       </div>
-      <div data-reveal class="car" data-carousel>
+      <div data-reveal class="car">
         <div class="car-track" data-car-track>
           <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Morpheus 8</div></div>
           <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">IPL Lumecca</div></div>
