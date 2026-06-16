@@ -39,6 +39,9 @@
   .btn-hero-light:hover{ opacity:.88; transform:translateY(-1px); }
   .btn-hero-outline{ transition:background .22s, border-color .22s; }
   .btn-hero-outline:hover{ background:rgba(243,236,230,.14) !important; border-color:rgba(243,236,230,.85) !important; }
+  /* hero content: tekst nisko (pod logo) na mobile, bliżej logo na desktop */
+  .hero-content{ padding:0 clamp(20px,5vw,40px) clamp(44px,7vh,110px); }
+  @media(min-width:821px){ .hero-content{ padding-bottom:clamp(120px,18vh,185px); } }
   /* Footer */
   .footer-nav-btn{ transition:color .18s; }
   .footer-nav-btn:hover{ color:#f3ece6 !important; }
@@ -121,10 +124,10 @@
   <!-- ===================== PAGE: HOME ===================== -->
   <div data-page="home" class="is-active">
     <!-- hero -->
-    <div style="position:relative; min-height:clamp(600px,92vh,960px); display:flex; align-items:flex-end; justify-content:center; overflow:hidden;">
-      <img src="images/hero1.jpeg" alt="nane beauty concept — wnętrze gabinetu" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 50%;">
-      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,26,23,.22) 0%, rgba(30,26,23,.12) 40%, rgba(30,26,23,.66) 100%);"></div>
-      <div data-reveal style="position:relative; z-index:2; text-align:center; max-width:580px; padding:0 clamp(20px,5vw,40px) clamp(48px,8vh,96px);">
+    <div style="position:relative; min-height:clamp(540px,80vh,800px); display:flex; align-items:flex-end; justify-content:center; overflow:hidden;">
+      <img src="images/hero1.jpeg" alt="nane beauty concept — wnętrze gabinetu" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 42%;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,26,23,.20) 0%, rgba(30,26,23,.10) 42%, rgba(30,26,23,.64) 100%);"></div>
+      <div data-reveal class="hero-content" style="position:relative; z-index:2; text-align:center; max-width:580px;">
         <p style="max-width:480px; margin:0 auto 32px; font-size:16px; line-height:1.8; color:#f3ece6; text-shadow:0 1px 14px rgba(20,16,14,.45);">Nowoczesne zabiegi na twarz i ciało — od liftingu Morpheus8 po modelowanie Icoone Laser Body. W kameralnym wnętrzu, z pełną dbałością o Twój komfort i naturalny efekt.</p>
         <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
           <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-hero-light" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
