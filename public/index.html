@@ -106,6 +106,68 @@
     .tp-price{ font-size:12px; }
     .tp-price td,.tp-price th{ padding:10px 6px; }
   }
+  /* ── Cennik tabs ── */
+  .cn-tabs-wrap{ border-bottom:1px solid #efe6dd; background:#fff; }
+  .cn-tabs{ max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px); display:flex; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; }
+  .cn-tabs::-webkit-scrollbar{ display:none; }
+  .cn-tab{ flex:none; padding:15px 20px; background:none; border:none; border-bottom:2px solid transparent; font-family:'Jost',sans-serif; font-size:13px; letter-spacing:.05em; color:#8a807a; cursor:pointer; white-space:nowrap; transition:color .18s,border-color .18s; }
+  .cn-tab.is-active{ color:#2a2421; border-bottom-color:#a78d76; }
+  .cn-tab:hover{ color:#2a2421; }
+  .cn-panel{ display:none; }
+  .cn-panel.is-active{ display:block; }
+  /* ── Cennik section ── */
+  .cn-section{ max-width:1180px; margin:0 auto; padding:clamp(28px,3vw,44px) clamp(18px,4vw,40px) clamp(20px,2.5vw,32px); }
+  .cn-section+.cn-section{ border-top:1px solid #f0e8df; }
+  .cn-section-hd{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+  .cn-section-name{ font-family:'Cormorant Garamond',serif; font-size:clamp(21px,2.4vw,28px); color:#2a2421; }
+  .cn-section-tag{ font-size:12px; letter-spacing:.08em; color:#b09a8a; }
+  .cn-section-intro{ font-size:14px; line-height:1.65; color:#8a807a; max-width:620px; margin:10px 0 0; }
+  .cn-divider{ height:1px; background:#efe6dd; margin:16px 0 4px; }
+  /* ── Treatment item ── */
+  .cn-item{ display:grid; grid-template-columns:1fr auto; column-gap:20px; padding:17px 0; border-bottom:1px solid #f5ede6; align-items:start; }
+  .cn-item:last-of-type{ border-bottom:none; }
+  .cn-item-left{ display:flex; flex-direction:column; gap:4px; }
+  .cn-item-name{ font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; line-height:1.25; }
+  .cn-item-desc{ font-size:13px; line-height:1.55; color:#8a807a; }
+  .cn-item-right{ text-align:right; }
+  .cn-price{ font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; white-space:nowrap; display:block; }
+  .cn-price-accent{ color:#a78d76; }
+  .cn-time{ font-size:12px; color:#b09a8a; display:block; margin-top:2px; }
+  /* ── Package chips ── */
+  .cn-pkgs{ display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; }
+  .cn-chip{ display:inline-flex; align-items:center; gap:5px; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; letter-spacing:.03em; color:#6f655e; }
+  .cn-chip-save{ font-weight:500; color:#a78d76; }
+  /* ── Zone grid (AquaPure, IPL, Morpheus8) ── */
+  .cn-zones{ display:grid; grid-template-columns:1fr 1fr; }
+  .cn-zone{ display:flex; align-items:center; justify-content:space-between; padding:12px 16px 12px 0; border-bottom:1px solid #f5ede6; gap:12px; }
+  .cn-zone:nth-last-child(-n+2){ border-bottom:none; }
+  .cn-zone-name{ font-size:14px; color:#2a2421; }
+  .cn-zone-price{ font-family:'Cormorant Garamond',serif; font-size:18px; color:#2a2421; white-space:nowrap; }
+  /* ── Icoon Laser table ── */
+  .cn-table-wrap{ overflow-x:auto; margin-top:14px; -webkit-overflow-scrolling:touch; }
+  .cn-tbl{ width:100%; border-collapse:collapse; min-width:520px; }
+  .cn-tbl th{ font-family:'Cormorant Garamond',serif; font-size:14px; font-weight:500; color:#2a2421; padding:11px 14px; background:#faf6f2; border-bottom:2px solid #e4d6c9; text-align:center; line-height:1.3; }
+  .cn-tbl th:first-child{ text-align:left; }
+  .cn-tbl td{ padding:12px 14px; border-bottom:1px solid #f0e8df; font-size:14px; color:#6f655e; text-align:center; vertical-align:middle; }
+  .cn-tbl td:first-child{ text-align:left; font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; }
+  .cn-tbl-sub{ display:block; font-family:'Jost',sans-serif; font-size:12px; color:#a78d76; margin-top:2px; }
+  .cn-tbl tr:last-child td{ border-bottom:none; }
+  /* ── Refresh list (makijaż permanentny) ── */
+  .cn-refresh-hd{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#b09a8a; margin:14px 0 4px; }
+  .cn-refresh-item{ display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #f5ede6; gap:12px; }
+  .cn-refresh-item:last-child{ border-bottom:none; }
+  .cn-refresh-label{ font-size:13px; color:#6f655e; }
+  .cn-refresh-price{ font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; white-space:nowrap; }
+  /* ── Sub-label inside section ── */
+  .cn-sub-label{ font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#a78d76; padding:18px 0 4px; display:block; }
+  @media(max-width:640px){
+    .cn-item{ grid-template-columns:1fr; }
+    .cn-item-right{ text-align:left; display:flex; gap:12px; align-items:baseline; margin-top:2px; }
+    .cn-zones{ grid-template-columns:1fr; }
+    .cn-zone:last-child{ border-bottom:none; }
+    .cn-zone:nth-last-child(-n+2){ border-bottom:1px solid #f5ede6; }
+    .cn-zone:last-child{ border-bottom:none; }
+  }
   /* oferta category grid */
   .oferta-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
   .oferta-tile-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
@@ -366,7 +428,7 @@
 
   <!-- ===================== PAGE: ZABIEGI ===================== -->
   <div data-page="zabiegi">
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(20px,3vw,36px);">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(20px,3vw,28px);">
       <div data-reveal style="max-width:680px;">
         <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Cennik</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(40px,5.4vw,72px); line-height:1.0; margin:0 0 20px; color:#2a2421;">Cennik zabiegów</h1>
@@ -374,204 +436,508 @@
       </div>
     </div>
 
-    <!-- category: Radiofrekwencja Morpheus8 — twarz -->
-    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(16px,2vw,24px);">
-      <div data-reveal style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #e4d6c9; padding-bottom:14px; margin-bottom:6px;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Radiofrekwencja Morpheus8 — twarz</span>
-        <span style="font-size:13px; color:#8a807a;">lifting · modelowanie owalu</span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — twarz z podbródkiem</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Frakcyjny lifting z falą radiową — ujędrnienie i modelowanie owalu twarzy z podbródkiem.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 550 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — twarz z linią żuchwy</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Ujędrnienie twarzy z wyraźniejszym konturem linii żuchwy.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 350 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — policzki, podbródek, szyja</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Kompleksowe ujędrnienie policzków, podbródka i szyi.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 550 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — okolica oka</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Precyzyjne ujędrnienie delikatnej skóry wokół oczu i wygładzenie drobnych zmarszczek.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 200 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — twarz, podbródek, szyja</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Rozszerzony zabieg obejmujący twarz, podbródek i szyję.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 800 zł</span><br><span style="font-size:12px; color:#8a807a;">2 h</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — twarz, szyja, dekolt</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Najszerszy wariant — twarz, szyja oraz dekolt podczas jednej sesji.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">2 200 zł</span><br><span style="font-size:12px; color:#8a807a;">2 h</span></span>
+    <!-- tabs -->
+    <div class="cn-tabs-wrap">
+      <div class="cn-tabs">
+        <button class="cn-tab is-active" data-cn-tab="kosmetologia">Kosmetologia</button>
+        <button class="cn-tab" data-cn-tab="cialo">Pielęgnacja ciała</button>
+        <button class="cn-tab" data-cn-tab="lifting">Morpheus8</button>
+        <button class="cn-tab" data-cn-tab="makijaz">Makijaż permanentny</button>
+        <button class="cn-tab" data-cn-tab="iniekcje">Medycyna estetyczna</button>
+        <button class="cn-tab" data-cn-tab="konsultacje">Konsultacje</button>
       </div>
     </div>
 
-    <!-- category: Twarz — pozostałe -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(20px,3vw,36px) clamp(18px,4vw,40px) clamp(16px,2vw,24px);">
-      <div data-reveal style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #e4d6c9; padding-bottom:14px; margin-bottom:6px;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Twarz — pozostałe zabiegi</span>
-        <span style="font-size:13px; color:#8a807a;">jakość skóry · stymulacja kolagenu</span>
+    <!-- ── TAB PANELS ── -->
+    <div>
+
+    <!-- KOSMETOLOGIA -->
+    <div class="cn-panel is-active" data-cn-panel="kosmetologia">
+
+      <!-- ZO Skin Health -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">ZO Skin Health</span><span class="cn-section-tag">pielęgnacja · stymulacja · anti-aging</span></div>
+        <p class="cn-section-intro">Medyczne protokoły pielęgnacji skóry oparte na zaawansowanych składnikach aktywnych — dobierane indywidualnie do potrzeb cery.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">ZO Stimulator Treatment</span><span class="cn-item-desc">Stymulacja, rozświetlenie i glow skin — dla skóry szarej, pozbawionej blasku.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">270 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">255 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">300 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">ZO Ultra Hydration Treatment</span><span class="cn-item-desc">Intensywne nawilżenie i odżywienie skóry suchej i odwodnionej.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">315 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">300 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">350 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">ZO Anti-Aging Treatment</span><span class="cn-item-desc">Ujędrnienie, napięcie i wygładzenie skóry wiotkiej z utratą owalu.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">360 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">340 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">ZO Skin Brightening Treatment</span><span class="cn-item-desc">Celowana terapia redukująca przebarwienia i wyrównująca koloryt.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">340 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">320 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">380 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">ZO Redness Relief Treatment</span><span class="cn-item-desc">Ukojenie i wzmocnienie skóry naczyniowej, reaktywnej i podrażnionej.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">340 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">320 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">380 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">ZO Acne &amp; Oil Treatment</span><span class="cn-item-desc">Oczyszczenie i wyciszenie stanów zapalnych dla skór tłustych i trądzikowych.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">340 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">320 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">380 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">ZO Skin Health z mikronakłuwaniem frakcyjnym</span><span class="cn-item-desc">Zabieg na koncentratach w ampułkach: Rozatrol (cera naczyniowa) · Brightening (przebarwienia) · Firming (skóra wiotka).</span></div>
+          <div class="cn-item-right"><span class="cn-price">900 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">ZO Skin Health z mikronakłuwaniem frakcyjnym</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Dermatologiczny protokół z frakcyjnym mikronakłuwaniem — odbudowa i poprawa jakości skóry.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">900 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
+
+      <!-- PRO XN -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">PRO XN</span><span class="cn-section-tag">regeneracja · depigmentacja · anti-aging</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">I Stopień — Recovery Therapy</span><span class="cn-item-desc">Ukojenie i odbudowa skóry wrażliwej oraz osłabionej.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">360 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">340 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">II Stopień — Anti-OX / Anti-Aging</span><span class="cn-item-desc">Silna antyoksydacja i profilaktyka starzenia skóry.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">450 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">425 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">500 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">III Stopień — Intensive Repair Therapy</span><span class="cn-item-desc">Intensywna regeneracja i kompleksowa poprawa jakości skóry.</span></div>
+          <div class="cn-item-right"><span class="cn-price">700 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Pro XN Bright Up Treatment No.&nbsp;1</span><span class="cn-item-desc">Intensywny zabieg rozświetlający i wyrównujący koloryt skóry.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">−10%</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">−15%</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">500 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Pro XN Bright Up Therapy No.&nbsp;2</span><span class="cn-item-desc">Zaawansowana terapia depigmentacyjna.</span></div>
+          <div class="cn-item-right"><span class="cn-price">450 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Pro XN Acne Rescue Treatment</span><span class="cn-item-desc">Specjalistyczna terapia przeciwtrądzikowa.</span></div>
+          <div class="cn-item-right"><span class="cn-price">450 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name" style="color:#a78d76;">+ Mikronakłuwanie frakcyjne</span><span class="cn-item-desc">Wzmocnienie dowolnego zabiegu PRO XN.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">630 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">595 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">+300 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Stymulator tkankowy — twarz</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Pobudzenie skóry twarzy do produkcji kolagenu — poprawa gęstości i napięcia cery.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+
+      <!-- Ribeskin -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Ribeskin</span><span class="cn-section-tag">nawilżenie · dotlenienie · anti-aging</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Karboksyterapia bezigłowa</span><span class="cn-item-desc">Głębokie dotlenienie skóry — stosowana w terapii łączonej z innymi zabiegami.</span></div>
+          <div class="cn-item-right"><span class="cn-price">250 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Deep Shot HA</span><span class="cn-item-desc">Wielopoziomowe nawilżenie skóry kwasem hialuronowym.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">−10%</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">−15%</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">550 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Deep Shot AA</span><span class="cn-item-desc">Zaawansowany koktajl anti-aging.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">−10%</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">−15%</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">550 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Deep Shot Lumi</span><span class="cn-item-desc">Rozświetlenie, wyrównanie kolorytu i redukcja przebarwień.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">−10%</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">−15%</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">550 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Stymulator tkankowy — okolica oka</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Stymulacja kolagenu w delikatnej okolicy oka.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+
+      <!-- PCA Skin -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">PCA Skin</span><span class="cn-section-tag">trądzik · przebarwienia · skóra wrażliwa</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Advanced Acne &amp; Corrective Therapy</span><span class="cn-item-desc">Zaawansowana terapia trądzikowa — redukcja zmian zapalnych, regulacja sebum i poprawa kondycji skóry.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">360 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">340 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Calming &amp; Hydration Therapy</span><span class="cn-item-desc">Koi, nawilża i przywraca równowagę skórze wrażliwej i podrażnionej.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">360 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">340 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Brightening &amp; Pigment Therapy</span><span class="cn-item-desc">Celowa terapia rozjaśniająca przebarwienia.</span><div class="cn-pkgs"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">360 zł</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">340 zł</span></span></div></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name" style="color:#a78d76;">+ Mikronakłuwanie frakcyjne</span><span class="cn-item-desc">Wzmocnienie dowolnego zabiegu PCA Skin.</span></div>
+          <div class="cn-item-right"><span class="cn-price">+300 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Kontrola pozabiegowa</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Wizyta kontrolna po zabiegu — ocena efektów i dalsze zalecenia.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+
+      <!-- GeneoX -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">GeneoX</span><span class="cn-section-tag">5 technologii · natychmiastowy efekt</span></div>
+        <p class="cn-section-intro">Nowoczesna platforma kosmetyczna łącząca dotlenienie, złuszczanie, lifting RF, stymulację mięśniową i wibracyjny drenaż limfatyczny — bez rekonwalescencji, dla każdego typu skóry.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Zabieg 5 technologii</span><span class="cn-item-desc">Dotlenienie i złuszczenie · ultradźwięki · lifting RF · stymulacja mięśniowa · wibracyjny drenaż limfatyczny.</span></div>
+          <div class="cn-item-right"><span class="cn-price">590 zł</span><span class="cn-time">1 h 30 min</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Zabieg 3 technologie</span><span class="cn-item-desc">Dotlenienie i złuszczenie · lifting RF lub ultradźwięki · stymulacja mięśniowa lub drenaż wibracyjny.</span></div>
+          <div class="cn-item-right"><span class="cn-price">450 zł</span><span class="cn-time">1 h</span></div>
+        </div>
+      </div>
+
+      <!-- AquaPure -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Hydropeeling AquaPure</span><span class="cn-section-tag">oczyszczanie · nawilżenie · dotlenienie</span></div>
+        <p class="cn-section-intro">Wieloetapowy rytuał pielęgnacyjny oparty na hydrodermabrazji — oczyszczanie, złuszczanie, nawilżenie i regeneracja skóry w jednym zabiegu.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-zones">
+          <div class="cn-zone"><span class="cn-zone-name">Twarz</span><span class="cn-zone-price">280 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Twarz + szyja</span><span class="cn-zone-price">300 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Twarz + szyja + dekolt</span><span class="cn-zone-price">330 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Plecy</span><span class="cn-zone-price">280 zł</span></div>
+        </div>
+        <div class="cn-pkgs" style="margin-top:14px;"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">−10%</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">−15%</span></span></div>
+      </div>
+
+      <!-- Dermap*N 4.0 -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Dermap*N 4.0</span><span class="cn-section-tag">mikronakłuwanie · mezoterapia · peelingi</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Mikronakłuwanie z ampułką — twarz</span><span class="cn-item-desc">Oryginalny, medyczny zabieg mikronakłuwania z ampułką do mezoterapii, dobraną do potrzeb skóry.</span></div>
+          <div class="cn-item-right"><span class="cn-price">600 zł</span><span class="cn-time">1 h</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Mikronakłuwanie — twarz i szyja</span></div>
+          <div class="cn-item-right"><span class="cn-price">700 zł</span><span class="cn-time">1 h</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Mikronakłuwanie — twarz, szyja, dekolt</span></div>
+          <div class="cn-item-right"><span class="cn-price">800 zł</span><span class="cn-time">1 h 30 min</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Uber Peel</span><span class="cn-item-desc">Medyczny peeling kwasowy — wzmacnia i pogłębia efekt zabiegu.</span></div>
+          <div class="cn-item-right"><span class="cn-price">100–150 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Biorepeel</span><span class="cn-item-desc">Silny peeling medyczny o działaniu biostymulującym i rewitalizującym.</span></div>
+          <div class="cn-item-right"><span class="cn-price">300 zł</span></div>
+        </div>
+      </div>
+
+      <!-- IPL Lumecca -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">IPL Lumecca</span><span class="cn-section-tag">przebarwienia · rumień · fotostarzenie</span></div>
+        <p class="cn-section-intro">Technologia intensywnego światła pulsacyjnego — redukuje przebarwienia, zmiany naczyniowe, rumień i oznaki fotostarzenia. Pobudza produkcję kolagenu i poprawia ogólną kondycję skóry.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-zones">
+          <div class="cn-zone"><span class="cn-zone-name">Nos</span><span class="cn-zone-price">380 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Broda</span><span class="cn-zone-price">380 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Policzki</span><span class="cn-zone-price">600 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Cała twarz</span><span class="cn-zone-price">800 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Dłonie</span><span class="cn-zone-price">500 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Twarz + szyja + dekolt</span><span class="cn-zone-price">1 200 zł</span></div>
+        </div>
+        <div class="cn-pkgs" style="margin-top:14px;"><span class="cn-chip">3 zabiegi · <span class="cn-chip-save">−10%</span></span><span class="cn-chip">5 zabiegów · <span class="cn-chip-save">−15%</span></span></div>
+      </div>
+
+      <!-- Autorskie terapie oczyszczające -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Autorskie terapie oczyszczające</span><span class="cn-section-tag">trądzik · oczyszczanie · peelingi</span></div>
+        <p class="cn-section-intro">Indywidualnie dobierane procedury oczyszczające — mycie terapeutyczne, peelingi chemiczne i enzymatyczne, boostery i maski dopasowane do aktualnych potrzeb skóry.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Terapia trądzikowa</span><span class="cn-item-desc">Autorski zabieg terapeutyczny — skuteczne wyciszenie trądziku i wsparcie procesu gojenia.</span></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Oczyszczanie skóry</span><span class="cn-item-desc">Zabieg podstawowy — kompleksowe oczyszczenie i wyrównanie kondycji cery.</span></div>
+          <div class="cn-item-right"><span class="cn-price">300 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Oczyszczanie pleców</span></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+      </div>
+
+      <!-- Observ -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Analiza skóry Observ 520x</span><span class="cn-section-tag">diagnostyka · beauty plan</span></div>
+        <p class="cn-section-intro">Zaawansowana diagnostyka skóry w 8 trybach światła — ocenia kondycję, problemy i realne potrzeby, w tym niewidoczne gołym okiem. Na podstawie analizy tworzony jest beauty plan i dobierany indywidualny zabieg.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Analiza Observ 520x + Beauty Plan + Zabieg pielęgnacyjny</span><span class="cn-item-desc">Pełen pakiet diagnostyczny z indywidualnym planem działania i zabiegiem dopasowanym do wyników analizy.</span></div>
+          <div class="cn-item-right"><span class="cn-price">400 zł</span></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END KOSMETOLOGIA -->
+
+    <!-- PIELĘGNACJA CIAŁA -->
+    <div class="cn-panel" data-cn-panel="cialo">
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Icoon Laser Body</span><span class="cn-section-tag">modelowanie · cellulit · drenaż limfatyczny</span></div>
+        <p class="cn-section-intro">Mikrostymulacja tkanek z technologią laserową i LED — modelowanie sylwetki, redukcja cellulitu i głęboki drenaż limfatyczny. W pakietach nawet ponad 35% taniej.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-table-wrap">
+          <table class="cn-tbl">
+            <thead>
+              <tr>
+                <th>Pakiet</th>
+                <th>Drenaż + 1 focus<br><span style="font-size:11px;font-weight:400;color:#b09a8a;">30 min</span></th>
+                <th>Drenaż + 2 focusy<br><span style="font-size:11px;font-weight:400;color:#b09a8a;">40 min</span></th>
+                <th>Drenaż + 3 focusy<br><span style="font-size:11px;font-weight:400;color:#b09a8a;">50 min</span></th>
+                <th>Drenaż + 4 focusy<br><span style="font-size:11px;font-weight:400;color:#b09a8a;">60 min</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 zabieg</td>
+                <td>250 zł</td><td>300 zł</td><td>350 zł</td><td>400 zł</td>
+              </tr>
+              <tr>
+                <td>5 zabiegów<span class="cn-tbl-sub">cena / zabieg</span></td>
+                <td>1 150 zł<span class="cn-tbl-sub">230 zł</span></td>
+                <td>1 250 zł<span class="cn-tbl-sub">250 zł</span></td>
+                <td>1 400 zł<span class="cn-tbl-sub">280 zł</span></td>
+                <td>1 500 zł<span class="cn-tbl-sub">300 zł</span></td>
+              </tr>
+              <tr>
+                <td>10 zabiegów<span class="cn-tbl-sub">cena / zabieg</span></td>
+                <td>2 100 zł<span class="cn-tbl-sub">210 zł</span></td>
+                <td>2 400 zł<span class="cn-tbl-sub">240 zł</span></td>
+                <td>2 600 zł<span class="cn-tbl-sub">260 zł</span></td>
+                <td>2 800 zł<span class="cn-tbl-sub">280 zł</span></td>
+              </tr>
+              <tr>
+                <td>15 zabiegów<span class="cn-tbl-sub">cena / zabieg</span></td>
+                <td>2 700 zł<span class="cn-tbl-sub">180 zł</span></td>
+                <td>3 075 zł<span class="cn-tbl-sub">205 zł</span></td>
+                <td>3 450 zł<span class="cn-tbl-sub">230 zł</span></td>
+                <td>3 800 zł<span class="cn-tbl-sub">253 zł</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #efe6dd; border-radius:12px; padding:14px 18px; margin-top:16px; font-size:13px; color:#6f655e;">Pakiet 15 zabiegów z 4 fokusami — <strong style="color:#a78d76;">ponad 35% taniej</strong> niż cena regularna.</div>
       </div>
     </div>
+    <!-- END CIAŁO -->
 
-    <!-- category: Ciało -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(20px,3vw,36px) clamp(18px,4vw,40px) clamp(16px,2vw,24px);">
-      <div data-reveal style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #e4d6c9; padding-bottom:14px; margin-bottom:6px;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Ciało</span>
-        <span style="font-size:13px; color:#8a807a;">modelowanie · drenaż · ujędrnienie</span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Icoone Laser Body — masaż podciśnieniowy</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Mikrostymulacja tkanek z laserem i światłem LED — modelowanie sylwetki, redukcja cellulitu i drenaż limfatyczny.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">250 zł</span><br><span style="font-size:12px; color:#8a807a;">50 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Icoone Laser Body + 1 focus</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Masaż podciśnieniowy z dodatkowym opracowaniem jednej okolicy fokusem.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">300 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Icoone Laser Body + 2 focusy</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Masaż z opracowaniem dwóch okolic fokusami.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">350 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 10 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Icoone Laser Body + 3 focusy</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Masaż z opracowaniem trzech okolic fokusami.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">400 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 20 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Icoone Laser Body + 4 focusy</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Najszerszy wariant masażu z czterema fokusami.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — ciało 1 okolica</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Ujędrnianie skóry ciała w jednej okolicy — brzuch, ramiona, kolana.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 800 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Morpheus8 — ciało 2 okolice</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Ujędrnianie dwóch okolic ciała podczas jednej, dłuższej sesji.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">2 300 zł</span><br><span style="font-size:12px; color:#8a807a;">2 h</span></span>
+    <!-- MORPHEUS8 -->
+    <div class="cn-panel" data-cn-panel="lifting">
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Morpheus8 Pro — Lifting bez skalpela</span><span class="cn-section-tag">twarz · szyja · dekolt · ciało</span></div>
+        <p class="cn-section-intro">Zabieg mikroigłowej radiofrekwencji — działa znacznie głębiej niż inne technologie, stymuluje przebudowę skóry, wygładza zmarszczki, blizny i tkankę tłuszczową, poprawia owal twarzy i ciało.</p>
+        <div class="cn-divider"></div>
+        <span class="cn-sub-label">Twarz</span>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Okolica oka</span><span class="cn-item-desc">Precyzyjne ujędrnienie delikatnej skóry wokół oczu, wygładzenie drobnych zmarszczek.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 200 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Twarz z linii żuchwy</span><span class="cn-item-desc">Ujędrnienie twarzy z wyraźniejszym konturem linii żuchwy.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 350 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Twarz z podbródkiem</span><span class="cn-item-desc">Frakcyjny lifting z modelowaniem owalu twarzy i podbródka.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 550 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Policzki, podbródek, szyja</span><span class="cn-item-desc">Kompleksowe ujędrnienie policzków, podbródka i szyi.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 550 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Twarz, podbródek, szyja</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 800 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Twarz, szyja, dekolt</span><span class="cn-item-desc">Najszerszy wariant — kompleksowy lifting twarzy, szyi i dekoltu w jednej sesji.</span></div>
+          <div class="cn-item-right"><span class="cn-price">2 200 zł</span></div>
+        </div>
+        <span class="cn-sub-label" style="padding-top:22px;">Ciało</span>
+        <p style="font-size:13px; color:#8a807a; margin:0 0 4px;">Dostępne okolice: ramiona z pachami, brzuch przód, brzuch boki, uda przód, uda tył, uda wewnętrzna strona, brzuchy, kolana.</p>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">1 okolica</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 800 zł</span><span class="cn-time">1 h 30 min</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">2 okolice</span></div>
+          <div class="cn-item-right"><span class="cn-price">2 300 zł</span><span class="cn-time">2 h</span></div>
+        </div>
       </div>
     </div>
+    <!-- END MORPHEUS8 -->
 
-    <!-- category: Makijaż permanentny powieki górnej -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(20px,3vw,36px) clamp(18px,4vw,40px) clamp(16px,2vw,24px);">
-      <div data-reveal style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #e4d6c9; padding-bottom:14px; margin-bottom:6px;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Makijaż permanentny powieki górnej</span>
-        <span style="font-size:13px; color:#8a807a;">eyeliner · kreski · odświeżenia</span>
+    <!-- MAKIJAŻ PERMANENTNY -->
+    <div class="cn-panel" data-cn-panel="makijaz">
+
+      <!-- Usta -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Makijaż permanentny ust</span><span class="cn-section-tag">ombre · pudrowe · full lips</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Makijaż permanentny ust</span><span class="cn-item-desc">Usta ombre-3D · Usta pudrowe (Aquarelle / Baby Doll) · Usta Full Lips — wszystkie warianty w tej samej cenie.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 200 zł</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ede6; margin-top:4px; padding-top:4px;">
+          <div class="cn-refresh-hd">Odświeżenia i korekty</div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Odświeżenie do 1 roku</span><span class="cn-refresh-price">800 zł</span></div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Odświeżenie do 2 lat</span><span class="cn-refresh-price">600 zł</span></div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Korekta / uzupełnienie do 3 miesięcy</span><span class="cn-refresh-price">150 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Makijaż permanentny powieki górnej (eyeliner)</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Precyzyjna pigmentacja powieki górnej — eyeliner.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">100 zł</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
+
+      <!-- Brwi -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Makijaż permanentny brwi</span><span class="cn-section-tag">puder ombre · włoski · kombinacja</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Brwi — metoda puder ombre</span><span class="cn-item-desc">Efekt pudrowego make-upu — miękki, naturalny gradient koloru.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 100 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Brwi — metoda włoski lub włoski z pudrem</span><span class="cn-item-desc">Realistyczne włoski imitujące naturalne brwi, opcjonalnie wzbogacone efektem pudrowym.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 200 zł</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ede6; margin-top:4px; padding-top:4px;">
+          <div class="cn-refresh-hd">Odświeżenia i korekty</div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Odświeżenie do 1 roku</span><span class="cn-refresh-price">500 zł</span></div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Odświeżenie do 2 lat</span><span class="cn-refresh-price">750 zł</span></div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Korekta / uzupełnienie do 3 miesięcy</span><span class="cn-refresh-price">100 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Kreska w linii rzęs, zagęszczająca rzęsy</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Subtelna kreska w linii rzęs optycznie zagęszczająca rzęsy.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">600 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
+
+      <!-- Oczy -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Makijaż permanentny oczu</span><span class="cn-section-tag">eyeliner · ombre · zagęszczenie</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Powieka górna — zagęszczająca w linii rzęs</span><span class="cn-item-desc">Subtelna kreska w linii rzęs dla naturalnego, głębszego spojrzenia.</span></div>
+          <div class="cn-item-right"><span class="cn-price">800 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Powieka górna — klasyczny eyeliner</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 000 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Powieka górna — ombre</span><span class="cn-item-desc">Efekt głębi i wyrazistości z możliwością łączenia 2 kolorów.</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 200 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Powieki dolne</span></div>
+          <div class="cn-item-right"><span class="cn-price">500 zł</span></div>
+        </div>
+        <div style="border-top:1px solid #f5ede6; margin-top:4px; padding-top:4px;">
+          <div class="cn-refresh-hd">Odświeżenia i korekty</div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Odświeżenie do 2 lat</span><span class="cn-refresh-price">1/2 aktualnej ceny</span></div>
+          <div class="cn-refresh-item"><span class="cn-refresh-label">Korekta do 3 miesięcy od pierwszej pigmentacji</span><span class="cn-refresh-price">100 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Kreska eyeliner z pudrem ombre</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Wyrazista kreska eyeliner uzupełniona efektem pudrowego ombre.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 000 zł</span><br><span style="font-size:12px; color:#8a807a;">2 h</span></span>
+
+      <!-- Usuwanie -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Usuwanie makijażu permanentnego</span><span class="cn-section-tag">laser · remover</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Laser — 1 zabieg</span><span class="cn-item-desc">Laserowe rozjaśnianie i usuwanie pigmentu z brwi lub ust.</span></div>
+          <div class="cn-item-right"><span class="cn-price">250 zł</span><span class="cn-time">30 min</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Remover — 1 zabieg</span><span class="cn-item-desc">Chemiczne usuwanie pigmentu z użyciem specjalistycznego removera.</span></div>
+          <div class="cn-item-right"><span class="cn-price">300 zł</span><span class="cn-time">30 min</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Klasyczny eyeliner lub sam puder</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Klasyczna kreska eyeliner lub samodzielny efekt pudrowy.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Wycena</span></span>
+
+    </div>
+    <!-- END MAKIJAŻ PERMANENTNY -->
+
+    <!-- MEDYCYNA ESTETYCZNA -->
+    <div class="cn-panel" data-cn-panel="iniekcje">
+
+      <!-- Mezoterapia -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Mezoterapia mikroigłowa</span><span class="cn-section-tag">nawilżenie · kolagen · rewitalizacja</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-zones">
+          <div class="cn-zone"><span class="cn-zone-name">Twarz</span><span class="cn-zone-price">500 zł</span></div>
+          <div class="cn-zone"><span class="cn-zone-name">Twarz i szyja</span><span class="cn-zone-price">600 zł</span></div>
+          <div class="cn-zone" style="border-bottom:none;"><span class="cn-zone-name">Twarz, szyja, dekolt</span><span class="cn-zone-price">800 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Korekta do 3 miesięcy</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Korekta makijażu permanentnego wykonana do 3 miesięcy od zabiegu.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">500 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
+
+      <!-- Stymulatory -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Stymulatory tkankowe</span><span class="cn-section-tag">kolagen · gęstość · napięcie</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Stymulatory pod oko</span><span class="cn-item-desc">Delikatna stymulacja kolagenu w okolicy oka — redukcja cieni i drobnych zmarszczek.</span></div>
+          <div class="cn-item-right"><span class="cn-price">500–600 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Stymulatory — twarz, szyja, dekolt lub dłonie</span><span class="cn-item-desc">Pobudzenie skóry do produkcji kolagenu — poprawa gęstości i napięcia cery.</span></div>
+          <div class="cn-item-right"><span class="cn-price">700–900 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Odświeżenie 3 miesiące do 1,5 roku</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Odświeżenie pigmentacji w okresie od 3 miesięcy do 1,5 roku.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">800 zł</span><br><span style="font-size:12px; color:#8a807a;">1 h 30 min</span></span>
+
+      <!-- Modelowanie ust -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Modelowanie ust</span><span class="cn-section-tag">kwas hialuronowy · objętość · kontur</span></div>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Modelowanie ust — 1 ml</span><span class="cn-item-desc">Pełne modelowanie z nadaniem objętości, konturu i symetrii.</span></div>
+          <div class="cn-item-right"><span class="cn-price">850 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Modelowanie ust — 0,5 ml</span><span class="cn-item-desc">Subtelne uwydatnienie i nawilżenie.</span></div>
+          <div class="cn-item-right"><span class="cn-price">700 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Odświeżenie 1,5 roku do 3 lat</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Odświeżenie pigmentacji w okresie od 1,5 roku do 3 lat.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">700 zł</span><br><span style="font-size:12px; color:#8a807a;">2 h</span></span>
+
+      <!-- Nici PDO/PLLA -->
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Nici PDO / PLLA</span><span class="cn-section-tag">lifting · unoszenie · konturowanie</span></div>
+        <p class="cn-section-intro">Nici biostymulujące z naturalnego materiału — stymulują produkcję kolagenu i elastyny. Efekt liftingu widoczny natychmiast, wzmacniany przez kolejne tygodnie.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Dolna partia twarzy — nici PDO (20–40 szt.)</span></div>
+          <div class="cn-item-right"><span class="cn-price">900–1 800 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Dolna partia twarzy — nici PLLA (20–40 szt.)</span></div>
+          <div class="cn-item-right"><span class="cn-price">1 000–2 000 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Górna partia twarzy — unoszenie policzków</span></div>
+          <div class="cn-item-right"><span class="cn-price">900–1 800 zł</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Podbródek (10–20 szt.)</span></div>
+          <div class="cn-item-right"><span class="cn-price">500–1 000 zł</span></div>
+        </div>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Odświeżenie po 3 latach</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Odświeżenie pigmentacji wykonane po upływie 3 lat.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">1 200 zł</span><br><span style="font-size:12px; color:#8a807a;">2 h</span></span>
+
+    </div>
+    <!-- END MEDYCYNA ESTETYCZNA -->
+
+    <!-- KONSULTACJE -->
+    <div class="cn-panel" data-cn-panel="konsultacje">
+      <div class="cn-section">
+        <div class="cn-section-hd"><span class="cn-section-name">Konsultacja kosmetologiczna</span></div>
+        <p class="cn-section-intro">Pierwszy krok do świadomej pielęgnacji skóry. Kosmetolog przeprowadza szczegółowy wywiad, analizuje potrzeby skóry i dobiera indywidualny plan działania.</p>
+        <div class="cn-divider"></div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Konsultacja przed zabiegiem</span><span class="cn-item-desc">Ocena kondycji skóry, dobór zabiegu i plan terapii — bezpłatna dla wszystkich klientów nane.</span></div>
+          <div class="cn-item-right"><span class="cn-price cn-price-accent">Bezpłatna</span><span class="cn-time">1 h</span></div>
+        </div>
+        <div class="cn-item">
+          <div class="cn-item-left"><span class="cn-item-name">Konsultacja bez zabiegu</span><span class="cn-item-desc">Samodzielne spotkanie konsultacyjne — analiza skóry i rekomendacje bez wykonania zabiegu.</span></div>
+          <div class="cn-item-right"><span class="cn-price">100 zł</span></div>
+        </div>
       </div>
     </div>
+    <!-- END KONSULTACJE -->
 
-    <!-- category: Usuwanie makijażu permanentnego -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(20px,3vw,36px) clamp(18px,4vw,40px) clamp(16px,2vw,24px);">
-      <div data-reveal style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #e4d6c9; padding-bottom:14px; margin-bottom:6px;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Usuwanie makijażu permanentnego</span>
-        <span style="font-size:13px; color:#8a807a;">laser · remover</span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Usuwanie laserem (brwi lub usta)</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Laserowe rozjaśnianie i usuwanie pigmentu brwi lub ust.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">250 zł</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Usuwanie laserem (tatuaż)</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Laserowe usuwanie tatuażu — cena ustalana od wielkości.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">wg wielkości</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Usuwanie makijażu permanentnego — remover</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Chemiczne usuwanie makijażu permanentnego z użyciem removera.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421;">od 300 zł</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
-      </div>
     </div>
-
-    <!-- category: Konsultacje -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(20px,3vw,36px) clamp(18px,4vw,40px) clamp(16px,2vw,24px);">
-      <div data-reveal style="display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #e4d6c9; padding-bottom:14px; margin-bottom:6px;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px,3vw,34px); color:#2a2421;">Konsultacje</span>
-        <span style="font-size:13px; color:#8a807a;">plan zabiegowy · dobór technologii</span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Konsultacja przed zabiegiem kosmetologicznym</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Ocena kondycji skóry i dobór planu zabiegowego do Twoich potrzeb.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">1 h</span></span>
-      </div>
-      <div data-reveal style="display:grid; grid-template-columns:1.2fr 2fr auto; gap:20px; align-items:center; padding:22px 4px; border-bottom:1px solid #efe6dd;">
-        <span style="font-family:'Cormorant Garamond',serif; font-size:22px; color:#2a2421;">Konsultacja przed zabiegiem na ciało</span>
-        <span style="font-size:14px; line-height:1.6; color:#6f655e;">Indywidualne omówienie zabiegów modelujących i ujędrniających ciało.</span>
-        <span style="text-align:right; white-space:nowrap;"><span style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#a78d76;">Bezpłatna</span><br><span style="font-size:12px; color:#8a807a;">30 min</span></span>
-      </div>
-    </div>
-
+    <!-- END PANELS -->
     <!-- note + CTA -->
     <div style="max-width:1180px; margin:0 auto; padding:clamp(28px,4vw,48px) clamp(18px,4vw,40px) clamp(48px,6vw,80px);">
       <div data-reveal style="background:#fafafa; border:1px solid #efe6dd; border-radius:20px; padding:clamp(32px,4vw,52px); display:grid; grid-template-columns:1.4fr 1fr; gap:clamp(24px,4vw,48px); align-items:center;">
@@ -943,6 +1309,18 @@
         });
       }, { passive: true });
     }
+  });
+
+  // cennik tabs
+  document.querySelectorAll('.cn-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var panel = tab.getAttribute('data-cn-tab');
+      document.querySelectorAll('.cn-tab').forEach(function(t) { t.classList.remove('is-active'); });
+      document.querySelectorAll('.cn-panel').forEach(function(p) { p.classList.remove('is-active'); });
+      tab.classList.add('is-active');
+      var el = document.querySelector('[data-cn-panel="' + panel + '"]');
+      if (el) el.classList.add('is-active');
+    });
   });
 
   go('home');
