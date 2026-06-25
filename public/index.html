@@ -75,7 +75,9 @@
   .car{ overflow:hidden; }
   .car-track{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; padding:2px; }
   .car-track::-webkit-scrollbar{ display:none; }
-  .car-card{ scroll-snap-align:start; flex:0 0 clamp(258px,31%,344px); background:#fff; border:1px solid #efe6dd; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; }
+  .car-card{ scroll-snap-align:start; flex:0 0 clamp(258px,31%,344px); background:#fff; border:1px solid #efe6dd; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow .24s, transform .24s, border-color .24s; }
+  .car-card[data-nav]:hover{ transform:translateY(-4px); box-shadow:0 20px 44px -18px rgba(120,80,55,.32); border-color:#d8c9bc; }
+  .car-card[data-nav]::after{ content:'Dowiedz się więcej →'; display:block; text-align:center; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#a78d76; padding:0 16px 18px; }
   .car-card-img{ aspect-ratio:3/4; position:relative; overflow:hidden; }
   .car-card-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
   .car-card:hover .car-card-img img{ transform:scale(1.045); }
