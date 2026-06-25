@@ -75,7 +75,9 @@
   .car{ overflow:hidden; }
   .car-track{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; padding:2px; }
   .car-track::-webkit-scrollbar{ display:none; }
-  .car-card{ scroll-snap-align:start; flex:0 0 clamp(258px,31%,344px); background:#fff; border:1px solid #efe6dd; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; }
+  .car-card{ scroll-snap-align:start; flex:0 0 clamp(258px,31%,344px); background:#fff; border:1px solid #efe6dd; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow .24s, transform .24s, border-color .24s; }
+  .car-card[data-nav]:hover{ transform:translateY(-4px); box-shadow:0 20px 44px -18px rgba(120,80,55,.32); border-color:#d8c9bc; }
+  .car-card[data-nav]::after{ content:'Dowiedz się więcej →'; display:block; text-align:center; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#a78d76; padding:0 16px 18px; }
   .car-card-img{ aspect-ratio:3/4; position:relative; overflow:hidden; }
   .car-card-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
   .car-card:hover .car-card-img img{ transform:scale(1.045); }
@@ -344,15 +346,15 @@
       </div>
       <div data-reveal class="car">
         <div class="car-track" data-car-track>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Morpheus 8</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">IPL Lumecca</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Icoon Body Laser</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">AquaPure</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">GeneoX</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Observ 520x</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Wypełnienie ust</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Stymulatory tkankowe</div></div>
-          <div class="car-card"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Makijaż permanentny</div></div>
+          <div class="car-card" data-nav="zabieg-morpheus8" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Morpheus 8</div></div>
+          <div class="car-card" data-nav="zabieg-ipl-lumecca" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">IPL Lumecca</div></div>
+          <div class="car-card" data-nav="zabieg-icoon-body-laser" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Icoon Body Laser</div></div>
+          <div class="car-card" data-nav="zabieg-aquapure" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">AquaPure</div></div>
+          <div class="car-card" data-nav="zabieg-geneo-x" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">GeneoX</div></div>
+          <div class="car-card" data-nav="zabieg-observ-520x" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Observ 520x</div></div>
+          <div class="car-card" data-nav="zabieg-wypelnienie-ust" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Wypełnienie ust</div></div>
+          <div class="car-card" data-nav="zabieg-stymulatory" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Stymulatory tkankowe</div></div>
+          <div class="car-card" data-nav="zabieg-makijaz-permanentny" style="cursor:pointer;"><div class="car-card-img"><div class="ph-img"><span class="ph-mark">nane</span><span class="ph-sub">zdjęcie wkrótce</span></div></div><div class="car-name">Makijaż permanentny</div></div>
         </div>
         <div class="car-dots" data-car-dots></div>
       </div>
@@ -1176,6 +1178,789 @@
         <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Oferta</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Inne zabiegi</h1>
         <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Szczegóły tej oferty są właśnie przygotowywane — wkrótce znajdziesz tu pełen opis zabiegów, ceny oraz zdjęcia efektów.</p>
+        <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — MORPHEUS 8 ===================== -->
+  <div data-page="zabieg-morpheus8">
+
+    <!-- Hero -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Morpheus8</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:680px;">Technologia, którą pokochały gwiazdy na całym świecie</p>
+      </div>
+    </div>
+
+    <!-- Intro + celebrity callout -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
+      <div style="display:grid; grid-template-columns:1.3fr .7fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <p data-reveal style="font-size:16px; line-height:1.85; color:#6f655e; margin:0;">Morpheus8 to zaawansowany zabieg z zakresu medycyny estetycznej, który łączy mikronakłuwanie skóry z energią fal radiowych (RF). Dzięki temu pobudzamy naturalne procesy regeneracyjne organizmu — następuje poprawa jędrności skóry oraz redukcja oznak starzenia bez konieczności przeprowadzania zabiegów chirurgicznych.</p>
+        <div data-reveal style="transition-delay:.08s; background:#faf6f2; border:1px solid #ede5db; border-radius:18px; padding:clamp(22px,2.5vw,32px);">
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Ambasadorki Morpheus8</div>
+          <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:18px;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#2a2421;">Eva Longoria</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#2a2421;">Kim Kardashian</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#2a2421;">Nicole Kidman</span>
+          </div>
+          <div style="border-top:1px solid #ede5db; padding-top:13px; display:flex; align-items:center; gap:9px;">
+            <span style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#b09a8a;">Certyfikacja</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#a78d76; font-weight:500;">FDA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Na czym polega -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Technologia</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 22px; color:#2a2421; line-height:1.1;">Na czym polega zabieg Morpheus8?</h2>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 14px;">Technologia Morpheus8 wykorzystuje specjalną głowicę wyposażoną w mikroigły, które wprowadzają energię radiofrekwencji do głębokich warstw skóry. Kontrolowane podgrzanie tkanek stymuluje produkcję kolagenu i elastyny — białek odpowiedzialnych za jędrność, elastyczność i młody wygląd skóry.</p>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Połączenie mikronakłuć z działaniem fal radiowych pozwala jednocześnie przebudowywać strukturę skóry i poprawiać jej napięcie, dzięki czemu zabieg cieszy się dużą popularnością wśród osób poszukujących skutecznych metod odmładzania.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Korzyści -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div data-reveal>
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Korzyści</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 14px; color:#2a2421; line-height:1.1;">Dlaczego pacjenci wybierają Morpheus8?</h2>
+        <p style="font-size:15px; line-height:1.8; color:#6f655e; margin:0 0 28px; max-width:660px;">Morpheus8 wyróżnia się wszechstronnym działaniem i możliwością indywidualnego dopasowania parametrów zabiegowych — to jeden z niewielu zabiegów posiadających certyfikację FDA.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:0 32px;">
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa jędrności i napięcia skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wygładzenie zmarszczek i linii mimicznych</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">modelowanie owalu twarzy</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">redukcja blizn potrądzikowych</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">zmniejszenie widoczności rozstępów</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa struktury i jakości skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">krótki okres rekonwalescencji</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:14px 0; display:flex; align-items:flex-start; gap:13px;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">skuteczność u wszystkich typów skóry</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obszary zabiegowe -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal style="margin-bottom:28px;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Gdzie działamy</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0; color:#2a2421; line-height:1.1;">Obszary zabiegowe</h2>
+        </div>
+        <div data-reveal style="transition-delay:.06s; display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px;">
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:22px 20px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:7px;">Twarz</div>
+            <div style="font-size:13px; line-height:1.6; color:#8a807a;">Poprawa owalu, redukcja zmarszczek i ujędrnienie.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:22px 20px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:7px;">Okolice oczu</div>
+            <div style="font-size:13px; line-height:1.6; color:#8a807a;">Wygładzenie drobnych zmarszczek i poprawa jakości skóry.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:22px 20px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:7px;">Szyja i dekolt</div>
+            <div style="font-size:13px; line-height:1.6; color:#8a807a;">Napięcie skóry i redukcja oznak starzenia.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:22px 20px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:7px;">Podbródek</div>
+            <div style="font-size:13px; line-height:1.6; color:#8a807a;">Poprawa konturu dolnej części twarzy.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:22px 20px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:7px;">Ciało</div>
+            <div style="font-size:13px; line-height:1.6; color:#8a807a;">Brzuch, uda, ramiona — ujędrnienie, redukcja rozstępów i modelowanie sylwetki.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Efekty -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Rezultaty</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Jakich efektów można się spodziewać?</h2>
+          <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Pierwsze rezultaty często są zauważalne już po jednym zabiegu, jednak pełna przebudowa skóry następuje stopniowo wraz z produkcją nowego kolagenu. W zależności od potrzeb specjalista może zalecić serię od 2 do 4 sesji — dobieraną indywidualnie na podstawie konsultacji i wizyt kontrolnych.</p>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">bardziej napięta i sprężysta skóra</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wygładzenie nierówności</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa konturu twarzy</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">redukcja blizn i przebarwień</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">młodszy i bardziej wypoczęty wygląd</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Procedura -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal style="margin-bottom:28px;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Przebieg</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0; color:#2a2421; line-height:1.1;">Jak przebiega procedura?</h2>
+        </div>
+        <div data-reveal style="transition-delay:.06s; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px;">
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">1.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Znieczulenie</div>
+            <div style="font-size:13px; line-height:1.65; color:#6f655e;">Na skórę aplikowany jest preparat znieczulający — komfort pacjenta jest priorytetem.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">2.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Zabieg</div>
+            <div style="font-size:13px; line-height:1.65; color:#6f655e;">Seria mikronakłuć jednorazową końcówką, dostosowaną do obszaru. Całość trwa 30–60 minut.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">3.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Regeneracja</div>
+            <div style="font-size:13px; line-height:1.65; color:#6f655e;">Może wystąpić zaczerwienienie i obrzęk, stopniowo ustępujące. Kluczowa pielęgnacja i filtr SPF.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przygotowanie + Przeciwwskazania -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px);">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Przed wizytą</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(22px,2.8vw,34px); margin:0 0 16px; color:#2a2421; line-height:1.15;">Przygotowanie do zabiegu</h2>
+          <p style="font-size:14px; line-height:1.82; color:#6f655e; margin:0;">Przed planowaną wizytą należy ograniczyć ekspozycję na słońce oraz unikać kosmetyków mogących podrażniać skórę. Szczegółowe zalecenia dotyczące przygotowania i pielęgnacji pozabiegowej omawiane są indywidualnie podczas konsultacji.</p>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Ważne informacje</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(22px,2.8vw,34px); margin:0 0 16px; color:#2a2421; line-height:1.15;">Przeciwwskazania</h2>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">ciąża i okres karmienia piersią</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">aktywne infekcje lub stany zapalne skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">niektóre choroby autoimmunologiczne</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">zaburzenia gojenia ran</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">stosowanie wybranych leków i terapii</span></div>
+          <p style="font-size:12px; color:#b09a8a; margin:12px 0 0; line-height:1.6;">Ostateczna kwalifikacja odbywa się podczas indywidualnej konsultacji ze specjalistą.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(52px,6vw,80px);">
+      <div data-reveal style="background:#2a2421; border-radius:22px; padding:clamp(36px,4.5vw,60px) clamp(28px,4vw,52px);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:clamp(24px,4vw,48px); flex-wrap:wrap;">
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin:0 0 10px; color:#f3ece6;">Umów się na konsultację</h2>
+            <p style="font-size:14px; line-height:1.7; color:rgba(243,236,230,.7); margin:0; max-width:480px;">Ocenimy stan skóry i przygotujemy indywidualny plan terapii, który pozwoli osiągnąć oczekiwane rezultaty.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
+            <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" style="text-decoration:none; display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Rezerwacja Booksy →</a>
+            <button class="reset-btn btn-outline-ondk" data-nav="kontakt" style="display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; border:1px solid rgba(243,236,230,.3); color:#f3ece6; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Kontakt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — LUMECCA IPL ===================== -->
+  <div data-page="zabieg-ipl-lumecca">
+
+    <!-- Hero -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Lumecca IPL</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:680px;">Skuteczna terapia przebarwień, naczynek i oznak fotostarzenia</p>
+      </div>
+    </div>
+
+    <!-- Intro + callout -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
+      <div style="display:grid; grid-template-columns:1.3fr .7fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <p data-reveal style="font-size:16px; line-height:1.85; color:#6f655e; margin:0;">Lumecca IPL to nowoczesna technologia intensywnego światła pulsacyjnego, stworzona z myślą o poprawie kolorytu skóry i redukcji niedoskonałości naczyniowych oraz pigmentacyjnych. Zabieg pozwala skutecznie zmniejszyć widoczność przebarwień, rumienia, rozszerzonych naczynek oraz oznak starzenia wywołanych promieniowaniem słonecznym — przy krótkim czasie rekonwalescencji i wysokiej skuteczności.</p>
+        <div data-reveal style="transition-delay:.08s; background:#faf6f2; border:1px solid #ede5db; border-radius:18px; padding:clamp(22px,2.5vw,32px);">
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Wskazania do zabiegu</div>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:18px;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Przebarwienia i plamy</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Rumień i naczynka</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Fotostarzenie skóry</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Nierówny koloryt</span>
+          </div>
+          <div style="border-top:1px solid #ede5db; padding-top:13px; display:flex; align-items:center; gap:9px;">
+            <span style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#b09a8a;">Czas zabiegu</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#a78d76; font-weight:500;">20–45 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Na czym polega -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Technologia</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 22px; color:#2a2421; line-height:1.1;">Na czym polega zabieg Lumecca IPL?</h2>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 14px;">Lumecca wykorzystuje energię intensywnego światła pulsacyjnego o wysokiej mocy, które dociera do wybranych struktur w skórze. Światło jest pochłaniane przez melaninę odpowiedzialną za przebarwienia oraz hemoglobinę znajdującą się w naczyniach krwionośnych — w efekcie dochodzi do stopniowego rozjaśnienia zmian pigmentacyjnych i zmniejszenia widoczności zmian naczyniowych.</p>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Dodatkowo zabieg pobudza naturalne procesy regeneracyjne skóry, wspierając jej odnowę i poprawiając ogólną jakość oraz wygląd.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jak przebiega -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div data-reveal style="margin-bottom:28px;">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Przebieg</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0; color:#2a2421; line-height:1.1;">Jak przebiega zabieg Lumecca IPL?</h2>
+      </div>
+      <div data-reveal style="transition-delay:.06s; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px;">
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">1.</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Konsultacja</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Specjalista ocenia stan skóry, określa wskazania i dobiera parametry urządzenia.</div>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">2.</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Przygotowanie</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Dokładne oczyszczenie skóry i nałożenie żelu przewodzącego na obszar zabiegowy.</div>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">3.</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Zabieg IPL</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Głowica emituje impulsy światła. Pacjent może odczuwać delikatne ciepło lub lekkie „strzelanie" — bez znieczulenia.</div>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">4.</div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Po zabiegu</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Usunięcie żelu, aplikacja preparatów łagodzących i kremu SPF. Można wrócić do aktywności tego samego dnia.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Co dzieje się po zabiegu -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+          <div data-reveal>
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Regeneracja</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Co dzieje się po zabiegu?</h2>
+            <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 12px;">Bezpośrednio po zabiegu może wystąpić przejściowe zaczerwienienie i uczucie ciepła. W przypadku przebarwień często obserwuje się ich chwilowe przyciemnienie — to naturalny etap regeneracji, świadczący o prawidłowej reakcji skóry.</p>
+            <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0;">W kolejnych dniach przebarwienia stopniowo się złuszczają, a skóra odzyskuje bardziej jednolity koloryt. Zaczerwienienia i naczynka stają się mniej widoczne wraz z postępującą regeneracją tkanek.</p>
+          </div>
+          <div data-reveal style="transition-delay:.08s;">
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Dlaczego warto?</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Korzyści Lumecca IPL</h2>
+            <div style="border-top:1px solid #e4d4c4; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">redukcja przebarwień posłonecznych i pozapalnych</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">zmniejszenie widoczności naczynek i rumienia</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wyrównanie kolorytu i poprawa tekstury skóry</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">działanie odmładzające i rewitalizujące</span></div>
+            <div style="border-top:1px solid #e4d4c4; border-bottom:1px solid #e4d4c4; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">terapia twarzy, szyi, dekoltu i dłoni</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Efekty + Problemy -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Rezultaty</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Jakich efektów można się spodziewać?</h2>
+          <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 20px;">Już po pierwszych zabiegach skóra staje się bardziej promienna i jednolita. Stopniowo zmniejsza się widoczność przebarwień i zmian naczyniowych, a cera odzyskuje świeży i zdrowy wygląd. Dla optymalnych rezultatów zaleca się indywidualnie dobraną serię zabiegów.</p>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">rozjaśnienie przebarwień</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">redukcja rumienia i naczynek</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa i wyrównanie kolorytu</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wygładzenie struktury skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">zwiększenie blasku i świeżości cery</span></div>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Wskazania</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Jakie problemy pomaga zniwelować?</h2>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:13px; color:#2a2421;">przebarwienia posłoneczne</span>
+            <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:13px; color:#2a2421;">plamy starcze</span>
+            <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:13px; color:#2a2421;">piegi</span>
+            <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:13px; color:#2a2421;">rumień i zaczerwienienia</span>
+            <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:13px; color:#2a2421;">rozszerzone naczynka</span>
+            <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:13px; color:#2a2421;">nierówny koloryt</span>
+            <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:13px; color:#2a2421;">fotostarzenie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przeciwwskazania -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal style="margin-bottom:24px;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Ważne informacje</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 10px; color:#2a2421; line-height:1.1;">Przeciwwskazania</h2>
+          <p style="font-size:14px; line-height:1.75; color:#6f655e; margin:0; max-width:660px;">Każdy zabieg poprzedzony jest szczegółowym wywiadem i kwalifikacją. Do najważniejszych przeciwwskazań należą:</p>
+        </div>
+        <div data-reveal style="transition-delay:.06s; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:0 40px;">
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">ciąża i okres karmienia piersią</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">świeża opalenizna lub solarium (ostatnie 4 tygodnie)</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">stosowanie samoopalaczy w obszarze zabiegowym</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">aktywne infekcje skóry (bakteryjne, wirusowe, grzybicze)</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">opryszczka w fazie aktywnej</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">choroby nowotworowe</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">nieuregulowana cukrzyca</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">epilepsja wywoływana światłem</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">skłonność do powstawania bliznowców</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">choroby autoimmunologiczne w fazie aktywnej</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">leki i zioła światłouczulające (antybiotyki, retinoidy, dziurawiec)</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">izotretynoina doustna w ciągu ostatnich 6–12 miesięcy</span></div>
+          <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">uszkodzenie ciągłości skóry w miejscu zabiegowym</span></div>
+          <div style="border-top:1px solid #e4d4c4; border-bottom:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">świeżo wykonane peelingi chemiczne lub zabiegi silnie złuszczające</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px) clamp(52px,6vw,80px);">
+      <div data-reveal style="background:#2a2421; border-radius:22px; padding:clamp(36px,4.5vw,60px) clamp(28px,4vw,52px);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:clamp(24px,4vw,48px); flex-wrap:wrap;">
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin:0 0 10px; color:#f3ece6;">Zapraszamy na konsultację</h2>
+            <p style="font-size:14px; line-height:1.7; color:rgba(243,236,230,.7); margin:0; max-width:480px;">Dobierzemy plan terapii dopasowany do potrzeb Twojej skóry i pomożemy odzyskać zdrowy, promienny wygląd.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
+            <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" style="text-decoration:none; display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Rezerwacja Booksy →</a>
+            <button class="reset-btn btn-outline-ondk" data-nav="kontakt" style="display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; border:1px solid rgba(243,236,230,.3); color:#f3ece6; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Kontakt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — ICOONE LASER BODY ===================== -->
+  <div data-page="zabieg-icoon-body-laser">
+
+    <!-- Hero -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Icoone<br>Laser Body</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:680px;">Nowoczesne wsparcie w modelowaniu sylwetki i poprawie kondycji skóry</p>
+      </div>
+    </div>
+
+    <!-- Intro + tech specs -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
+      <div style="display:grid; grid-template-columns:1.3fr .7fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <p data-reveal style="font-size:16px; line-height:1.85; color:#6f655e; margin:0;">Icoone Laser Body to innowacyjny zabieg wykorzystujący zaawansowaną technologię masażu mechanicznego wspomaganego podciśnieniem, światłem LED oraz laserem diodowym. Dzięki połączeniu kilku metod stymulacji tkanek możliwe jest skuteczne oddziaływanie na skórę i tkankę podskórną — co pomaga poprawić jej wygląd, napięcie oraz ogólną kondycję.</p>
+        <div data-reveal style="transition-delay:.08s; background:#faf6f2; border:1px solid #ede5db; border-radius:18px; padding:clamp(22px,2.5vw,32px);">
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Technologie zabiegu</div>
+          <div style="display:flex; flex-direction:column; gap:13px;">
+            <div style="display:flex; align-items:flex-start; gap:11px;">
+              <span style="width:5px; height:5px; border-radius:50%; background:#a78d76; flex:none; margin-top:8px;"></span>
+              <div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Laser diodowy 915 nm</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">redukcja tkanki tłuszczowej</div></div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:11px;">
+              <span style="width:5px; height:5px; border-radius:50%; background:#a78d76; flex:none; margin-top:8px;"></span>
+              <div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Światło LED 650 nm</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">poprawa jakości skóry</div></div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:11px;">
+              <span style="width:5px; height:5px; border-radius:50%; background:#a78d76; flex:none; margin-top:8px;"></span>
+              <div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Masaż podciśnieniowy</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">drenaż limfatyczny i mikrokrążenie</div></div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:11px;">
+              <span style="width:5px; height:5px; border-radius:50%; background:#a78d76; flex:none; margin-top:8px;"></span>
+              <div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Wielootworowe rolki</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">precyzyjna mikrostymulacja skóry</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Na czym polega -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Technologia</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 22px; color:#2a2421; line-height:1.1;">Na czym polega zabieg Icoone Laser Body?</h2>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 14px;">Technologia Icoone Laser Body opiera się na precyzyjnej mikrostymulacji skóry za pomocą specjalnych głowic wyposażonych w wielootworowe rolki. Zabieg oddziałuje na tkanki w sposób kontrolowany i delikatny, pobudzając mikrokrążenie, procesy regeneracyjne oraz naturalną aktywność fibroblastów odpowiedzialnych za produkcję kolagenu i elastyny.</p>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Dodatkowe wsparcie lasera diodowego 915 nm i światła LED 650 nm pozwala jeszcze skuteczniej wpływać na jakość skóry, wspomagać redukcję miejscowo nagromadzonej tkanki tłuszczowej oraz poprawiać jej napięcie. Dzięki inteligentnym głowicom zabieg działa selektywnie — dociera dokładnie tam, gdzie występuje problem, nie naruszając delikatnych struktur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Korzyści -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div data-reveal style="margin-bottom:28px;">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Korzyści</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 12px; color:#2a2421; line-height:1.1;">Dlaczego warto wybrać Icoone Laser Body?</h2>
+        <p style="font-size:15px; line-height:1.8; color:#6f655e; margin:0; max-width:660px;">Zabieg jest bezbolesny, nie powoduje siniaków ani podrażnień i nie wymaga rekonwalescencji. Nie rozciąga skóry — wręcz stymuluje jej ujędrnienie i regenerację.</p>
+      </div>
+      <div data-reveal style="transition-delay:.06s; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px;">
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:8px; line-height:1.2;">Modelowanie sylwetki bez skalpela</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Bezinwazyjny zabieg, który pozwala osiągnąć efekt wysmuklenia i modelowania sylwetki.</div>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:8px; line-height:1.2;">Redukcja cellulitu i wygładzenie skóry</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Precyzyjny masaż podciśnieniowy oraz działanie lasera i LED skutecznie eliminują efekt „skórki pomarańczowej".</div>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:8px; line-height:1.2;">Poprawa jędrności i elastyczności</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Zabieg wspiera produkcję kolagenu i elastyny, dzięki czemu skóra staje się jędrniejsza i bardziej napięta.</div>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:8px; line-height:1.2;">Odprowadzanie toksyn i obrzęków</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Masaż podciśnieniowy pobudza krążenie limfy, co sprzyja usuwaniu toksyn i redukcji obrzęków.</div>
+        </div>
+        <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#2a2421; margin-bottom:8px; line-height:1.2;">Komfort i zero rekonwalescencji</div>
+          <div style="font-size:13px; line-height:1.65; color:#6f655e;">Bezbolesna procedura — bezpośrednio po zabiegu można wrócić do codziennych aktywności.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Efekty -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+          <div data-reveal>
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Rezultaty</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Jakich efektów można się spodziewać?</h2>
+            <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Regularnie wykonywane zabiegi pomagają uzyskać gładszą, bardziej napiętą i jednolitą skórę. Terapia wspiera także redukcję cellulitu oraz poprawę konturów sylwetki. Wielu pacjentów zauważa poprawę komfortu i lekkości już po pierwszych sesjach — najlepsze rezultaty osiąga się po ukończeniu indywidualnie dobranej serii zabiegowej.</p>
+          </div>
+          <div data-reveal style="transition-delay:.08s;">
+            <div style="border-top:1px solid #e4d4c4; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wygładzenie nierówności skóry</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa napięcia i sprężystości tkanek</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">zmniejszenie widoczności cellulitu</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">redukcja obrzęków</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa krążenia i metabolizmu tkanek</span></div>
+            <div style="border-top:1px solid #e4d4c4; border-bottom:1px solid #e4d4c4; padding:14px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">lepszy wygląd blizn i rozstępów</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px) clamp(52px,6vw,80px);">
+      <div data-reveal style="background:#2a2421; border-radius:22px; padding:clamp(36px,4.5vw,60px) clamp(28px,4vw,52px);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:clamp(24px,4vw,48px); flex-wrap:wrap;">
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin:0 0 10px; color:#f3ece6;">Zapraszamy na konsultację</h2>
+            <p style="font-size:14px; line-height:1.7; color:rgba(243,236,230,.7); margin:0; max-width:480px;">Ocenimy potrzeby Twojej skóry i przygotujemy indywidualny plan zabiegowy dopasowany do Twoich celów estetycznych.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
+            <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" style="text-decoration:none; display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Rezerwacja Booksy →</a>
+            <button class="reset-btn btn-outline-ondk" data-nav="kontakt" style="display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; border:1px solid rgba(243,236,230,.3); color:#f3ece6; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Kontakt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — AQUAPURE ===================== -->
+  <div data-page="zabieg-aquapure">
+
+    <!-- Hero -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Aquapure</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:680px;">Wieloetapowe oczyszczanie i odżywienie skóry dla efektu „glass skin"</p>
+      </div>
+    </div>
+
+    <!-- Intro + technologie -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
+      <div style="display:grid; grid-template-columns:1.3fr .7fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <p data-reveal style="font-size:16px; line-height:1.85; color:#6f655e; margin:0;">Aquapure to nowoczesny zabieg pielęgnacyjny, który łączy oczyszczanie, złuszczanie, nawilżanie i odżywianie skóry w jednej procedurze. Dzięki technologii hydrodermabrazji oraz infuzji składników aktywnych skóra staje się świeża, promienna i wyraźnie bardziej nawilżona już po pierwszej wizycie — bez okresu rekonwalescencji. To jeden z najczęściej wybieranych zabiegów bankietowych.</p>
+        <div data-reveal style="transition-delay:.08s; background:#faf6f2; border:1px solid #ede5db; border-radius:18px; padding:clamp(22px,2.5vw,32px);">
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Technologie zabiegu</div>
+          <div style="display:flex; flex-direction:column; gap:13px;">
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Hydrodermabrazja</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">oczyszczanie i złuszczanie podciśnieniem</div></div></div>
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Mezoterapia bezigłowa</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">transport składników aktywnych</div></div></div>
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Elektrostymulacja</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">napięcie skóry i mikrokrążenie</div></div></div>
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:17px; color:#2a2421; line-height:1.2;">Termoterapia</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">regeneracja, zamknięcie porów, wchłanianie</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Na czym polega -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Technologia</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 22px; color:#2a2421; line-height:1.1;">Na czym polega zabieg Aquapure?</h2>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 14px;">Technologia Aquapure łączy kilka zaawansowanych etapów pielęgnacyjnych, które kompleksowo wpływają na kondycję skóry. Zabieg obejmuje dokładne oczyszczanie i złuszczanie naskórka z wykorzystaniem podciśnienia, a następnie mezoterapię bezigłową wspomagającą transport substancji aktywnych do głębszych warstw skóry.</p>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Kolejnym etapem jest elektrostymulacja, poprawiająca napięcie skóry i pobudzająca mikrokrążenie, oraz termoterapia wspierająca procesy regeneracyjne, zamykająca pory i ułatwiająca wchłanianie składników odżywczych. Dzięki synergii tych technologii skóra jest oczyszczona, intensywnie nawilżona, bardziej napięta i pełna naturalnego blasku.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dlaczego warto -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Zalety</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Dlaczego pacjenci wybierają Aquapure?</h2>
+          <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Aquapure wyróżnia się połączeniem kilku technologii w jednej procedurze — bez konieczności oddzielnych wizyt i bez okresu rekonwalescencji. Dzięki swojej wszechstronności sprawdza się zarówno jako regularna terapia, jak i zabieg bankietowy przed ważnymi okazjami.</p>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">4 technologie w jednej wizycie: oczyszczanie, mezoterapia, elektrostymulacja i termoterapia</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">indywidualne dopasowanie terapii do kondycji skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">nieinwazyjny, komfortowy przebieg</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">brak rekonwalescencji, natychmiastowy powrót do aktywności</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">możliwość wykonania przez cały rok, również przed ważnym wydarzeniem</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">bezpieczny dla większości typów skóry, także wrażliwej i odwodnionej</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">widoczna poprawa wyglądu już po pierwszej sesji</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obszary + Efekty -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+          <div data-reveal>
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Obszary</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 20px; color:#2a2421; line-height:1.1;">Obszary zabiegowe</h2>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+              <div style="background:#fff; border:1px solid #ede5db; border-radius:14px; padding:18px 16px;"><div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:5px;">Twarz</div><div style="font-size:12px; line-height:1.55; color:#6f655e;">oczyszczenie, nawilżenie, poprawa jakości</div></div>
+              <div style="background:#fff; border:1px solid #ede5db; border-radius:14px; padding:18px 16px;"><div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:5px;">Szyja</div><div style="font-size:12px; line-height:1.55; color:#6f655e;">nawilżenie i wygładzenie skóry</div></div>
+              <div style="background:#fff; border:1px solid #ede5db; border-radius:14px; padding:18px 16px;"><div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:5px;">Dekolt</div><div style="font-size:12px; line-height:1.55; color:#6f655e;">poprawa struktury i świeżości skóry</div></div>
+              <div style="background:#fff; border:1px solid #ede5db; border-radius:14px; padding:18px 16px;"><div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:5px;">Plecy</div><div style="font-size:12px; line-height:1.55; color:#6f655e;">zanieczyszczone pory i niedoskonałości</div></div>
+            </div>
+          </div>
+          <div data-reveal style="transition-delay:.08s;">
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Rezultaty</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Jakich efektów można się spodziewać?</h2>
+            <p style="font-size:14px; line-height:1.8; color:#6f655e; margin:0 0 16px;">Pierwsze efekty są widoczne bezpośrednio po zabiegu. Dla długotrwałych rezultatów zalecana jest indywidualnie dobrana seria.</p>
+            <div style="border-top:1px solid #e4d4c4; padding:12px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">świeża i rozświetlona cera</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:12px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">głębokie nawilżenie skóry</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:12px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">zmniejszenie widoczności porów</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:12px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wygładzenie powierzchni i redukcja niedoskonałości</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:12px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa kolorytu i zdrowy wygląd</span></div>
+            <div style="border-top:1px solid #e4d4c4; border-bottom:1px solid #e4d4c4; padding:12px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">efekt wypoczętej, promiennej cery</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przebieg + Przeciwwskazania -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Przebieg</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Jak przebiega procedura?</h2>
+          <p style="font-size:14px; line-height:1.8; color:#6f655e; margin:0 0 20px;">Cała procedura trwa zazwyczaj <strong style="color:#2a2421; font-weight:500;">45–60 minut</strong> i jest komfortowa dla pacjenta. Po zabiegu można od razu wracać do aktywności — skóra może być delikatnie zaróżowiona, jednak objaw ten szybko ustępuje.</p>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div style="display:flex; gap:14px; align-items:flex-start;"><div style="width:32px; height:32px; border-radius:50%; background:#f0e8df; display:flex; align-items:center; justify-content:center; flex:none; font-family:'Cormorant Garamond',serif; font-size:15px; color:#a78d76;">1</div><div style="padding-top:5px; font-size:14px; line-height:1.65; color:#6f655e;">Ocena stanu skóry i oczyszczenie wstępne</div></div>
+            <div style="display:flex; gap:14px; align-items:flex-start;"><div style="width:32px; height:32px; border-radius:50%; background:#f0e8df; display:flex; align-items:center; justify-content:center; flex:none; font-family:'Cormorant Garamond',serif; font-size:15px; color:#a78d76;">2</div><div style="padding-top:5px; font-size:14px; line-height:1.65; color:#6f655e;">Złuszczanie, oczyszczanie porów i aplikacja preparatów aktywnych</div></div>
+            <div style="display:flex; gap:14px; align-items:flex-start;"><div style="width:32px; height:32px; border-radius:50%; background:#f0e8df; display:flex; align-items:center; justify-content:center; flex:none; font-family:'Cormorant Garamond',serif; font-size:15px; color:#a78d76;">3</div><div style="padding-top:5px; font-size:14px; line-height:1.65; color:#6f655e;">Indywidualnie dobrana maska i pielęgnacja końcowa</div></div>
+          </div>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Ważne informacje</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 10px; color:#2a2421; line-height:1.1;">Przeciwwskazania</h2>
+          <p style="font-size:13px; line-height:1.7; color:#6f655e; margin:0 0 16px;">Kwalifikacja odbywa się podczas indywidualnej konsultacji ze specjalistą.</p>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">ciąża i okres karmienia piersią</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">aktywne infekcje skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">opryszczka w fazie aktywnej</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">stany zapalne skóry w miejscu zabiegowym</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">przerwanie ciągłości naskórka</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">świeże oparzenia słoneczne</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">niektóre choroby dermatologiczne</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(52px,6vw,80px);">
+      <div data-reveal style="background:#2a2421; border-radius:22px; padding:clamp(36px,4.5vw,60px) clamp(28px,4vw,52px);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:clamp(24px,4vw,48px); flex-wrap:wrap;">
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin:0 0 10px; color:#f3ece6;">Umów się na konsultację</h2>
+            <p style="font-size:14px; line-height:1.7; color:rgba(243,236,230,.7); margin:0; max-width:480px;">Dobierzemy plan terapii dopasowany do potrzeb Twojej skóry i pomożemy uzyskać efekt zdrowej, promiennej cery.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
+            <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" style="text-decoration:none; display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Rezerwacja Booksy →</a>
+            <button class="reset-btn btn-outline-ondk" data-nav="kontakt" style="display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; border:1px solid rgba(243,236,230,.3); color:#f3ece6; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Kontakt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — GENEO X ===================== -->
+  <div data-page="zabieg-geneo-x">
+
+    <!-- Hero -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Geneo X</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:680px;">Zabieg dla skóry, która potrzebuje natychmiastowego efektu wow</p>
+      </div>
+    </div>
+
+    <!-- Intro + technologie -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
+      <div style="display:grid; grid-template-columns:1.3fr .7fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <p data-reveal style="font-size:16px; line-height:1.85; color:#6f655e; margin:0;">Geneo X to innowacyjny zabieg kosmetologiczny nowej generacji łączący kilka zaawansowanych technologii w jednej procedurze. Dzięki synergicznemu działaniu dotlenienia skóry, radiofrekwencji, ultradźwięków i elektrostymulacji możliwe jest jednoczesne oczyszczanie, odżywienie, ujędrnienie i rewitalizacja skóry — bez bólu, igieł i okresu rekonwalescencji. Stworzony dla osób, które oczekują szybkiej, widocznej poprawy już po pierwszej wizycie.</p>
+        <div data-reveal style="transition-delay:.08s; background:#faf6f2; border:1px solid #ede5db; border-radius:18px; padding:clamp(22px,2.5vw,32px);">
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Technologie zabiegu</div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; line-height:1.2;">OxyGeneo®</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">naturalne dotlenienie i złuszczanie</div></div></div>
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; line-height:1.2;">TriPollar® RF</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">radiofrekwencja – kolagen i elastyna</div></div></div>
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; line-height:1.2;">Ultrasound</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">transport składników aktywnych</div></div></div>
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; line-height:1.2;">ESA</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">elektrostymulacja i mikrokrążenie</div></div></div>
+            <div style="display:flex; align-items:flex-start; gap:11px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; line-height:1.2;">Masaż wibracyjny</div><div style="font-size:12px; color:#b09a8a; margin-top:2px;">drenaż, relaksacja i odżywienie</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Na czym polega -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Technologia</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 22px; color:#2a2421; line-height:1.1;">Na czym polega zabieg Geneo X?</h2>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 14px;">Geneo X opiera się na opatentowanej technologii OxyGeneo®, która pobudza naturalne procesy dotlenienia skóry od wewnątrz poprzez efekt Bohra. Jednocześnie dochodzi do delikatnego złuszczenia martwego naskórka i przygotowania skóry do przyjęcia składników aktywnych.</p>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0;">W zależności od potrzeb skóry procedura jest wzbogacana o radiofrekwencję TriPollar® RF stymulującą produkcję kolagenu, ultradźwięki wspomagające transport składników aktywnych, elektrostymulację ESA poprawiającą mikrokrążenie i napięcie, a także masaż wibracyjny wspierający drenaż i odżywienie tkanek. Zabieg działa kompleksowo — zarówno na powierzchnię skóry, jak i jej głębsze struktury.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Efekty + Obszary -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Rezultaty</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Efekty zabiegu Geneo X</h2>
+          <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 16px;">Pierwsze rezultaty widoczne są bezpośrednio po zabiegu. Skóra staje się promienna, napięta i lepiej nawilżona. Zabieg można wykonywać przez cały rok i jest odpowiedni dla większości typów skóry.</p>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">efekt naturalnego glow</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa napięcia i elastyczności skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wygładzenie drobnych zmarszczek</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">bardziej jednolity koloryt cery</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">intensywne nawilżenie</span></div>
+          <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa struktury skóry</span></div>
+          <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">zdrowszy i młodszy wygląd</span></div>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Obszary</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 20px; color:#2a2421; line-height:1.1;">Obszary zabiegowe</h2>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:14px; padding:16px 18px; display:flex; align-items:flex-start; gap:12px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#2a2421; margin-bottom:3px;">Twarz</div><div style="font-size:12px; color:#6f655e;">poprawa jakości, napięcia i rozświetlenia</div></div></div>
+            <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:14px; padding:16px 18px; display:flex; align-items:flex-start; gap:12px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#2a2421; margin-bottom:3px;">Okolice oczu</div><div style="font-size:12px; color:#6f655e;">odświeżenie i wygładzenie skóry</div></div></div>
+            <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:14px; padding:16px 18px; display:flex; align-items:flex-start; gap:12px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#2a2421; margin-bottom:3px;">Szyja</div><div style="font-size:12px; color:#6f655e;">poprawa jędrności i nawilżenia</div></div></div>
+            <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:14px; padding:16px 18px; display:flex; align-items:flex-start; gap:12px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#2a2421; margin-bottom:3px;">Dekolt</div><div style="font-size:12px; color:#6f655e;">zmniejszenie oznak starzenia</div></div></div>
+            <div style="background:#faf6f2; border:1px solid #ede5db; border-radius:14px; padding:16px 18px; display:flex; align-items:flex-start; gap:12px;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:8px;"></span><div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#2a2421; margin-bottom:3px;">Wybrane partie ciała</div><div style="font-size:12px; color:#6f655e;">rewitalizacja i poprawa jakości skóry</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przebieg + Przeciwwskazania -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+          <div data-reveal>
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Przebieg</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Jak przebiega procedura?</h2>
+            <p style="font-size:14px; line-height:1.8; color:#6f655e; margin:0 0 20px;">Cały zabieg trwa zazwyczaj <strong style="color:#2a2421; font-weight:500;">60–90 minut</strong> i nie wymaga rekonwalescencji.</p>
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div style="display:flex; gap:14px; align-items:flex-start;"><div style="width:32px;height:32px;border-radius:50%;background:#e8ddd4;display:flex;align-items:center;justify-content:center;flex:none;font-family:'Cormorant Garamond',serif;font-size:15px;color:#a78d76;">1</div><div style="padding-top:5px;font-size:14px;line-height:1.65;color:#6f655e;">Konsultacja i ocena potrzeb skóry</div></div>
+              <div style="display:flex; gap:14px; align-items:flex-start;"><div style="width:32px;height:32px;border-radius:50%;background:#e8ddd4;display:flex;align-items:center;justify-content:center;flex:none;font-family:'Cormorant Garamond',serif;font-size:15px;color:#a78d76;">2</div><div style="padding-top:5px;font-size:14px;line-height:1.65;color:#6f655e;">OxyGeneo® – złuszczenie i naturalne dotlenienie skóry</div></div>
+              <div style="display:flex; gap:14px; align-items:flex-start;"><div style="width:32px;height:32px;border-radius:50%;background:#e8ddd4;display:flex;align-items:center;justify-content:center;flex:none;font-family:'Cormorant Garamond',serif;font-size:15px;color:#a78d76;">3</div><div style="padding-top:5px;font-size:14px;line-height:1.65;color:#6f655e;">Ultradźwięki, ESA i TriPollar® RF – regeneracja i napięcie skóry</div></div>
+              <div style="display:flex; gap:14px; align-items:flex-start;"><div style="width:32px;height:32px;border-radius:50%;background:#e8ddd4;display:flex;align-items:center;justify-content:center;flex:none;font-family:'Cormorant Garamond',serif;font-size:15px;color:#a78d76;">4</div><div style="padding-top:5px;font-size:14px;line-height:1.65;color:#6f655e;">Aplikacja składników aktywnych dobranych do potrzeb cery</div></div>
+            </div>
+          </div>
+          <div data-reveal style="transition-delay:.08s;">
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Ważne informacje</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 10px; color:#2a2421; line-height:1.1;">Przeciwwskazania</h2>
+            <p style="font-size:13px; line-height:1.7; color:#6f655e; margin:0 0 16px;">Kwalifikacja odbywa się podczas indywidualnej konsultacji ze specjalistą.</p>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">ciąża i okres karmienia piersią</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">aktywne infekcje skóry</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">opryszczka w fazie aktywnej</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">stany zapalne w miejscu zabiegowym</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">choroby nowotworowe</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">nieuregulowana cukrzyca</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">rozrusznik serca lub elektroniczne implanty (przy RF i ESA)</span></div>
+            <div style="border-top:1px solid #e4d4c4; border-bottom:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">przerwanie ciągłości naskórka w obszarze zabiegowym</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px) clamp(52px,6vw,80px);">
+      <div data-reveal style="background:#2a2421; border-radius:22px; padding:clamp(36px,4.5vw,60px) clamp(28px,4vw,52px);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:clamp(24px,4vw,48px); flex-wrap:wrap;">
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin:0 0 10px; color:#f3ece6;">Umów się na konsultację</h2>
+            <p style="font-size:14px; line-height:1.7; color:rgba(243,236,230,.7); margin:0; max-width:480px;">Dobierzemy indywidualny plan terapii dopasowany do potrzeb Twojej skóry.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
+            <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" style="text-decoration:none; display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Rezerwacja Booksy →</a>
+            <button class="reset-btn btn-outline-ondk" data-nav="kontakt" style="display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; border:1px solid rgba(243,236,230,.3); color:#f3ece6; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Kontakt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — OBSERV 520X ===================== -->
+  <div data-page="zabieg-observ-520x">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Observ 520x</h1>
+        <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Opis zabiegu jest w trakcie przygotowania — wkrótce znajdziesz tu szczegółowe informacje, efekty i cennik.</p>
+        <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — WYPEŁNIENIE UST ===================== -->
+  <div data-page="zabieg-wypelnienie-ust">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Wypełnienie ust</h1>
+        <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Opis zabiegu jest w trakcie przygotowania — wkrótce znajdziesz tu szczegółowe informacje, efekty i cennik.</p>
+        <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — STYMULATORY TKANKOWE ===================== -->
+  <div data-page="zabieg-stymulatory">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Stymulatory tkankowe</h1>
+        <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Opis zabiegu jest w trakcie przygotowania — wkrótce znajdziesz tu szczegółowe informacje, efekty i cennik.</p>
+        <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PAGE: ZABIEG — MAKIJAŻ PERMANENTNY ===================== -->
+  <div data-page="zabieg-makijaz-permanentny">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="home" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:32px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Start</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">Zabieg</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Makijaż permanentny</h1>
+        <p style="max-width:520px; font-size:16px; line-height:1.75; color:#6f655e; margin:0 0 38px;">Opis zabiegu jest w trakcie przygotowania — wkrótce znajdziesz tu szczegółowe informacje, efekty i cennik.</p>
         <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-dark" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 28px; border-radius:999px; background:#2a2421; color:#f3ece6; font-size:14px; letter-spacing:.06em;">Umów wizytę →</a>
       </div>
     </div>
