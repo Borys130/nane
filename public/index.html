@@ -103,8 +103,7 @@
   .tp-price td:first-child,.tp-price th:first-child{ text-align:left; font-family:'Cormorant Garamond',serif; color:#2a2421; }
   .tp-price td{ color:#6f655e; }
   @media (max-width:820px){
-    [data-page] > div > div[style*="grid-template-columns"],
-    [data-page] > div[style*="grid-template-columns"]{ grid-template-columns:1fr !important; }
+    [data-page] div[style*="grid-template-columns"]{ grid-template-columns:1fr !important; }
     .tp-price{ font-size:12px; }
     .tp-price td,.tp-price th{ padding:10px 6px; }
   }
@@ -165,6 +164,7 @@
   @media(max-width:640px){
     .cn-item{ grid-template-columns:1fr; }
     .cn-item-right{ text-align:left; display:flex; gap:12px; align-items:baseline; margin-top:2px; }
+    .cn-item:has(.cn-pkgs) .cn-price::before{ content:"1 zabieg · "; font-family:'Jost',sans-serif; font-size:12px; letter-spacing:.03em; color:#b09a8a; }
     .cn-zones{ grid-template-columns:1fr; }
     .cn-zone:last-child{ border-bottom:none; }
     .cn-zone:nth-last-child(-n+2){ border-bottom:1px solid #f5ede6; }
@@ -191,12 +191,13 @@
   /* ── Mobile nav & layout ── */
   @media(max-width:820px){
     .nav-inner{flex-wrap:wrap;padding-top:8px!important;padding-bottom:0!important;gap:0!important}
-    .nav-inner .reset-btn img{height:48px!important}
+    .nav-inner .reset-btn img{height:68px!important}
     .nav-inner>a.btn-dark{display:none!important}
     .nav-links{order:3;flex:0 0 100%;overflow-x:auto;scrollbar-width:none;padding:2px 0 6px;margin-top:4px;border-top:1px solid #f5ede6}
     .nav-links::-webkit-scrollbar{display:none}
     .nav-dropdown{display:none!important}
-    .footer-grid{grid-template-columns:1fr!important}
+    .footer-grid{grid-template-columns:1fr!important; row-gap:32px!important;}
+    .footer-nav-list{flex-direction:row!important;flex-wrap:wrap;gap:10px 20px!important}
     [data-page]>div>.onas-gallery[data-reveal]{grid-template-columns:1fr 1fr!important;height:auto!important;grid-template-rows:auto!important}
     .onas-gallery>div{grid-row:auto!important;aspect-ratio:4/3}
     .onas-gallery>div:last-child{grid-column:1/-1;aspect-ratio:8/3}
@@ -2940,7 +2941,7 @@
         </div>
         <div>
           <div style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#8a7d72; margin-bottom:14px;">Nawigacja</div>
-          <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; align-items:flex-start;">
+          <div class="footer-nav-list" style="display:flex; flex-direction:column; gap:10px; font-size:14px; align-items:flex-start;">
             <button class="reset-btn footer-nav-btn" data-nav="home" style="text-align:left; color:#2a2421; font-size:14px;">Start</button>
             <button class="reset-btn footer-nav-btn" data-nav="oferta" style="text-align:left; color:#2a2421; font-size:14px;">Oferta</button>
             <button class="reset-btn footer-nav-btn" data-nav="zabiegi" style="text-align:left; color:#2a2421; font-size:14px;">Cennik</button>
