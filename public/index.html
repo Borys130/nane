@@ -164,6 +164,7 @@
   @media(max-width:640px){
     .cn-item{ grid-template-columns:1fr; }
     .cn-item-right{ text-align:left; display:flex; gap:12px; align-items:baseline; margin-top:2px; }
+    .cn-item:has(.cn-pkgs) .cn-price::before{ content:"1 zabieg · "; font-family:'Jost',sans-serif; font-size:12px; letter-spacing:.03em; color:#b09a8a; }
     .cn-zones{ grid-template-columns:1fr; }
     .cn-zone:last-child{ border-bottom:none; }
     .cn-zone:nth-last-child(-n+2){ border-bottom:1px solid #f5ede6; }
