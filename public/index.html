@@ -47,8 +47,10 @@
   .btn-hero-outline{ transition:background .22s, border-color .22s; }
   .btn-hero-outline:hover{ background:rgba(243,236,230,.14) !important; border-color:rgba(243,236,230,.85) !important; }
   /* hero content: tekst nisko (pod logo) na mobile, bliżej logo na desktop */
-  .hero-content{ padding:0 clamp(20px,5vw,40px) clamp(44px,7vh,110px); }
-  @media(min-width:821px){ .hero-content{ padding-bottom:clamp(120px,18vh,185px); } }
+  .hero-content{ padding:0 clamp(20px,5vw,40px) clamp(28px,5vh,60px); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; align-self:stretch; }
+  /* logo centruje się w wolnej przestrzeni nad opisem */
+  .hero-logo{ width:clamp(150px,22vw,210px); height:auto; display:block; margin:auto; padding:clamp(24px,7vh,72px) 0 clamp(22px,4vh,36px); filter:drop-shadow(0 2px 14px rgba(20,16,14,.4)); }
+  @media(min-width:821px){ .hero-content{ padding-bottom:clamp(60px,10vh,100px); } .hero-p{ margin-bottom:clamp(28px,4.5vh,52px) !important; } }
   /* Footer */
   .footer-nav-btn{ transition:color .18s; }
   .footer-nav-btn:hover{ color:#a78d76 !important; }
@@ -236,11 +238,15 @@
   <!-- ===================== PAGE: HOME ===================== -->
   <div data-page="home" class="is-active">
     <!-- hero -->
-    <div style="position:relative; min-height:clamp(540px,80vh,800px); display:flex; align-items:flex-end; justify-content:center; overflow:hidden;">
+    <div style="position:relative; min-height:clamp(680px,92vh,960px); display:flex; align-items:flex-end; justify-content:center; overflow:hidden;">
       <img src="images/hero2.jpeg" alt="nane beauty concept — wnętrze gabinetu" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 50%;">
-      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(28,24,21,.16) 0%, rgba(28,24,21,.04) 38%, rgba(28,24,21,.34) 70%, rgba(28,24,21,.60) 100%);"></div>
-      <div data-reveal class="hero-content" style="position:relative; z-index:2; text-align:center; max-width:580px;">
-        <p style="max-width:480px; margin:0 auto 32px; font-size:16px; line-height:1.8; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.7);">Nowoczesne zabiegi na twarz i ciało — od liftingu Morpheus8 po modelowanie Icoone Laser Body. W kameralnym wnętrzu, z pełną dbałością o Twój komfort i naturalny efekt.</p>
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(28,24,21,.18) 0%, rgba(28,24,21,.10) 30%, rgba(28,24,21,.46) 65%, rgba(28,24,21,.70) 100%);"></div>
+      <div data-reveal class="hero-content" style="position:relative; z-index:2; text-align:center; max-width:720px;">
+        <img src="images/logo-white.png" alt="nane beauty concept" class="hero-logo">
+        <p class="hero-p" style="max-width:640px; margin:0 auto 16px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Nane beauty concept jest nowoczesną koncepcją piękna stworzoną dla osób, które oczekują najwyższej jakości, profesjonalizmu i holistycznej pielęgnacji. To miejsce, w którym nowoczesne technologie, estetyka i ekspercka wiedza tworzą spójną przestrzeń dedykowaną pięknu, zdrowiu skóry i dobremu samopoczuciu.</p>
+        <p class="hero-p" style="max-width:640px; margin:0 auto 16px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Każdy zabieg dobieramy indywidualnie, kierując się potrzebami skóry oraz oczekiwaniami naszych klientów. Łączymy skuteczne procedury, najnowocześniejsze technologie oraz wiedzę i doświadczenie naszego zespołu, aby osiągać naturalne, harmonijne i długotrwałe efekty.</p>
+        <p style="max-width:640px; margin:0 auto 28px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Nane Beauty Concept wyróżnia również eleganckie, ciepłe i przyjazne wnętrze, zaprojektowane z dbałością o każdy detal. To przestrzeń, w której profesjonalna opieka, komfort oraz wysoki standard usług tworzą wyjątkowe doświadczenie dla każdego, kto ceni jakość, estetykę i indywidualne podejście.</p>
+        <div style="height:clamp(20px,4vh,44px);"></div>
         <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
           <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-hero-light" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
           <button class="reset-btn btn-hero-outline" data-nav="zabiegi" style="display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:transparent; color:#f3ece6; border:1px solid rgba(243,236,230,.55); font-size:14px; letter-spacing:.06em;">Zobacz cennik</button>
