@@ -1001,51 +1001,57 @@
 
   <!-- ===================== PAGE: O NAS ===================== -->
   <div data-page="onas">
-    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,4vw,56px); align-items:center; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(28px,4vw,48px);">
-      <div data-reveal>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:20px;">O nas</div>
-        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(38px,5vw,66px); line-height:1.0; margin:0 0 22px; color:#2a2421;">Kosmetologia<br>z <em style="color:#a78d76;">sensem i sercem.</em></h1>
-        <p style="max-width:460px; font-size:16px; line-height:1.78; color:#6f655e; margin:0;">Jesteśmy studiem kosmetologii estetycznej w Rawiczu — zabiegi na twarz i ciało łączymy z makijażem permanentnym i uważną opieką. Podkreślamy naturalne piękno, nie zmieniamy rysów.</p>
-      </div>
-      <div data-reveal style="transition-delay:.12s;">
-        <div style="position:relative; border-radius:18px 18px 200px 200px; overflow:hidden; aspect-ratio:4/5; box-shadow:0 30px 60px -32px rgba(120,80,55,.5);">
-          <img src="images/women.jpg" alt="Strefa relaksu nane beauty concept" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        </div>
-      </div>
-    </div>
+    <style>
+      .ed{ max-width:960px; margin:0 auto; padding:0 clamp(20px,5vw,40px); }
+      .ed-eyebrow{ font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; padding-top:clamp(36px,6vw,64px); }
+      .ed-hero{ padding:clamp(14px,2vw,18px) 0 clamp(36px,5vw,56px); border-bottom:1px solid #efe6dd; }
+      .ed-title{ font-family:'Cormorant Garamond',serif; font-weight:500; color:#2a2421; font-size:clamp(36px,6vw,68px); line-height:1.04; margin:clamp(12px,2vw,18px) 0 clamp(22px,3vw,30px); }
+      .ed-title .ed-paren{ color:#a78d76; font-weight:400; margin:0 .12em; }
+      .ed-lead{ font-size:clamp(16px,1.6vw,19px); line-height:1.7; color:#4a423c; max-width:640px; margin:0 0 16px; }
+      .ed-hero-text p{ font-size:15px; line-height:1.75; color:#6f655e; max-width:640px; margin:0 0 14px; }
+      .ed-hero-text p.strong{ font-weight:600; color:#2a2421; margin-bottom:0; }
+      .ed-sec{ padding:clamp(30px,4.5vw,52px) 0; border-bottom:1px solid #efe6dd; }
+      .ed-sec h2{ font-family:'Cormorant Garamond',serif; font-weight:500; color:#2a2421; font-size:clamp(23px,3.2vw,36px); line-height:1.14; margin:0 0 clamp(12px,1.8vw,18px); }
+      .ed-sec p{ font-size:15px; line-height:1.78; color:#6f655e; max-width:680px; margin:0; }
+    </style>
 
-    <!-- values -->
-    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
-      <div data-reveal style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:40px;">Nasze wartości</div>
-      <div data-reveal style="border-top:1px solid #e4d6c9; transition-delay:.04s;">
-        <div style="display:grid; grid-template-columns:1fr 2fr; gap:clamp(20px,4vw,56px); padding:clamp(22px,3vw,34px) 0; border-bottom:1px solid #efe6dd;">
-          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.2vw,24px); color:#2a2421; line-height:1.25; padding-top:2px;">Indywidualne podejście</div>
-          <p style="font-size:15px; line-height:1.75; color:#6f655e; margin:0;">Każdy plan pielęgnacji i terapii zabiegowej tworzymy w pełni indywidualnie — uwzględniając potrzeby skóry, oczekiwane rezultaty oraz styl życia.</p>
+    <div class="ed">
+      <div class="ed-eyebrow" data-reveal>O nas</div>
+
+      <div class="ed-hero">
+        <h1 class="ed-title" data-reveal><span class="ed-paren">(</span>Kosmetologia z sensem i sercem<span class="ed-paren">)</span></h1>
+        <div class="ed-hero-text" data-reveal style="transition-delay:.08s;">
+          <p class="ed-lead">Jesteśmy studiem kosmetologii estetycznej w Rawiczu. Zabiegi na twarz i ciało łączymy z makijażem permanentnym oraz uważną, w pełni indywidualną opieką.</p>
+          <p>Każdy plan pielęgnacji tworzymy od nowa — pod potrzeby skóry, oczekiwane efekty i styl życia. Podkreślamy naturalne piękno, nie zmieniając rysów.</p>
+          <p class="strong">Piękno z sensem — naturalne, świadome, dopracowane w każdym detalu.</p>
         </div>
       </div>
-      <div data-reveal style="transition-delay:.06s;">
-        <div style="display:grid; grid-template-columns:1fr 2fr; gap:clamp(20px,4vw,56px); padding:clamp(22px,3vw,34px) 0; border-bottom:1px solid #efe6dd;">
-          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.2vw,24px); color:#2a2421; line-height:1.25; padding-top:2px;">Holistyczne podejście do urody</div>
-          <p style="font-size:15px; line-height:1.75; color:#6f655e; margin:0;">Łączymy pielęgnację skóry, zabiegi kosmetologiczne i makijaż permanentny, aby harmonijnie podkreślać naturalne piękno i proporcje twarzy.</p>
-        </div>
+
+      <div class="ed-eyebrow" data-reveal style="padding-top:clamp(28px,4vw,44px); padding-bottom:clamp(4px,1vw,8px);">Nasze wartości</div>
+
+      <div class="ed-sec" data-reveal>
+        <h2>Indywidualne podejście</h2>
+        <p>Każdy plan pielęgnacji i terapii zabiegowej tworzymy w pełni indywidualnie — uwzględniając potrzeby skóry, oczekiwane rezultaty oraz styl życia.</p>
       </div>
-      <div data-reveal style="transition-delay:.08s;">
-        <div style="display:grid; grid-template-columns:1fr 2fr; gap:clamp(20px,4vw,56px); padding:clamp(22px,3vw,34px) 0; border-bottom:1px solid #efe6dd;">
-          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.2vw,24px); color:#2a2421; line-height:1.25; padding-top:2px;">Ekspercka wiedza i doświadczenie</div>
-          <p style="font-size:15px; line-height:1.75; color:#6f655e; margin:0;">Nasze rekomendacje opieramy na zaawansowanej wiedzy, wieloletnim doświadczeniu oraz sprawdzonych procedurach z zakresu kosmetologii i medycyny estetycznej.</p>
-        </div>
+
+      <div class="ed-sec" data-reveal>
+        <h2>Holistyczne podejście do urody</h2>
+        <p>Łączymy pielęgnację skóry, zabiegi kosmetologiczne i makijaż permanentny, aby harmonijnie podkreślać naturalne piękno i proporcje twarzy.</p>
       </div>
-      <div data-reveal style="transition-delay:.10s;">
-        <div style="display:grid; grid-template-columns:1fr 2fr; gap:clamp(20px,4vw,56px); padding:clamp(22px,3vw,34px) 0; border-bottom:1px solid #efe6dd;">
-          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.2vw,24px); color:#2a2421; line-height:1.25; padding-top:2px;">Naturalne, harmonijne efekty</div>
-          <p style="font-size:15px; line-height:1.75; color:#6f655e; margin:0;">Skupiamy się na subtelnych rezultatach, które podkreślają indywidualne rysy — zachowując równowagę, proporcje i naturalny charakter urody.</p>
-        </div>
+
+      <div class="ed-sec" data-reveal>
+        <h2>Ekspercka wiedza i doświadczenie</h2>
+        <p>Nasze rekomendacje opieramy na zaawansowanej wiedzy, wieloletnim doświadczeniu oraz sprawdzonych procedurach z zakresu kosmetologii i medycyny estetycznej.</p>
       </div>
-      <div data-reveal style="transition-delay:.12s;">
-        <div style="display:grid; grid-template-columns:1fr 2fr; gap:clamp(20px,4vw,56px); padding:clamp(22px,3vw,34px) 0; border-bottom:1px solid #efe6dd;">
-          <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(19px,2.2vw,24px); color:#2a2421; line-height:1.25; padding-top:2px;">Dyskretna opieka i spokojna atmosfera</div>
-          <p style="font-size:15px; line-height:1.75; color:#6f655e; margin:0;">Zapewniamy indywidualną, uważną obsługę oraz przestrzeń sprzyjającą wyciszeniu, komfortowi i pełnemu poczuciu swobody.</p>
-        </div>
+
+      <div class="ed-sec" data-reveal>
+        <h2>Naturalne, harmonijne efekty</h2>
+        <p>Skupiamy się na subtelnych rezultatach, które podkreślają indywidualne rysy — zachowując równowagę, proporcje i naturalny charakter urody.</p>
+      </div>
+
+      <div class="ed-sec" data-reveal>
+        <h2>Dyskretna opieka i spokojna atmosfera</h2>
+        <p>Zapewniamy indywidualną, uważną obsługę oraz przestrzeń sprzyjającą wyciszeniu, komfortowi i pełnemu poczuciu swobody.</p>
       </div>
     </div>
 
