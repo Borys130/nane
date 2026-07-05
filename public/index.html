@@ -10,11 +10,11 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *{ box-sizing:border-box; }
   html,body{ margin:0; background:#ffffff; }
-  body{ font-family:'Jost',sans-serif; color:#2a2421; }
+  body{ font-family:'Poppins',sans-serif; color:#2a2421; }
   ::selection{ background:#e8d3c2; color:#2a2421; }
   input,textarea,select,button{ outline:none; }
   input:focus,textarea:focus,select:focus{ border-color:#a78d76 !important; }
@@ -79,7 +79,7 @@
   .car-track::-webkit-scrollbar{ display:none; }
   .car-card{ scroll-snap-align:start; flex:0 0 clamp(258px,31%,344px); background:#fff; border:1px solid #efe6dd; border-radius:18px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow .24s, transform .24s, border-color .24s; }
   .car-card[data-nav]:hover{ transform:translateY(-4px); box-shadow:0 20px 44px -18px rgba(120,80,55,.32); border-color:#d8c9bc; }
-  .car-card[data-nav]::after{ content:'Dowiedz się więcej →'; display:block; text-align:center; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#a78d76; padding:0 16px 18px; }
+  .car-card[data-nav]::after{ content:'Dowiedz się więcej →'; display:block; text-align:center; font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#a78d76; padding:0 16px 18px; }
   .car-card-img{ aspect-ratio:3/4; position:relative; overflow:hidden; }
   .car-card-img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
   .car-card:hover .car-card-img img{ transform:scale(1.045); }
@@ -90,7 +90,7 @@
   .car-card-body{ padding:22px 22px 26px; display:flex; flex-direction:column; flex:1; }
   .car-card-body h3{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:24px; color:#2a2421; margin:0 0 8px; }
   .car-card-body p{ font-size:14px; line-height:1.6; color:#6f655e; margin:0 0 20px; flex:1; }
-  .car-btn{ align-self:flex-start; display:inline-flex; align-items:center; height:44px; padding:0 22px; border:1px solid #2a2421; border-radius:999px; color:#2a2421; background:transparent; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:.16em; text-transform:uppercase; cursor:pointer; transition:background .22s,color .22s; }
+  .car-btn{ align-self:flex-start; display:inline-flex; align-items:center; height:44px; padding:0 22px; border:1px solid #2a2421; border-radius:999px; color:#2a2421; background:transparent; font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:.16em; text-transform:uppercase; cursor:pointer; transition:background .22s,color .22s; }
   .car-btn:hover{ background:#2a2421; color:#fff; }
   .car-arrow{ width:46px; height:46px; border-radius:50%; border:1px solid #d8cabb; background:#fff; color:#2a2421; font-size:20px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s,color .2s,border-color .2s; }
   .car-arrow:hover{ background:#2a2421; color:#fff; border-color:#2a2421; }
@@ -113,7 +113,7 @@
   .cn-tabs-wrap{ border-bottom:1px solid #efe6dd; background:#fff; }
   .cn-tabs{ max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px); display:flex; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; }
   .cn-tabs::-webkit-scrollbar{ display:none; }
-  .cn-tab{ flex:none; padding:15px 20px; background:none; border:none; border-bottom:2px solid transparent; font-family:'Jost',sans-serif; font-size:13px; letter-spacing:.05em; color:#8a807a; cursor:pointer; white-space:nowrap; transition:color .18s,border-color .18s; }
+  .cn-tab{ flex:none; padding:15px 20px; background:none; border:none; border-bottom:2px solid transparent; font-family:'Poppins',sans-serif; font-size:13px; letter-spacing:.05em; color:#8a807a; cursor:pointer; white-space:nowrap; transition:color .18s,border-color .18s; }
   .cn-tab.is-active{ color:#2a2421; border-bottom-color:#a78d76; }
   .cn-tab:hover{ color:#2a2421; }
   .cn-panel{ display:none; }
@@ -153,7 +153,7 @@
   .cn-tbl th:first-child{ text-align:left; }
   .cn-tbl td{ padding:12px 14px; border-bottom:1px solid #f0e8df; font-size:14px; color:#6f655e; text-align:center; vertical-align:middle; }
   .cn-tbl td:first-child{ text-align:left; font-family:'Cormorant Garamond',serif; font-size:16px; color:#2a2421; }
-  .cn-tbl-sub{ display:block; font-family:'Jost',sans-serif; font-size:12px; color:#a78d76; margin-top:2px; }
+  .cn-tbl-sub{ display:block; font-family:'Poppins',sans-serif; font-size:12px; color:#a78d76; margin-top:2px; }
   .cn-tbl tr:last-child td{ border-bottom:none; }
   /* ── Refresh list (makijaż permanentny) ── */
   .cn-refresh-hd{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#b09a8a; margin:14px 0 4px; }
@@ -166,7 +166,7 @@
   @media(max-width:640px){
     .cn-item{ grid-template-columns:1fr; }
     .cn-item-right{ text-align:left; display:flex; gap:12px; align-items:baseline; margin-top:2px; }
-    .cn-item:has(.cn-pkgs) .cn-price::before{ content:"1 zabieg · "; font-family:'Jost',sans-serif; font-size:12px; letter-spacing:.03em; color:#b09a8a; }
+    .cn-item:has(.cn-pkgs) .cn-price::before{ content:"1 zabieg · "; font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:.03em; color:#b09a8a; }
     .cn-zones{ grid-template-columns:1fr; }
     .cn-zone:last-child{ border-bottom:none; }
     .cn-zone:nth-last-child(-n+2){ border-bottom:1px solid #f5ede6; }
@@ -195,8 +195,9 @@
     .nav-inner{flex-wrap:wrap;padding-top:8px!important;padding-bottom:0!important;gap:0!important}
     .nav-inner .reset-btn img{height:68px!important}
     .nav-inner>a.btn-dark{display:none!important}
-    .nav-links{order:3;flex:0 0 100%;overflow-x:auto;scrollbar-width:none;padding:2px 0 6px;margin-top:4px;border-top:1px solid #f5ede6}
+    .nav-links{order:3;flex:0 0 100%;overflow-x:auto;scrollbar-width:none;padding:2px 0 6px;margin-top:4px;border-top:1px solid #f5ede6;gap:14px!important;justify-content:space-between}
     .nav-links::-webkit-scrollbar{display:none}
+    .nav-links .nav-link{font-size:13px;letter-spacing:.02em}
     .nav-dropdown{display:none!important}
     .footer-grid{grid-template-columns:1fr!important; row-gap:32px!important;}
     .footer-nav-list{flex-direction:row!important;flex-wrap:wrap;gap:10px 20px!important}
@@ -1108,17 +1109,17 @@
       <div data-reveal style="transition-delay:.1s; background:#fff; border-radius:18px; padding:clamp(24px,3vw,34px); border:1px solid #ecdfd3; align-self:start;">
         <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0 0 18px; color:#2a2421;">Formularz kontaktowy</h2>
         <form id="contactForm" style="display:flex; flex-direction:column; gap:14px;">
-          <input name="name" placeholder="Imię i nazwisko" style="height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 16px; font-family:'Jost',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3;" />
+          <input name="name" placeholder="Imię i nazwisko" style="height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 16px; font-family:'Poppins',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3;" />
           <div style="display:flex; gap:14px; flex-wrap:wrap;">
-            <input name="phone" placeholder="Telefon" style="flex:1; min-width:140px; height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 16px; font-family:'Jost',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3;" />
-            <input name="email" type="email" placeholder="E-mail" style="flex:1; min-width:140px; height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 16px; font-family:'Jost',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3;" />
+            <input name="phone" placeholder="Telefon" style="flex:1; min-width:140px; height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 16px; font-family:'Poppins',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3;" />
+            <input name="email" type="email" placeholder="E-mail" style="flex:1; min-width:140px; height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 16px; font-family:'Poppins',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3;" />
           </div>
-          <select name="service" style="height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 14px; font-family:'Jost',sans-serif; font-size:14px; color:#6f655e; background:#fbf7f3;">
+          <select name="service" style="height:48px; border:1px solid #e4d6c9; border-radius:10px; padding:0 14px; font-family:'Poppins',sans-serif; font-size:14px; color:#6f655e; background:#fbf7f3;">
             <option>Wybierz zabieg…</option><option>Morpheus8</option><option>Icoone Laser Body</option><option>Makijaż permanentny</option><option>ZO Skin Health</option><option>Konsultacja</option><option>Inne</option>
           </select>
-          <textarea name="message" placeholder="Wiadomość" rows="4" style="border:1px solid #e4d6c9; border-radius:10px; padding:12px 16px; font-family:'Jost',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3; resize:none;"></textarea>
+          <textarea name="message" placeholder="Wiadomość" rows="4" style="border:1px solid #e4d6c9; border-radius:10px; padding:12px 16px; font-family:'Poppins',sans-serif; font-size:14px; color:#2a2421; background:#fbf7f3; resize:none;"></textarea>
           <label style="display:flex; gap:10px; align-items:flex-start; font-size:12px; line-height:1.5; color:#8a807a;"><input type="checkbox" required style="margin-top:2px;" /> Wyrażam zgodę na kontakt w celu umówienia wizyty.</label>
-          <button type="submit" class="btn-gold" style="height:52px; border:none; border-radius:999px; background:#a78d76; color:#fff; font-family:'Jost',sans-serif; font-size:14px; letter-spacing:.06em; cursor:pointer;">Wyślij zapytanie</button>
+          <button type="submit" class="btn-gold" style="height:52px; border:none; border-radius:999px; background:#a78d76; color:#fff; font-family:'Poppins',sans-serif; font-size:14px; letter-spacing:.06em; cursor:pointer;">Wyślij zapytanie</button>
           <div id="formNote" style="display:none; font-size:13px; color:#6f655e;">Dziękujemy! Odezwiemy się wkrótce.</div>
         </form>
       </div>
