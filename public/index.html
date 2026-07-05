@@ -47,7 +47,9 @@
   .btn-hero-outline{ transition:background .22s, border-color .22s; }
   .btn-hero-outline:hover{ background:rgba(243,236,230,.14) !important; border-color:rgba(243,236,230,.85) !important; }
   /* hero content: tekst nisko (pod logo) na mobile, bliżej logo na desktop */
-  .hero-content{ padding:0 clamp(20px,5vw,40px) clamp(28px,5vh,60px); }
+  .hero-content{ padding:0 clamp(20px,5vw,40px) clamp(28px,5vh,60px); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; align-self:stretch; }
+  /* logo centruje się w wolnej przestrzeni nad opisem */
+  .hero-logo{ width:clamp(150px,22vw,210px); height:auto; display:block; margin:auto; padding:24px 0 clamp(22px,4vh,36px); filter:drop-shadow(0 2px 14px rgba(20,16,14,.4)); }
   @media(min-width:821px){ .hero-content{ padding-bottom:clamp(60px,10vh,100px); } }
   /* Footer */
   .footer-nav-btn{ transition:color .18s; }
@@ -240,7 +242,7 @@
       <img src="images/hero2.jpeg" alt="nane beauty concept — wnętrze gabinetu" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 50%;">
       <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(28,24,21,.18) 0%, rgba(28,24,21,.10) 30%, rgba(28,24,21,.46) 65%, rgba(28,24,21,.70) 100%);"></div>
       <div data-reveal class="hero-content" style="position:relative; z-index:2; text-align:center; max-width:720px;">
-        <img src="images/logo-white.png" alt="nane beauty concept" style="width:clamp(150px,22vw,210px); height:auto; display:block; margin:0 auto clamp(22px,4vh,36px); filter:drop-shadow(0 2px 14px rgba(20,16,14,.4));">
+        <img src="images/logo-white.png" alt="nane beauty concept" class="hero-logo">
         <p style="max-width:640px; margin:0 auto 16px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Nane beauty concept jest nowoczesną koncepcją piękna stworzoną dla osób, które oczekują najwyższej jakości, profesjonalizmu i holistycznej pielęgnacji. To miejsce, w którym nowoczesne technologie, estetyka i ekspercka wiedza tworzą spójną przestrzeń dedykowaną pięknu, zdrowiu skóry i dobremu samopoczuciu.</p>
         <p style="max-width:640px; margin:0 auto 16px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Każdy zabieg dobieramy indywidualnie, kierując się potrzebami skóry oraz oczekiwaniami naszych klientów. Łączymy skuteczne procedury, najnowocześniejsze technologie oraz wiedzę i doświadczenie naszego zespołu, aby osiągać naturalne, harmonijne i długotrwałe efekty.</p>
         <p style="max-width:640px; margin:0 auto 28px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Nane Beauty Concept wyróżnia również eleganckie, ciepłe i przyjazne wnętrze, zaprojektowane z dbałością o każdy detal. To przestrzeń, w której profesjonalna opieka, komfort oraz wysoki standard usług tworzą wyjątkowe doświadczenie dla każdego, kto ceni jakość, estetykę i indywidualne podejście.</p>
