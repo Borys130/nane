@@ -51,6 +51,10 @@
   /* logo centruje się w wolnej przestrzeni nad opisem */
   .hero-logo{ width:clamp(150px,22vw,210px); height:auto; display:block; margin:auto; padding:clamp(24px,7vh,72px) 0 clamp(22px,4vh,36px); filter:drop-shadow(0 2px 14px rgba(20,16,14,.4)); }
   @media(min-width:821px){ .hero-content{ padding-bottom:clamp(60px,10vh,100px); } .hero-p{ margin-bottom:clamp(28px,4.5vh,52px) !important; } }
+  /* hero: rozwijany opis */
+  .hero-more-toggle{ display:inline-flex; align-items:center; gap:6px; margin:0 0 20px; font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#f3ece6; background:none; border:none; border-bottom:1px solid rgba(243,236,230,.5); padding:0 0 2px; cursor:pointer; transition:opacity .18s; }
+  .hero-more-toggle:hover{ opacity:.75; }
+  .hero-more-toggle svg{ width:10px; height:10px; transform:rotate(-90deg); }
   /* Footer */
   .footer-nav-btn{ transition:color .18s; }
   .footer-nav-btn:hover{ color:#a78d76 !important; }
@@ -256,8 +260,10 @@
       <div data-reveal class="hero-content" style="position:relative; z-index:2; text-align:center; max-width:720px;">
         <img src="images/logo-white.png" alt="nane beauty concept" class="hero-logo">
         <p class="hero-p" style="max-width:640px; margin:0 auto 16px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Nane beauty concept jest nowoczesną koncepcją piękna stworzoną dla osób, które oczekują najwyższej jakości, profesjonalizmu i holistycznej pielęgnacji. To miejsce, w którym nowoczesne technologie, estetyka i ekspercka wiedza tworzą spójną przestrzeń dedykowaną pięknu, zdrowiu skóry i dobremu samopoczuciu.</p>
-        <p class="hero-p" style="max-width:640px; margin:0 auto 16px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Każdy zabieg dobieramy indywidualnie, kierując się potrzebami skóry oraz oczekiwaniami naszych klientów. Łączymy skuteczne procedury, najnowocześniejsze technologie oraz wiedzę i doświadczenie naszego zespołu, aby osiągać naturalne, harmonijne i długotrwałe efekty.</p>
-        <p style="max-width:640px; margin:0 auto 28px; font-size:clamp(12.5px,1.35vw,14px); line-height:1.65; color:#fbf7f3; text-shadow:0 2px 18px rgba(20,16,14,.75);">Nane Beauty Concept wyróżnia również eleganckie, ciepłe i przyjazne wnętrze, zaprojektowane z dbałością o każdy detal. To przestrzeń, w której profesjonalna opieka, komfort oraz wysoki standard usług tworzą wyjątkowe doświadczenie dla każdego, kto ceni jakość, estetykę i indywidualne podejście.</p>
+        <button type="button" class="reset-btn hero-more-toggle" data-nav="onas" data-anchor="onas-pelny-opis">
+          <span>Czytaj więcej</span>
+          <svg viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
         <div style="height:clamp(20px,4vh,44px);"></div>
         <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
           <a href="https://booksy.com/pl-pl/280551_nane-beauty-concept_salon-kosmetyczny_17342_rawicz" target="_blank" rel="noopener" class="btn-hero-light" style="text-decoration:none; display:inline-flex; align-items:center; height:52px; padding:0 30px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:14px; letter-spacing:.06em;">Rezerwacja Booksy</a>
@@ -1028,31 +1034,12 @@
         </div>
       </div>
 
-      <div class="ed-eyebrow" data-reveal style="padding-top:clamp(28px,4vw,44px); padding-bottom:clamp(4px,1vw,8px);">Nasze wartości</div>
+      <div class="ed-eyebrow" data-reveal id="onas-pelny-opis" style="padding-top:clamp(28px,4vw,44px); padding-bottom:clamp(4px,1vw,8px); scroll-margin-top:90px;">Nasze podejście</div>
 
-      <div class="ed-sec" data-reveal>
-        <h2>Indywidualne podejście</h2>
-        <p>Każdy plan pielęgnacji i terapii zabiegowej tworzymy w pełni indywidualnie — uwzględniając potrzeby skóry, oczekiwane rezultaty oraz styl życia.</p>
-      </div>
-
-      <div class="ed-sec" data-reveal>
-        <h2>Holistyczne podejście do urody</h2>
-        <p>Łączymy pielęgnację skóry, zabiegi kosmetologiczne i makijaż permanentny, aby harmonijnie podkreślać naturalne piękno i proporcje twarzy.</p>
-      </div>
-
-      <div class="ed-sec" data-reveal>
-        <h2>Ekspercka wiedza i doświadczenie</h2>
-        <p>Nasze rekomendacje opieramy na zaawansowanej wiedzy, wieloletnim doświadczeniu oraz sprawdzonych procedurach z zakresu kosmetologii i medycyny estetycznej.</p>
-      </div>
-
-      <div class="ed-sec" data-reveal>
-        <h2>Naturalne, harmonijne efekty</h2>
-        <p>Skupiamy się na subtelnych rezultatach, które podkreślają indywidualne rysy — zachowując równowagę, proporcje i naturalny charakter urody.</p>
-      </div>
-
-      <div class="ed-sec" data-reveal>
-        <h2>Dyskretna opieka i spokojna atmosfera</h2>
-        <p>Zapewniamy indywidualną, uważną obsługę oraz przestrzeń sprzyjającą wyciszeniu, komfortowi i pełnemu poczuciu swobody.</p>
+      <div class="ed-sec" data-reveal style="border-bottom:none;">
+        <p style="max-width:720px;">Nane beauty concept jest nowoczesną koncepcją piękna stworzoną dla osób, które oczekują najwyższej jakości, profesjonalizmu i holistycznej pielęgnacji. To miejsce, w którym nowoczesne technologie, estetyka i ekspercka wiedza tworzą spójną przestrzeń dedykowaną pięknu, zdrowiu skóry i dobremu samopoczuciu.</p>
+        <p style="max-width:720px; margin-top:16px;">Każdy zabieg dobieramy indywidualnie, kierując się potrzebami skóry oraz oczekiwaniami naszych klientów. Łączymy skuteczne procedury, najnowocześniejsze technologie oraz wiedzę i doświadczenie naszego zespołu, aby osiągać naturalne, harmonijne i długotrwałe efekty.</p>
+        <p style="max-width:720px; margin-top:16px;">Nane Beauty Concept wyróżnia również eleganckie, ciepłe i przyjazne wnętrze, zaprojektowane z dbałością o każdy detal. To przestrzeń, w której profesjonalna opieka, komfort oraz wysoki standard usług tworzą wyjątkowe doświadczenie dla każdego, kto ceni jakość, estetykę i indywidualne podejście.</p>
       </div>
     </div>
 
@@ -3016,23 +3003,28 @@
     });
   }
 
-  function go(page) {
+  function go(page, anchorId) {
     pages.forEach(function (p) {
       p.classList.toggle('is-active', p.getAttribute('data-page') === page);
     });
     navLinks.forEach(function (l) {
       l.classList.toggle('is-active', l.getAttribute('data-nav') === page);
     });
-    try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0, 0); }
     requestAnimationFrame(function () {
       checkReveal();
       setTimeout(checkReveal, 120);
       setTimeout(checkReveal, 500);
     });
+    var anchorEl = anchorId && document.getElementById(anchorId);
+    if (anchorEl) {
+      setTimeout(function () { anchorEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+    } else {
+      try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0, 0); }
+    }
   }
 
   document.querySelectorAll('[data-nav]').forEach(function (el) {
-    el.addEventListener('click', function () { go(el.getAttribute('data-nav')); });
+    el.addEventListener('click', function () { go(el.getAttribute('data-nav'), el.getAttribute('data-anchor')); });
   });
 
   window.addEventListener('scroll', checkReveal, { passive: true });
