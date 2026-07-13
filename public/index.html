@@ -3193,6 +3193,8 @@
 (function () {
   var pages = document.querySelectorAll('[data-page]');
   var navLinks = document.querySelectorAll('.nav-link');
+  var validPages = {};
+  pages.forEach(function (p) { validPages[p.getAttribute('data-page')] = true; });
 
   function checkReveal() {
     var h = window.innerHeight || 800;
@@ -3202,13 +3204,16 @@
     });
   }
 
-  function go(page, anchorId) {
+  function go(page, anchorId, pushToHistory) {
     pages.forEach(function (p) {
       p.classList.toggle('is-active', p.getAttribute('data-page') === page);
     });
     navLinks.forEach(function (l) {
       l.classList.toggle('is-active', l.getAttribute('data-nav') === page);
     });
+    if (pushToHistory !== false) {
+      history.pushState({ page: page, anchorId: anchorId || null }, '', '#' + page);
+    }
     requestAnimationFrame(function () {
       checkReveal();
       setTimeout(checkReveal, 120);
@@ -3225,6 +3230,21 @@
   document.querySelectorAll('[data-nav]').forEach(function (el) {
     el.addEventListener('click', function () { go(el.getAttribute('data-nav'), el.getAttribute('data-anchor')); });
   });
+
+  window.addEventListener('popstate', function (e) {
+    var state = e.state;
+    var hashPage = location.hash.slice(1);
+    var page = (state && state.page) || (validPages[hashPage] && hashPage) || 'home';
+    var anchorId = state && state.anchorId;
+    go(page, anchorId, false);
+  });
+
+  (function initFromUrl() {
+    var hashPage = location.hash.slice(1);
+    var initialPage = validPages[hashPage] ? hashPage : 'home';
+    history.replaceState({ page: initialPage, anchorId: null }, '', initialPage === 'home' ? location.pathname : '#' + initialPage);
+    go(initialPage, null, false);
+  })();
 
   window.addEventListener('scroll', checkReveal, { passive: true });
   window.addEventListener('resize', checkReveal, { passive: true });
@@ -3342,8 +3362,6 @@
     lb.addEventListener('click', closeLb);
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLb(); });
   })();
-
-  go('home');
 })();
 </script>
 </body>
