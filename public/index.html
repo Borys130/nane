@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/hero2.jpeg" fetchpriority="high">
 <style>
   *{ box-sizing:border-box; }
@@ -3407,8 +3407,14 @@
     go(initialPage, null, false);
   })();
 
-  window.addEventListener('scroll', checkReveal, { passive: true });
-  window.addEventListener('resize', checkReveal, { passive: true });
+  var revealTicking = false;
+  function onScrollOrResize() {
+    if (revealTicking) return;
+    revealTicking = true;
+    requestAnimationFrame(function () { checkReveal(); revealTicking = false; });
+  }
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize, { passive: true });
 
   var form = document.getElementById('contactForm');
   if (form) {
