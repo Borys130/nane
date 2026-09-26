@@ -71,7 +71,7 @@
   .intro-portrait::after{ content:""; position:absolute; z-index:1; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(42,36,33,0) 50%, rgba(42,36,33,.2) 66%, rgba(42,36,33,.36) 80%, rgba(42,36,33,.24) 100%); }
   /* logo nisko na szyi — zdjęcie zawsze zajmuje pełną wysokość kontenera,
      więc % wysokości kontenera = % wysokości zdjęcia */
-  .intro-portrait-logo{ position:absolute; z-index:2; left:50%; transform:translate(-50%,-50%); top:78%; width:clamp(110px,14vw,195px); height:auto; display:block; filter:drop-shadow(0 2px 16px rgba(20,16,14,.55)); }
+  .intro-portrait-logo{ position:absolute; z-index:2; left:50%; transform:translate(-50%,-50%); top:81%; width:clamp(110px,14vw,195px); height:auto; display:block; filter:drop-shadow(0 2px 16px rgba(20,16,14,.55)); }
   /* animacja wejścia: zdjęcie wyostrza się i powoli „oddala”, potem wjeżdża logo */
   .intro-portrait-photo{ animation:portraitIn 2.6s cubic-bezier(.22,.61,.25,1) both; transform-origin:50% 30%; }
   /* logo startuje dopiero, gdy jest widoczne (na desktopie leży niżej niż pierwszy ekran) */
@@ -5458,16 +5458,17 @@
   // portret: animacja logo po wjechaniu w widok
   var portraitLogo = document.querySelector('.intro-portrait-logo');
   if (portraitLogo) {
-    if ('IntersectionObserver' in window) {
-      var plIO = new IntersectionObserver(function (entries) {
-        if (!entries[0].isIntersecting) return;
+    var checkPortraitLogo = function () {
+      var r = portraitLogo.getBoundingClientRect();
+      if (r.height && r.top + r.height / 2 < window.innerHeight * 0.88) {
         portraitLogo.classList.add('is-shown');
-        plIO.disconnect();
-      }, { threshold: 0.6 });
-      plIO.observe(portraitLogo);
-    } else {
-      portraitLogo.classList.add('is-shown');
-    }
+        window.removeEventListener('scroll', checkPortraitLogo);
+        window.removeEventListener('resize', checkPortraitLogo);
+      }
+    };
+    window.addEventListener('scroll', checkPortraitLogo, { passive: true });
+    window.addEventListener('resize', checkPortraitLogo);
+    checkPortraitLogo();
   }
 
   // treatments carousel
