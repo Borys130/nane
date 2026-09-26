@@ -71,7 +71,22 @@
   .intro-portrait::after{ content:""; position:absolute; z-index:1; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(42,36,33,0) 50%, rgba(42,36,33,.2) 66%, rgba(42,36,33,.36) 80%, rgba(42,36,33,.24) 100%); }
   /* logo nisko na szyi — zdjęcie zawsze zajmuje pełną wysokość kontenera,
      więc % wysokości kontenera = % wysokości zdjęcia */
-  .intro-portrait-logo{ position:absolute; z-index:2; left:50%; transform:translate(-50%,-50%); top:78%; width:clamp(130px,17vw,240px); height:auto; display:block; filter:drop-shadow(0 2px 16px rgba(20,16,14,.55)); }
+  .intro-portrait-logo{ position:absolute; z-index:2; left:50%; transform:translate(-50%,-50%); top:78%; width:clamp(110px,14vw,195px); height:auto; display:block; filter:drop-shadow(0 2px 16px rgba(20,16,14,.55)); }
+  /* animacja wejścia: zdjęcie wyostrza się i powoli „oddala”, potem wjeżdża logo */
+  .intro-portrait-photo{ animation:portraitIn 2.6s cubic-bezier(.22,.61,.25,1) both; transform-origin:50% 30%; }
+  /* logo startuje dopiero, gdy jest widoczne (na desktopie leży niżej niż pierwszy ekran) */
+  .intro-portrait-logo{ animation:portraitLogoIn 1.4s cubic-bezier(.2,.7,.2,1) .4s both; animation-play-state:paused; }
+  .intro-portrait-logo.is-shown{ animation-play-state:running; }
+  @keyframes portraitIn{
+    from{ transform:scale(1.14); filter:blur(14px) brightness(1.12) saturate(.8); opacity:0; }
+    35%{ opacity:1; }
+    to{ transform:scale(1); filter:none; opacity:1; }
+  }
+  @keyframes portraitLogoIn{
+    from{ opacity:0; transform:translate(-50%,calc(-50% + 26px)); filter:blur(6px) drop-shadow(0 2px 16px rgba(20,16,14,.55)); }
+    to{ opacity:1; transform:translate(-50%,-50%); filter:drop-shadow(0 2px 16px rgba(20,16,14,.55)); }
+  }
+  @media(prefers-reduced-motion:reduce){ .intro-portrait-photo, .intro-portrait-logo{ animation:none; } }
   /* wąski biały pas oddzielający portret od zdjęcia gabinetu */
   .intro-strip{ background:#ffffff; height:clamp(56px,9vh,112px); }
   @media(max-width:820px){
@@ -5438,6 +5453,21 @@
       });
     }, { threshold: 0.4 });
     document.querySelectorAll('.ba').forEach(function (ba) { baIO.observe(ba); });
+  }
+
+  // portret: animacja logo po wjechaniu w widok
+  var portraitLogo = document.querySelector('.intro-portrait-logo');
+  if (portraitLogo) {
+    if ('IntersectionObserver' in window) {
+      var plIO = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) return;
+        portraitLogo.classList.add('is-shown');
+        plIO.disconnect();
+      }, { threshold: 0.6 });
+      plIO.observe(portraitLogo);
+    } else {
+      portraitLogo.classList.add('is-shown');
+    }
   }
 
   // treatments carousel
