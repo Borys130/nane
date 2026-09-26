@@ -50,7 +50,7 @@
   /* hero content: tekst nisko (pod logo) na mobile, bliżej logo na desktop */
   .hero-content{ padding:0 clamp(20px,5vw,40px) clamp(28px,5vh,60px); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; align-self:stretch; }
   /* logo centruje się w wolnej przestrzeni nad opisem */
-  .hero-logo{ width:clamp(150px,22vw,210px); height:auto; display:block; margin:auto auto 0; padding:clamp(24px,7vh,72px) 0 clamp(12px,2vh,20px); filter:drop-shadow(0 2px 14px rgba(20,16,14,.4)); }
+  .hero-logo{ width:clamp(110px,14vw,150px); height:auto; display:block; margin:auto auto 0; padding:clamp(24px,7vh,72px) 0 clamp(12px,2vh,20px); filter:drop-shadow(0 2px 14px rgba(20,16,14,.4)); }
   @media(min-width:821px){ .hero-content{ padding-bottom:clamp(60px,10vh,100px); } .hero-p{ margin-bottom:clamp(28px,4.5vh,52px) !important; } }
   /* hero: rozwijany opis */
   .hero-more-toggle{ display:inline-flex; align-items:center; gap:6px; margin:0 0 20px; font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#f3ece6; background:none; border:none; border-bottom:1px solid rgba(243,236,230,.5); padding:0 0 2px; cursor:pointer; transition:opacity .18s; }
@@ -1414,25 +1414,26 @@
           <div><button class="reset-btn" data-nav="zabieg-ipl-lumecca" style="display:inline-flex; align-items:center; gap:7px; font-size:13px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;" onmouseenter="this.style.color='#2a2421';this.style.borderColor='#a78d76'" onmouseleave="this.style.color='#a78d76';this.style.borderColor='#e4d4c4'">Dowiedz się więcej →</button></div>
         </div>
 
-        <!-- Ribeskin -->
-        <div data-reveal style="transition-delay:.30s; background:#fff; border:1px solid #ede5db; border-radius:20px; padding:clamp(28px,3vw,40px); display:flex; flex-direction:column; gap:16px; transition:box-shadow .24s,transform .24s,border-color .24s;" onmouseenter="this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px -14px rgba(120,80,55,.22)';this.style.borderColor='#d8c9bc'" onmouseleave="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#ede5db'">
-          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.8vw,34px); line-height:1.1; margin:0; color:#2a2421;">Ribeskin</h2>
-          <p style="font-size:14px; line-height:1.75; color:#6f655e; margin:0; flex:1;">Karboksyterapia bezigłowa oraz koktajle Shot AA, HA i Lumi — dotlenienie, głębokie nawilżenie i rozświetlenie skóry.</p>
-          <div><button class="reset-btn" data-nav="zabieg-ribeskin" style="display:inline-flex; align-items:center; gap:7px; font-size:13px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;" onmouseenter="this.style.color='#2a2421';this.style.borderColor='#a78d76'" onmouseleave="this.style.color='#a78d76';this.style.borderColor='#e4d4c4'">Dowiedz się więcej →</button></div>
-        </div>
-
-        <!-- Dr CYJ Hair Filler -->
-        <div data-reveal style="transition-delay:.34s; background:#fff; border:1px solid #ede5db; border-radius:20px; padding:clamp(28px,3vw,40px); display:flex; flex-direction:column; gap:16px; transition:box-shadow .24s,transform .24s,border-color .24s;" onmouseenter="this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px -14px rgba(120,80,55,.22)';this.style.borderColor='#d8c9bc'" onmouseleave="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#ede5db'">
-          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.8vw,34px); line-height:1.1; margin:0; color:#2a2421;">Dr CYJ Hair Filler</h2>
-          <p style="font-size:14px; line-height:1.75; color:#6f655e; margin:0; flex:1;">Terapia peptydowa na wypadanie włosów — 7 biomimetycznych peptydów w kwasie hialuronowym pobudza mieszki włosowe do regeneracji i wspiera naturalny wzrost włosów.</p>
-          <div><button class="reset-btn" data-nav="zabieg-dr-cyj" style="display:inline-flex; align-items:center; gap:7px; font-size:13px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;" onmouseenter="this.style.color='#2a2421';this.style.borderColor='#a78d76'" onmouseleave="this.style.color='#a78d76';this.style.borderColor='#e4d4c4'">Dowiedz się więcej →</button></div>
-        </div>
-
-        <!-- Mezoterapia i stymulacja skóry głowy -->
-        <div data-reveal style="transition-delay:.38s; background:#fff; border:1px solid #ede5db; border-radius:20px; padding:clamp(28px,3vw,40px); display:flex; flex-direction:column; gap:16px; transition:box-shadow .24s,transform .24s,border-color .24s;" onmouseenter="this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px -14px rgba(120,80,55,.22)';this.style.borderColor='#d8c9bc'" onmouseleave="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#ede5db'">
+        <!-- Mezoterapia i stymulacja skóry głowy (kafelek zbiorczy z procedurami) -->
+        <div data-reveal style="transition-delay:.30s; grid-column:1/-1; background:#fff; border:1px solid #ede5db; border-radius:20px; padding:clamp(28px,3vw,40px); display:flex; flex-direction:column; gap:16px;">
           <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.8vw,34px); line-height:1.1; margin:0; color:#2a2421;">Mezoterapia i stymulacja skóry głowy</h2>
-          <p style="font-size:14px; line-height:1.75; color:#6f655e; margin:0; flex:1;">Dermapen 4.0 z preparatem MG-EXO-GROW™ — terapia przerzedzenia i wypadania włosów, wsparcie kondycji skóry głowy oraz mieszków włosowych.</p>
-          <div><button class="reset-btn" data-nav="zabieg-mezoterapia-glowy" style="display:inline-flex; align-items:center; gap:7px; font-size:13px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;" onmouseenter="this.style.color='#2a2421';this.style.borderColor='#a78d76'" onmouseleave="this.style.color='#a78d76';this.style.borderColor='#e4d4c4'">Dowiedz się więcej →</button></div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:12px; margin-top:4px;">
+            <div onclick="if(!event.target.closest('button'))this.querySelector('button').click()" style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:clamp(20px,2.2vw,26px); display:flex; flex-direction:column; gap:10px; cursor:pointer; transition:border-color .2s, background .2s;" onmouseenter="this.style.borderColor='#d8c9bc';this.style.background='#f5eee6'" onmouseleave="this.style.borderColor='#ede5db';this.style.background='#faf6f2'">
+              <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(20px,2.1vw,25px); line-height:1.15; margin:0; color:#2a2421;">Dermapen 4.0 z MG-EXO-GROW™</h3>
+              <p style="font-size:13px; line-height:1.7; color:#6f655e; margin:0; flex:1;">Mikronakłuwanie skóry głowy z preparatem w technologii egzosomowej — wsparcie mieszków włosowych i zdrowego cyklu wzrostu włosa.</p>
+              <div><button class="reset-btn" data-nav="zabieg-mezoterapia-glowy" style="display:inline-flex; align-items:center; gap:7px; font-size:12px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;">Dowiedz się więcej →</button></div>
+            </div>
+            <div onclick="if(!event.target.closest('button'))this.querySelector('button').click()" style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:clamp(20px,2.2vw,26px); display:flex; flex-direction:column; gap:10px; cursor:pointer; transition:border-color .2s, background .2s;" onmouseenter="this.style.borderColor='#d8c9bc';this.style.background='#f5eee6'" onmouseleave="this.style.borderColor='#ede5db';this.style.background='#faf6f2'">
+              <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(20px,2.1vw,25px); line-height:1.15; margin:0; color:#2a2421;">Dr CYJ Hair Filler</h3>
+              <p style="font-size:13px; line-height:1.7; color:#6f655e; margin:0; flex:1;">Terapia peptydowa metodą mezoterapii igłowej — 7 biomimetycznych peptydów w kwasie hialuronowym pobudza mieszki włosowe do regeneracji.</p>
+              <div><button class="reset-btn" data-nav="zabieg-dr-cyj" style="display:inline-flex; align-items:center; gap:7px; font-size:12px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;">Dowiedz się więcej →</button></div>
+            </div>
+            <div onclick="if(!event.target.closest('button'))this.querySelector('button').click()" style="background:#faf6f2; border:1px solid #ede5db; border-radius:16px; padding:clamp(20px,2.2vw,26px); display:flex; flex-direction:column; gap:10px; cursor:pointer; transition:border-color .2s, background .2s;" onmouseenter="this.style.borderColor='#d8c9bc';this.style.background='#f5eee6'" onmouseleave="this.style.borderColor='#ede5db';this.style.background='#faf6f2'">
+              <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(20px,2.1vw,25px); line-height:1.15; margin:0; color:#2a2421;">Ribeskin Hairlopecia Meso Complex</h3>
+              <p style="font-size:13px; line-height:1.7; color:#6f655e; margin:0; flex:1;">Mezoterapia skóry głowy w technologii DualLepin® — aminokwasy, peptydy biomimetyczne, PDRN i czynniki wzrostu wspierają regenerację i wzrost włosów.</p>
+              <div><button class="reset-btn" data-nav="zabieg-ribeskin-hairlopecia" style="display:inline-flex; align-items:center; gap:7px; font-size:12px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;">Dowiedz się więcej →</button></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -1840,6 +1841,15 @@
           <p style="font-size:14px; line-height:1.75; color:#6f655e; margin:0; flex:1;">Zaawansowane terapie oparte na precyzyjnie dobranych kwasach i składnikach aktywnych — dla skóry trądzikowej, wrażliwej lub z przebarwieniami.</p>
           <div style="display:flex; flex-wrap:wrap; gap:6px;"><span style="display:inline-flex; align-items:center; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; color:#8a7d72;">Advanced Acne &amp; Corrective</span><span style="display:inline-flex; align-items:center; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; color:#8a7d72;">Calming &amp; Hydration</span><span style="display:inline-flex; align-items:center; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; color:#8a7d72;">Brightening &amp; Pigment</span></div>
           <div><button class="reset-btn" data-nav="zabieg-pca-skin" style="display:inline-flex; align-items:center; gap:7px; font-size:13px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;" onmouseenter="this.style.color='#2a2421';this.style.borderColor='#a78d76'" onmouseleave="this.style.color='#a78d76';this.style.borderColor='#e4d4c4'">Dowiedz się więcej →</button></div>
+        </div>
+
+        <!-- Ribeskin -->
+        <div data-reveal style="transition-delay:.22s; background:#fff; border:1px solid #ede5db; border-radius:20px; padding:clamp(28px,3vw,40px); display:flex; flex-direction:column; gap:16px; transition:box-shadow .24s,transform .24s,border-color .24s;" onmouseenter="this.style.transform='translateY(-3px)';this.style.boxShadow='0 16px 40px -14px rgba(120,80,55,.22)';this.style.borderColor='#d8c9bc'" onmouseleave="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#ede5db'">
+          <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#a78d76;">Pielęgnacja twarzy</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,2.8vw,34px); line-height:1.1; margin:0; color:#2a2421;">Ribeskin</h2>
+          <p style="font-size:14px; line-height:1.75; color:#6f655e; margin:0; flex:1;">Karboksyterapia bezigłowa oraz koktajle Shot AA, HA i Lumi — dotlenienie, głębokie nawilżenie i rozświetlenie skóry.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;"><span style="display:inline-flex; align-items:center; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; color:#8a7d72;">Karboksyterapia</span><span style="display:inline-flex; align-items:center; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; color:#8a7d72;">Deep Shot HA</span><span style="display:inline-flex; align-items:center; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; color:#8a7d72;">Deep Shot AA</span><span style="display:inline-flex; align-items:center; height:26px; padding:0 11px; border-radius:999px; background:#faf6f2; border:1px solid #ede5db; font-size:11px; color:#8a7d72;">Deep Shot Lumi</span></div>
+          <div><button class="reset-btn" data-nav="zabieg-ribeskin" style="display:inline-flex; align-items:center; gap:7px; font-size:13px; letter-spacing:.08em; color:#a78d76; border-bottom:1px solid #e4d4c4; padding-bottom:3px; transition:color .18s,border-color .18s;" onmouseenter="this.style.color='#2a2421';this.style.borderColor='#a78d76'" onmouseleave="this.style.color='#a78d76';this.style.borderColor='#e4d4c4'">Dowiedz się więcej →</button></div>
         </div>
 
         <!-- Geneo X -->
@@ -4317,7 +4327,7 @@
     <!-- Hero -->
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
       <div data-reveal>
-        <button class="reset-btn" data-nav="kosmetologia" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Medycyna estetyczna</button>
+        <button class="reset-btn" data-nav="pielegnacja-twarzy" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Pielęgnacja twarzy</button>
         <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Terapia</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Ribeskin</h1>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:680px;">Nowoczesne terapie koreańskiej kosmetologii</p>
@@ -5082,9 +5092,9 @@
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
       <div data-reveal>
         <button class="reset-btn" data-nav="kosmetologia" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Medycyna estetyczna</button>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Zabieg</div>
-        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Mezoterapia i stymulacja skóry głowy</h1>
-        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:720px;">Dermapen 4.0 z preparatem MG-EXO-GROW™ — zaawansowana terapia skóry głowy</p>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Mezoterapia i stymulacja skóry głowy</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Dermapen 4.0 z MG-EXO-GROW™</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:720px;">Zaawansowana terapia skóry głowy</p>
       </div>
     </div>
 
@@ -5327,7 +5337,7 @@
     <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
       <div data-reveal>
         <button class="reset-btn" data-nav="kosmetologia" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Medycyna estetyczna</button>
-        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Zabieg</div>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Mezoterapia i stymulacja skóry głowy</div>
         <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Dr CYJ Hair Filler</h1>
         <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:720px;">Zaawansowana terapia peptydowa na wypadanie włosów i regenerację skóry głowy</p>
       </div>
@@ -5500,6 +5510,207 @@
           <div>
             <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin:0 0 10px; color:#f3ece6;">Umów wizytę</h2>
             <p style="font-size:14px; line-height:1.7; color:rgba(243,236,230,.7); margin:0; max-width:520px;">Jeśli zauważasz nadmierne wypadanie włosów, ich przerzedzenie lub pogorszenie kondycji skóry głowy, terapia Dr CYJ Hair Filler może skutecznie wspomóc regenerację mieszków włosowych oraz pobudzić wzrost nowych, mocniejszych włosów. Zapraszamy na konsultację, podczas której dobierzemy terapię dopasowaną do potrzeb Twojej skóry głowy i włosów.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
+            <a href="tel:+48512899699" style="text-decoration:none; display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Zadzwoń →</a>
+            <button class="reset-btn btn-outline-ondk" data-nav="kontakt" style="display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; border:1px solid rgba(243,236,230,.3); color:#f3ece6; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Kontakt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PAGE: RIBESKIN HAIRLOPECIA MESO COMPLEX (skóra głowy) ===================== -->
+  <div data-page="zabieg-ribeskin-hairlopecia">
+
+    <!-- Hero -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(32px,4vw,52px);">
+      <div data-reveal>
+        <button class="reset-btn" data-nav="kosmetologia" style="font-size:13px; color:#a78d76; letter-spacing:.04em; margin-bottom:36px; display:inline-flex; align-items:center; gap:6px;" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">← Medycyna estetyczna</button>
+        <div style="font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Mezoterapia i stymulacja skóry głowy</div>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(44px,6.5vw,88px); line-height:.93; margin:0 0 18px; color:#2a2421;">Ribeskin Hairlopecia Meso Complex</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(20px,2.5vw,30px); color:#a78d76; margin:0; line-height:1.35; max-width:720px;">Zaawansowana terapia skóry głowy wspierająca wzrost i regenerację włosów</p>
+      </div>
+    </div>
+
+    <!-- Intro + callout -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(44px,5vw,72px);">
+      <div style="display:grid; grid-template-columns:1.3fr .7fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <p style="font-size:16px; line-height:1.85; color:#6f655e; margin:0 0 16px;">Hairlopecia Meso Complex to profesjonalna terapia przeznaczona dla osób zmagających się z nadmiernym wypadaniem włosów, ich przerzedzeniem oraz osłabieniem. Zabieg wspiera regenerację skóry głowy, poprawia kondycję mieszków włosowych oraz stymuluje fizjologiczny cykl wzrostu włosa.</p>
+          <p style="font-size:16px; line-height:1.85; color:#6f655e; margin:0;">Dzięki innowacyjnej technologii DualLepin® składniki aktywne są równomiernie dostarczane bezpośrednio do skóry głowy za pomocą systemu IGO 32G, co zapewnia wysoką skuteczność terapii przy zachowaniu maksymalnego komfortu. Zabieg jest niemal bezbolesny, małoinwazyjny i nie wymaga okresu rekonwalescencji.</p>
+        </div>
+        <div data-reveal style="transition-delay:.08s; background:#faf6f2; border:1px solid #ede5db; border-radius:18px; padding:clamp(22px,2.5vw,32px);">
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:16px;">Główne wskazania</div>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:18px;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Wypadanie włosów</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Przerzedzenie włosów</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Utrata gęstości</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421;">Regeneracja skóry głowy</span>
+          </div>
+          <div style="border-top:1px solid #ede5db; padding-top:13px; display:flex; align-items:center; gap:9px;">
+            <span style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#b09a8a;">Czas zabiegu</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#a78d76; font-weight:500;">30–45 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Na czym polega + skład -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Technologia</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 22px; color:#2a2421; line-height:1.1;">Na czym polega zabieg Hairlopecia Meso Complex?</h2>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0 0 24px;">Zabieg wykonywany jest metodą mezoterapii skóry głowy z wykorzystaniem specjalistycznego preparatu Hairlopecia Meso Complex. Dzięki precyzyjnej aplikacji substancje aktywne trafiają bezpośrednio do okolic mieszków włosowych, gdzie wspierają procesy regeneracyjne oraz odżywcze.</p>
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:6px; margin-bottom:12px;">Bogata formuła preparatu zawiera m.in.</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">kompleks 17 aminokwasów</span>
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">kompleks 14 peptydów biomimetycznych</span>
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">kwas hialuronowy</span>
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">PDRN (polinukleotydy)</span>
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">biotyna</span>
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">koenzym Q10</span>
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">peptyd z grochu</span>
+          <span style="display:inline-flex; align-items:center; height:34px; padding:0 14px; border-radius:999px; background:#fff; border:1px solid #ede5db; font-size:13px; color:#2a2421;">czynniki wzrostu</span>
+          </div>
+          <p style="max-width:760px; font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Połączenie tych składników wspomaga regenerację skóry głowy, poprawia mikrośrodowisko mieszków włosowych, działa przeciwzapalnie i antyoksydacyjnie oraz stwarza optymalne warunki do wzrostu mocniejszych i zdrowszych włosów.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Efekty -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Rezultaty</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Efekty zabiegu</h2>
+          <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Efekty terapii pojawiają się stopniowo i narastają wraz z kolejnymi zabiegami oraz prawidłowo dobraną pielęgnacją domową.</p>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+          <div style="font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:#a78d76; margin-bottom:6px;">Terapia zapewnia</div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">ograniczenie nadmiernego wypadania włosów</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">stymulacja wzrostu nowych włosów</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wzmocnienie mieszków włosowych</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa gęstości i jakości włosów</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">regeneracja i odżywienie skóry głowy</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">poprawa nawilżenia skóry głowy</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">zwiększenie grubości włosów</span></div>
+            <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wsparcie naturalnych procesów regeneracyjnych skóry</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przebieg -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div data-reveal style="margin-bottom:28px;">
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Przebieg</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0; color:#2a2421; line-height:1.1;">Jak przebiega zabieg?</h2>
+        </div>
+        <div data-reveal style="transition-delay:.06s; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px;">
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">1.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Konsultacja</div>
+            <div style="font-size:13px; line-height:1.65; color:#6f655e;">Ocena stanu skóry głowy i włosów. Na podstawie wywiadu dobierany jest indywidualny plan terapii.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">2.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Mezoterapia skóry głowy</div>
+            <div style="font-size:13px; line-height:1.65; color:#6f655e;">Preparat aplikowany jest z wykorzystaniem systemu mini igieł, który umożliwia precyzyjne i komfortowe podanie preparatu.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">3.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Czas zabiegu</div>
+            <div style="font-size:13px; line-height:1.65; color:#6f655e;">Cała procedura trwa około 30–45 minut.</div>
+          </div>
+          <div style="background:#fff; border:1px solid #ede5db; border-radius:16px; padding:24px 22px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#a78d76; margin-bottom:12px; line-height:1;">4.</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:19px; color:#2a2421; margin-bottom:8px;">Po zabiegu</div>
+            <div style="font-size:13px; line-height:1.65; color:#6f655e;">Może wystąpić niewielkie zaczerwienienie, tkliwość lub delikatny obrzęk skóry głowy — zazwyczaj ustępują w ciągu 24–48 godzin.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wskazania -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+        <div data-reveal>
+          <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Wskazania</div>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 18px; color:#2a2421; line-height:1.1;">Dla kogo przeznaczona jest terapia?</h2>
+          <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0;">Terapia Hairlopecia Meso Complex polecana jest osobom zmagającym się z:</p>
+        </div>
+        <div data-reveal style="transition-delay:.08s;">
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">nadmiernym wypadaniem włosów</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">postępującym przerzedzeniem włosów</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">osłabieniem i utratą gęstości włosów</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">łysieniem androgenowym</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">łysieniem plackowatym</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">utratą włosów w okresie okołomenopauzalnym</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">wypadaniem włosów po ciąży</span></div>
+            <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:13px 0; display:flex; gap:13px; align-items:flex-start;"><span style="width:6px;height:6px;border-radius:50%;background:#a78d76;flex:none;margin-top:7px;"></span><span style="font-size:14px;line-height:1.6;color:#2a2421;">potrzebą regeneracji skóry głowy po przeszczepie włosów</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zalecenia przed i po -->
+    <div style="background:#faf6f2; border-top:1px solid #efe6dd; border-bottom:1px solid #efe6dd;">
+      <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:start;">
+          <div data-reveal>
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Przed wizytą</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(22px,2.8vw,34px); margin:0 0 16px; color:#2a2421; line-height:1.15;">Zalecenia przed zabiegiem</h2>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">umycie włosów w dniu zabiegu</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">niestosowanie kosmetyków do stylizacji włosów przed wizytą</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">poinformowanie specjalisty o przyjmowanych lekach i chorobach przewlekłych</span></div>
+            <div style="border-top:1px solid #e4d4c4; border-bottom:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">unikanie spożywania alkoholu na 24 godziny przed zabiegiem</span></div>
+          </div>
+          <div data-reveal style="transition-delay:.08s;">
+            <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Po wizycie</div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(22px,2.8vw,34px); margin:0 0 16px; color:#2a2421; line-height:1.15;">Zalecenia po zabiegu</h2>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">nie myć włosów przez około 24 godziny</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">unikać sauny, basenu i intensywnego wysiłku fizycznego przez 24–48 godzin</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">nie stosować drażniących preparatów na skórę głowy do czasu jej wyciszenia</span></div>
+            <div style="border-top:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">chronić skórę głowy przed intensywną ekspozycją na słońce</span></div>
+            <div style="border-top:1px solid #e4d4c4; border-bottom:1px solid #e4d4c4; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#a78d76;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#2a2421;">stosować się do indywidualnych zaleceń pozabiegowych</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przeciwwskazania + Konsultacja -->
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(44px,5vw,72px) clamp(18px,4vw,40px);">
+      <div data-reveal style="margin-bottom:24px;">
+        <div style="font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#a78d76; margin-bottom:14px;">Ważne informacje</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(26px,3.4vw,42px); margin:0 0 10px; color:#2a2421; line-height:1.1;">Przeciwwskazania</h2>
+        <p style="font-size:14px; line-height:1.75; color:#6f655e; margin:0; max-width:660px;">Zabieg nie jest wykonywany w przypadku:</p>
+      </div>
+      <div data-reveal style="transition-delay:.06s; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:0 40px;">
+            <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">ciąży i okresu karmienia piersią</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">aktywnych infekcji oraz stanów zapalnych skóry głowy</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">otwartych ran w miejscu zabiegowym</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">chorób nowotworowych</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">zaburzeń krzepnięcia krwi</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">uczulenia na składniki preparatu</span></div>
+            <div style="border-top:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">aktywnych chorób autoimmunologicznych (po indywidualnej kwalifikacji)</span></div>
+            <div style="border-top:1px solid #f0e8df; border-bottom:1px solid #f0e8df; padding:11px 0; display:flex; gap:12px; align-items:flex-start;"><span style="width:5px;height:5px;border-radius:50%;background:#d8cabb;flex:none;margin-top:9px;"></span><span style="font-size:13px;line-height:1.65;color:#6f655e;">gorączki lub aktywnej infekcji organizmu</span></div>
+      </div>
+      <p data-reveal style="transition-delay:.12s; font-size:12px; color:#b09a8a; margin:14px 0 0; line-height:1.6;">Każdorazowo przed rozpoczęciem terapii przeprowadzany jest szczegółowy wywiad, który pozwala bezpiecznie zakwalifikować pacjenta do zabiegu.</p>
+      <div data-reveal style="transition-delay:.16s; margin-top:clamp(32px,4vw,48px); background:#faf6f2; border:1px solid #ede5db; border-radius:20px; padding:clamp(26px,3vw,36px);">
+        <div style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#a78d76; margin-bottom:12px;">Konsultacja i plan terapii</div>
+        <p style="font-size:15px; line-height:1.85; color:#6f655e; margin:0; max-width:760px;">Każdy zabieg Hairlopecia Meso Complex poprzedzony jest konsultacją, podczas której oceniany jest stan skóry głowy, stopień utraty włosów oraz możliwe przyczyny problemu. Na tej podstawie dobierany jest indywidualny plan terapii oraz zalecana liczba zabiegów.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="max-width:1180px; margin:0 auto; padding:0 clamp(18px,4vw,40px) clamp(52px,6vw,80px);">
+      <div data-reveal style="background:#2a2421; border-radius:22px; padding:clamp(36px,4.5vw,60px) clamp(28px,4vw,52px);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:clamp(24px,4vw,48px); flex-wrap:wrap;">
+          <div>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(24px,3.2vw,40px); line-height:1.1; margin:0 0 10px; color:#f3ece6;">Umów konsultację</h2>
+            <p style="font-size:14px; line-height:1.7; color:rgba(243,236,230,.7); margin:0; max-width:520px;">Jeśli zauważasz nadmierne wypadanie lub przerzedzenie włosów — ocenimy kondycję skóry głowy i włosów oraz dobierzemy odpowiednią terapię i indywidualny plan zabiegowy.</p>
           </div>
           <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
             <a href="tel:+48512899699" style="text-decoration:none; display:inline-flex; align-items:center; height:50px; padding:0 26px; border-radius:999px; background:#f3ece6; color:#2a2421; font-size:13px; letter-spacing:.06em; white-space:nowrap;">Zadzwoń →</a>
