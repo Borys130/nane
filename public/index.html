@@ -278,14 +278,12 @@
   <img class="site-intro-logo" src="images/logo.png" alt="">
 </div>
 <script>
-  // intro tylko przy pierwszym wejściu na stronę główną w danej sesji
+  // intro przy każdym wejściu / odświeżeniu strony głównej
   (function () {
     var el = document.getElementById('site-intro');
-    var seen = false;
-    try { seen = sessionStorage.getItem('nane-intro') === '1'; } catch (e) {}
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var onHome = !location.hash || location.hash === '#home';
-    if (seen || reduce || !onHome) { el.parentNode.removeChild(el); return; }
+    if (reduce || !onHome) { el.parentNode.removeChild(el); return; }
     document.documentElement.classList.add('intro-on', 'intro-played');
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   })();
@@ -5570,11 +5568,10 @@
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLb(); });
   })();
 
-  // intro przy pierwszym wejściu (overlay usuwany wcześniej, jeśli ma się nie pokazać)
+  // intro przy wejściu na stronę główną (overlay usuwany wcześniej, jeśli ma się nie pokazać)
   (function () {
     var intro = document.getElementById('site-intro');
     if (!intro) return;
-    try { sessionStorage.setItem('nane-intro', '1'); } catch (e) {}
     window.scrollTo(0, 0);
     var win = intro.querySelector('.site-intro-window');
     var winImg = win.querySelector('img');
