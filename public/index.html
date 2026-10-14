@@ -113,7 +113,7 @@
   .social-link{ transition:color .18s; cursor:pointer; }
   .social-link:hover{ color:#a78d76 !important; }
   /* before/after slider */
-  .ba{ --pos:50%; margin:16px 0 8px; }
+  .ba{ --pos:35%; margin:16px 0 8px; }
   .ba-frame{ position:relative; width:100%; margin:0 auto; border-radius:14px; overflow:hidden; cursor:ew-resize; user-select:none; touch-action:none; box-shadow:0 18px 40px -26px rgba(120,80,55,.5); }
   .ba--portrait .ba-frame{ aspect-ratio:720/1509; max-width:260px; }
   .ba--landscape .ba-frame{ aspect-ratio:1440/754; max-width:680px; }
@@ -6598,9 +6598,9 @@
         if (!en.isIntersecting) return;
         var ba = en.target;
         ba.classList.add('ba-animating');
-        ba.style.setProperty('--pos', '85%');
-        setTimeout(function () { ba.style.setProperty('--pos', '16%'); }, 260);
-        setTimeout(function () { ba.style.setProperty('--pos', '50%'); }, 1300);
+        ba.style.setProperty('--pos', '16%');
+        setTimeout(function () { ba.style.setProperty('--pos', '60%'); }, 260);
+        setTimeout(function () { ba.style.setProperty('--pos', '35%'); }, 1300);
         setTimeout(function () { ba.classList.remove('ba-animating'); }, 2300);
         baIO.unobserve(ba);
       });
